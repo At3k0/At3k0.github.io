@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Short Films</title>
+	    <style>
+	        html, body {
+	            height: 100%;
+    			margin: 0;
+    			padding: 0;
+    			font-family: 'Karla', sans-serif;
+	        }
+	        .navbar {
+	            display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+	            background-color: #333;
+	            color: #fff;
+	            padding: 10px;
+	        }
+
+	        .navbar, .logo, p {
+	            font-size: 24px;
+	            font-weight: bold;
+	            text-align: center;
+	            flex-grow: 1;
+	            z-index: 2;
+	        }
+	        .footer {
+	        	font-size: 24px;
+	            font-weight: bold;
+	            text-align: center;
+	            flex-grow: 1;
+	        	padding-bottom: 20px;
+	        	display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+	            background-color: #333;
+	            color: #fff;
+	            padding: 10px;
+	        }
+	        .container {
+	            display: grid;
+	            grid-template-columns: 1fr 1fr;
+	            grid-gap: 20px;
+	            padding: 20px;
+	            overflow: auto;
+	        }
+
+	        .column {
+	            background-color: #f2f2f2;
+	            padding: 20px;
+	            display: flex;
+	            flex-direction: column;
+	            align-items: center;
+	            justify-content: center;
+	        }
+
+	        .column img {
+	            max-width: 100%;
+	            height: auto;
+	            width: 400px;
+	        }
+	        html {
+	            background-color: royalblue;
+	        }
+	        .center-content {
+			    font-size: 24px;
+	            font-weight: bold;
+	            text-align: center;
+	            flex-grow: 1;
+			}
+			.line {
+			    margin-bottom: 10px;
+			    border: none;
+			    border-top: 1px solid grey;
+			    width: 5%;
+			}
+	        ::-webkit-scrollbar {
+	            width: 0;
+	        }
+
+	    </style>
+	</head>
+	<body>
+	    <header>
+	        <div class="navbar">
+	            <div class="logo">
+	            	<a href="https://bridgeshof.com"><img src="logo.png"></a>
+	            </div>
+	        </div>
+	    </header>
+	    <div class="container">
+	        <div class="column">
+	            <h1>My Videos</h1>
+	            <iframe width="560" height="315" src="https://www.youtube.com/embed/6lm-AGp-szU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	            <p>Bridges' play made goofy.</p>
+	            <iframe width="560" height="315" src="https://www.youtube.com/embed/IaG5XPOW9cc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	            <p>The fan favorite</p>
+	            <iframe width="560" height="315" src="https://www.youtube.com/embed/S_uhfeleOdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	            <p>Don't trust me when I'm bored :)</p>
+	            <iframe width="560" height="315" src="https://www.youtube.com/embed/ERArvgDBJZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	            <p>My first short film... Not well made</p>
+	            <iframe width="560" height="315" src="https://www.youtube.com/embed/Mg_RJc6KiEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	            <p>Thanks for showing me the original, Elias</p>
+	        </div>
+	        <div class="column">
+	        	<h1>Short Film Hall of Fame (coming soon)</h1>
+	            <p>(ok the reason is i havent got permission to post anything here yet)</p>
+	        </div>
+	    </div>
+	    <footer>
+	    	<div class="footer">
+	    		<div class="center-content">
+	    			copyright literally nobody 2023
+	    			<hr class="line">
+					Run by Alec Diramerian
+					<hr class="line">
+					Contact me at alecdiramerian@gmail.com
+				</div>
+	    	</div>
+	    </footer>
+	</body>
+</html>
