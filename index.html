@@ -1,11 +1,142 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>hi</title>
-</head>
-<body>
-Hello! I'm in the process of changing the host of bridgeshof.com; It'll be up within the week. Have a good day :D <br>questions? contact me - alecdiramerian@gmail.com<br>Alright, the DNS is finally set up properly. Almost done with the page, too.<br>https is working too weeeeeeeeeeeeeeeeeeeeeeeee
-</body>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Bridges Hall of Fame</title>
+	    <style>
+	        html, body {
+	            height: 100%;
+    			margin: 0;
+    			padding: 0;
+    			font-family: 'Karla', sans-serif;
+	        }
+	        .navbar {
+	            display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+	            background-color: #333;
+	            color: #fff;
+	            padding: 10px;
+	        }
+
+	        .navbar, .logo, p {
+	            font-size: 24px;
+	            font-weight: bold;
+	            text-align: center;
+	            flex-grow: 1;
+	            z-index: 2;
+	        }
+	        .footer {
+	        	font-size: 24px;
+	            font-weight: bold;
+	            text-align: center;
+	            flex-grow: 1;
+	        	padding-bottom: 20px;
+	        	display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+	            background-color: #333;
+	            color: #fff;
+	            padding: 10px;
+	        }
+	        .container {
+	            display: grid;
+	            grid-template-columns: 2fr 2fr;
+	            grid-gap: 20px;
+	            padding: 20px;
+	        }
+	        .scontainer {
+	        	display: block;
+	            
+	            padding: 20px;
+	        }
+
+	        .column {
+	            background-color: #f2f2f2;
+	            padding: 20px;
+	            display: flex;
+	            flex-direction: column;
+	            align-items: center;
+	            justify-content: center;
+	        }
+	        .column img {
+	            max-width: 100%;
+	            height: auto;
+	            width: 400px;
+	        }
+	        html {
+	        	background-color: royalblue;
+	        }
+	        a {
+	        	text-decoration: none;
+	        	color: black;
+	        }
+	        a:hover {
+	        	color: darkslategray;
+	        }
+			.center-content {
+			    font-size: 24px;
+	            font-weight: bold;
+	            text-align: center;
+	            flex-grow: 1;
+			}
+			.line {
+			    margin-bottom: 10px;
+			    border: none;
+			    border-top: 1px solid grey;
+			    width: 5%;
+			}
+			::-webkit-scrollbar {
+	            width: 0;
+	        }
+	    </style>
+	</head>
+	<body>
+	    <header>
+	        <div class="navbar">
+	            <div class="logo">
+	                <a href="https://bridgeshof.com"><img src="logo.png"></a>
+	            </div>
+	        </div>
+	    </header>
+	    <div class="container">
+	        <div class="column">
+	            <a href="shortfilms.html"><img src="shortfilmsimg.png"></a>
+	            <a href="shortfilms.html"><p>Short films made by the students that deserve to be here! (and also my videos)</p></a>
+	        </div>
+	        <div class="column">
+	        	<a href="quotes.html"><img src="quotesimg.png"></a>
+	            <a href="quotes.html"><p>No-context wise statements, jokes, and wacky words.</p></a>
+	        </div>
+	    </div>
+	    <div class="scontainer">
+	    	<div class="column">
+	    		<h1>What is this?</h1>
+	    		<p>
+	    			<s>No clue</s>
+	    			<br>
+	    			Bridgeshof.com is a personal website I made to store all the dumb
+	    			quotes that deserve to be seen and heard. It's also my place to
+	    			put my short films, since people keep asking for them to be posted
+	    			somewhere. Since YouTube might hate me because "something something
+	    			COPPA something." What that means is any short films with children
+	    			acting in them are unlisted, so you can only watch them if the link
+	    			to the video is provided. They cannot be found by searching Google,
+	    			YouTube, or anywhere else. This is the only place they can be found.
+	    		</p>
+	    	</div>
+	    </div>
+	    <footer>
+	    	<div class="footer">
+	    		<div class="center-content">
+	    			copyright literally nobody 2023
+	    			<hr class="line">
+				Run by Alec Diramerian
+				<hr class="line">
+				Contact me at alecdiramerian@gmail.com
+			</div>
+	    	</div>
+	    </footer>
+	</body>
 </html>
