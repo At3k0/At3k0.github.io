@@ -5,6 +5,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>Bridges Hall of Fame</title>
 	    <link rel="icon" type="image/x-icon" href="logo.png">
+	    <script src="videodates.js"></script>
 	    <style>
 	        html, body {
 	            height: 100%;
@@ -102,39 +103,17 @@
 	        </div>
 	    </header>
 	    <br>
-		<script>
-		  function isJuly25th() {
-		    var today = new Date();
-		    return today.getMonth() === 6 && today.getDate() === 25;
-		  }
-
-		  function toggleContent() {
-		    var videoElement = document.getElementById("birthdayVideo");
-		    var paragraphElement = document.getElementById("birthdayText");
-
-		    if (isJuly25th()) {
-		      videoElement.style.display = "block";
-		      paragraphElement.style.display = "block";
-		    } else {
-		      videoElement.style.display = "none";
-		      paragraphElement.style.display = "none";
-		    }
-		  }
-		  window.onload = toggleContent;
-		</script>
 		<div style="text-align: center;">
 		  <iframe
-		    id="birthdayVideo"
+		    id="songvideo"
 		    width="560"
 		    height="315"
-		    src="birthday.mp4"
-		    title="july 25 baby"
+		    src=""
 		    frameborder="0"
-		    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 		    allowfullscreen
 		    style="display: block; border-style: none; width: 560px; height: 315px; margin: 0 auto;"
 		  ></iframe>
-		  <p id="birthdayText" style="display: block;">july 25th baby</p>
+		  <p id="songtext" style="display: block;">july 25th baby</p>
 		</div>
 	    <div class="container">
 	        <div class="column">
