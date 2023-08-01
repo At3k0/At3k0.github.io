@@ -1,6 +1,6 @@
 #  About
-Soo, if you don't go to or not affiliated with Bridges Academy, I'd like to kindly tell you to go away please
-This site is for writing down halarious quotes from people there
+Soo, if you don't go to or not affiliated with Bridges Academy, I'd like to kindly tell you to go away please<br>
+This site is for writing down halarious quotes from people there<br>
 It's also where I post my comedic videos, because I'm not gonna purchase another domain just for that (most are unlisted because kids act in them)
 # Requests
 If you want to add a quote, you can use the issues tab. I count them as issues because it's an issue if I don't have all the dumbness in my collection. heh.<br>

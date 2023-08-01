@@ -1,0 +1,78 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", sans-serif;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar,
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    z-index: 2;
+}
+.footer {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+.container {
+    display: block;
+    padding: 20px;
+    overflow: auto;
+}
+
+.column {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+b {
+    font-size: 24px;
+    font-weight: bold;
+}
+.column img {
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+}
+html {
+    background-color: royalblue;
+}
+.center-content {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+.line {
+    margin-bottom: 10px;
+    border: none;
+    border-top: 1px solid grey;
+    width: 5%;
+}
+::-webkit-scrollbar {
+    width: 0;
+}

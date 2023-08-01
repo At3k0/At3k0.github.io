@@ -4,124 +4,38 @@
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>Bridges Hall of Fame</title>
-	    <link rel="icon" type="image/x-icon" href="logo.png">
-	    <script src="videodates.js"></script>
-	    <style>
-	        html, body {
-	            height: 100%;
-    			margin: 0;
-    			padding: 0;
-    			font-family: 'Karla', sans-serif;
-	        }
-	        .navbar {
-	            display: flex;
-	            align-items: center;
-	            justify-content: space-between;
-	            background-color: #333;
-	            color: #fff;
-	            padding: 10px;
-	        }
-
-	        .navbar, .logo, p {
-	            font-size: 24px;
-	            font-weight: bold;
-	            text-align: center;
-	            flex-grow: 1;
-	            z-index: 2;
-	        }
-	        .footer {
-	        	font-size: 24px;
-	            font-weight: bold;
-	            text-align: center;
-	            flex-grow: 1;
-	        	padding-bottom: 20px;
-	        	display: flex;
-	            align-items: center;
-	            justify-content: space-between;
-	            background-color: #333;
-	            color: #fff;
-	            padding: 10px;
-	        }
-	        .container {
-	            display: flex;
-	            grid-template-columns: 2fr 2fr;
-	            grid-gap: 20px;
-	            padding: 20px;
-	        }
-	        .scontainer {
-	        	display: block;
-	            padding: 20px;
-	        }
-	        .column {
-	            background-color: #f2f2f2;
-	            padding: 20px;
-	            flex-direction: column;
-	            display: flex;
-	            align-items: center;
-	            justify-content: flex-start;
-	            flex: 1;
-	        }
-	        .column img {
-	            max-width: 100%;
-	            height: auto;
-	            display: block;
-	            width: 400px;
-	        }
-	        html {
-	        	background-color: royalblue;
-	        }
-	        a {
-	        	text-decoration: none;
-	        	color: black;
-	        }
-	        a:hover {
-	        	color: darkslategray;
-	        }
-			.center-content {
-			    font-size: 24px;
-	            font-weight: bold;
-	            text-align: center;
-	            flex-grow: 1;
-			}
-			.line {
-			    margin-bottom: 10px;
-			    border: none;
-			    border-top: 1px solid grey;
-			    width: 5%;
-			}
-			::-webkit-scrollbar {
-	            width: 0;
-	        }
-	    </style>
+	    <link rel="icon" type="image/x-icon" href="images/logo.png">
+	    <link rel="stylesheet" type="text/css" href="style/index.css">
+	    <script src="videodates/videodates.js"></script>
 	</head>
 	<body>
 	    <header>
 	        <div class="navbar">
 	            <div class="logo">
-	                <a href="https://bridgeshof.com"><img src="logo.png"></a>
+	                <a href="https://www.bridgeshof.com"><img src="images/logo.png"></a>
 	            </div>
 	        </div>
 	    </header>
 	    <br>
 		<div style="text-align: center;">
-		  <iframe
-		    id="songvideo"
-		    width="560"
-		    height="315"
-		    src=""
-		    frameborder="0"
-		    allowfullscreen
-		    style="display: block; border-style: none; width: 560px; height: 315px; margin: 0 auto;"
-		  ></iframe>
-		  <p id="songtext" style="display: block;">july 25th baby</p>
+		    <iframe
+			    id="songvideo"
+			    width="560"
+			    height="315"
+			    src=""
+			    frameborder="0"
+			    allowfullscreen
+			    style="display: block; border-style: none; width: 560px; height: 315px; margin: 0 auto;">
+		    </iframe>
+		    <p id="songtext" style="display: block;">july 25th baby</p>
 		</div>
 	    <div class="container">
 	        <div class="column">
-	            <a href="shortfilms.html"><img src="shortfilmsimg.png"></a>
+	            <a href="shortfilms.html"><img src="images/shortfilmsimg.png"></a>
 	            <a href="shortfilms.html"><p>Short films made by the students that deserve to be here! (and also my videos)</p></a>
 	        </div>
 	        <div class="column">
-	        	<a href="quotes.html"><img src="quotesimg.png"></a>
+	        	<a href="quotes.html"><img src="images/quotesimg.png"></a>
 	            <a href="quotes.html"><p>No-context wise statements, jokes, and wacky words.</p></a>
 	        </div>
 	    </div>
