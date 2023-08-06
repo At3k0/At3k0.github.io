@@ -1,16 +1,20 @@
+function isFebuary14th() {
+    var today = new Date();
+    return today.getMonth() === 7 && today.getDate() === 6;
+}
 function isJuly25th() {
     var today = new Date();
     return today.getMonth() === 6 && today.getDate() === 25;
 }
 
-function isAugest11th() {
+function isAugust11th() {
     var today = new Date();
     return today.getMonth() === 7 && today.getDate() === 11;
 }
 
-function isSeptember22nd() {
+function isAugust22nd() {
     var today = new Date();
-    return today.getMonth() === 8 && today.getDate() === 22;
+    return today.getMonth() === 7 && today.getDate() === 22;
 }
 
 function isOctober1st() {
@@ -31,14 +35,16 @@ function isDecember2nd() {
 function toggleContent() {
     var v = document.getElementById("songvideo");
     var t = document.getElementById("songtext");
-
-    if (isJuly25th()) {
+    if (isFebuary14th()) {
+        v.src = "videodates/poem.mp4"
+        t.textContent = "damn thats deep kat"
+    } else if (isJuly25th()) {
         v.src = "videodates/birthday.mp4";
         t.textContent = "july 25th baby";
-    } else if (isAugest11th()) {
+    } else if (isAugust11th()) {
         v.src = "videodates/dogdays.mp4";
         t.textContent = "summer's gone";
-    } else if (isSeptember22nd()) {
+    } else if (isAugust22nd()) {
         v.src = "videodates/schoolsin.mp4"
         t.textContent = "time for school"
     } else if (isOctober1st()){
