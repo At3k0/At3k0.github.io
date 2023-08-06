@@ -5,6 +5,10 @@ html, body {
     font-family: "Karla", sans-serif;
 }
 
+.l {
+    color: royalblue;
+}
+
 .navbar {
     display: flex;
     align-items: center;
