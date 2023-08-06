@@ -1,6 +1,6 @@
 function isFebuary14th() {
     var today = new Date();
-    return today.getMonth() === 7 && today.getDate() === 6;
+    return today.getMonth() === 1 && today.getDate() === 14;
 }
 function isJuly25th() {
     var today = new Date();
