@@ -1,62 +1,35 @@
-function isFebuary14th() {
-    var today = new Date();
-    return today.getMonth() === 1 && today.getDate() === 14;
-}
-function isJuly25th() {
-    var today = new Date();
-    return today.getMonth() === 6 && today.getDate() === 25;
-}
-
-function isAugust11th() {
-    var today = new Date();
-    return today.getMonth() === 7 && today.getDate() === 11;
-}
-
-function isAugust22nd() {
-    var today = new Date();
-    return today.getMonth() === 7 && today.getDate() === 22;
-}
-
-function isOctober1st() {
-    var today = new Date();
-    return today.getMonth() === 9 && today.getDate() === 1;
-}
-
-function isDecember1st() {
-    var today = new Date();
-    return today.getMonth() === 11 && today.getDate() === 1;
-}
-
-function isDecember2nd() {
-    var today = new Date();
-    return today.getMonth() === 11 && today.getDate() === 2;
-}
+const specialDates = [
+    { month: 1, date: 14, video: "poem.mp4", text: "damn thats deep kat" },
+    { month: 6, date: 25, video: "birthday.mp4", text: "july 25th baby" },
+    { month: 7, date: 11, video: "dogdays.mp4", text: "summer's gone" },
+    { month: 7, date: 22, video: "schoolsin.mp4", text: "time for school" },
+    { month: 9, date: 1, video: "spooky.mp4", text: "spooky begins" },
+    { month: 11, date: 1, image: "christmasplaylistimg.png", playlist: "https://www.youtube.com/playlist?list=PL0s0N2avSv5eU9BDBymqdismmjwIEZ69-", text: "click for bridgeshof.com 12 days of christmas videos" },
+];
 
 function toggleContent() {
-    var v = document.getElementById("songvideo");
-    var t = document.getElementById("songtext");
-    if (isFebuary14th()) {
-        v.src = "videodates/poem.mp4"
-        t.textContent = "damn thats deep kat"
-    } else if (isJuly25th()) {
-        v.src = "videodates/birthday.mp4";
-        t.textContent = "july 25th baby";
-    } else if (isAugust11th()) {
-        v.src = "videodates/dogdays.mp4";
-        t.textContent = "summer's gone";
-    } else if (isAugust22nd()) {
-        v.src = "videodates/schoolsin.mp4"
-        t.textContent = "time for school"
-    } else if (isOctober1st()){
-    	v.src = "videodates/spooky.mp4";
-    	t.textContent = "spooky begins";
-    } else if (isDecember1st()){
-        v.src = "videodates/beginchristmas.mp4";
-        t.textContent = "december day 1 lesson - dont die";
-    } else if (isDecember2nd()){
-        v.src = "videodates/wonderfultime.mp4";
-        t.textContent = "december day 2 lesson - look both ways before crossing the road ";
-    /*ill add more christmas ones later, probably in december because obviously*/
+    const today = new Date();
+    const v = document.getElementById("songvideo");
+    const t = document.getElementById("songtext");
+    
+    for (const date of specialDates) {
+        if (today.getMonth() === date.month && today.getDate() === date.date) {
+            if (date.playlist) {
+                v.style.display = "none";
+                t.innerHTML = `<a href="${date.playlist}" target="_blank"><img src="videodates/${date.image}" alt="${date.text}" style="max-width: 200px;"><br>${date.text}</a>`;
+            } else {
+                v.src = `videodates/${date.video}`;
+                t.textContent = date.text;
+            }
+            document.getElementById("brvideodates").style.display = "block";
+            return;
+        }
+    }
+    
+    if (today.getMonth() === 11 && today.getDate() <= 12) {
+        v.style.display = "none";
+        t.innerHTML = `<a href="${specialDates[5].playlist}" target="_blank"><img src="videodates/${specialDates[5].image}" alt="${specialDates[5].text}" style="max-width: 200px;"><br>${specialDates[5].text}</a>`;
+        document.getElementById("brvideodates").style.display = "block";
     } else {
         v.style.display = "none";
         t.style.display = "none";
