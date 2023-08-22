@@ -2,7 +2,7 @@ const specialDates = [
     { month: 1, date: 14, video: "poem.mp4", text: "damn thats deep kat" },
     { month: 6, date: 25, video: "birthday.mp4", text: "july 25th baby" },
     { month: 7, date: 11, video: "dogdays.mp4", text: "summer's gone" },
-    { month: 7, date: 22, video: "schoolsin.mp4", text: "time for school" },
+    { month: 7, date: 22, video: "schoolsin.mp4", text: "and the chaos begins" },
     { month: 9, date: 1, video: "spooky.mp4", text: "spooky begins" },
     { month: 11, date: 1, image: "christmasplaylistimg.png", playlist: "https://www.youtube.com/playlist?list=PL0s0N2avSv5eU9BDBymqdismmjwIEZ69-", text: "click for bridgeshof.com 12 days of christmas videos" },
 ];
