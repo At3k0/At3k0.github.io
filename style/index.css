@@ -41,12 +41,16 @@ html, body {
 .container {
     display: flex;
     grid-template-columns: 2fr 2fr;
-    grid-gap: 20px;
+    grid-gap: 300px;
     padding: 20px;
 }
 .scontainer {
     display: block;
     padding: 20px;
+}
+.container, .columnleft, .columnright {
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .column {
     background-color: #f2f2f2;
