@@ -15,7 +15,8 @@ html, body {
     justify-content: space-between;
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .navbar, .logo, p {
@@ -40,17 +41,13 @@ html, body {
 }
 .container {
     display: flex;
-    grid-template-columns: 2fr 2fr;
-    grid-gap: 300px;
+    grid-template-columns: 3fr 3fr;
+    grid-gap: 100px;
     padding: 20px;
 }
 .scontainer {
     display: block;
     padding: 20px;
-}
-.container, .columnleft, .columnright {
-    padding-left: 100px;
-    padding-right: 100px;
 }
 .column {
     background-color: #f2f2f2;
@@ -61,10 +58,9 @@ html, body {
     justify-content: flex-start;
     flex: 1;
 }
+
 .column img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    height: 100;
     width: 400px;
 }
 html {
