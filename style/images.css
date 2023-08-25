@@ -72,13 +72,6 @@ html, body {
 html {
     background-color: royalblue;
 }
-a {
-    text-decoration: none;
-    color: black;
-}
-a:hover {
-    color: darkslategray;
-}
 .center-content {
     font-size: 24px;
     font-weight: bold;
