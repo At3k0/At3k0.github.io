@@ -65,12 +65,25 @@ html, body {
 }
 
 .column img {
-    height: 100;
     width: 400px;
+    border-radius: 15px;
+}
+.bigimg img {
+    width: 710px;
+    border-radius: 15px;
+}
+.bigimg2 img {
+    width: 759px;
     border-radius: 15px;
 }
 html {
     background-color: royalblue;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: darkslategray;
 }
 .center-content {
     font-size: 24px;

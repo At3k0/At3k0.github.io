@@ -64,6 +64,12 @@ b {
 html {
     background-color: royalblue;
 }
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: darkslategray;
+}
 .center-content {
     font-size: 24px;
     font-weight: bold;
