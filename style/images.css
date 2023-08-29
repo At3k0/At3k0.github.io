@@ -15,10 +15,13 @@ html, body {
     justify-content: space-between;
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
-.navbar, .logo {
+.navbar, .logo, p {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -37,29 +40,41 @@ html, body {
     background-color: #333;
     color: #fff;
     padding: 10px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 .container {
+    display: flex;
+    grid-template-columns: 3fr 3fr;
+    grid-gap: 100px;
+    padding: 20px;
+}
+.scontainer {
     display: block;
     padding: 20px;
-    overflow: auto;
 }
-
 .column {
     background-color: #f2f2f2;
     padding: 20px;
-    display: flex;
     flex-direction: column;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    flex: 1;
+    border-radius: 15px;
 }
-b {
-    font-size: 24px;
-    font-weight: bold;
-}
+
 .column img {
-    max-width: 100%;
-    height: auto;
     width: 400px;
+    border-radius: 15px;
+}
+.bigimg img {
+    width: 710px;
+    border-radius: 15px;
+}
+.bigimg2 img {
+    width: 759px;
+    border-radius: 15px;
 }
 html {
     background-color: royalblue;
