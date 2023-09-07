@@ -22,7 +22,7 @@ html, body {
 }
 
 .navbar, .logo, p {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     flex-grow: 1;
@@ -46,7 +46,7 @@ html, body {
 .container {
     display: flex;
     grid-template-columns: 3fr 3fr;
-    grid-gap: 100px;
+    grid-gap: 5%;
     padding: 20px;
 }
 .scontainer {
@@ -64,9 +64,15 @@ html, body {
     border-radius: 15px;
 }
 
-.column img {
+.columnleft img, .columnright img {
     height: 100;
-    width: 400px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.columncenter img {
+    height: 100;
+    width: 100%;
     border-radius: 15px;
 }
 html {

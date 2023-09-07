@@ -23,7 +23,7 @@ html, body {
 }
 
 .navbar, .logo, p {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     flex-grow: 1;
@@ -47,7 +47,7 @@ html, body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 5%;
     padding: 20px;
     overflow: auto;
 }
@@ -78,6 +78,7 @@ a:hover {
 }
 iframe {
     border-radius: 15px;
+    width: 90%;
 }
 .center-content {
     font-size: 24px;

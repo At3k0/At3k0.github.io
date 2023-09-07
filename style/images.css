@@ -46,7 +46,7 @@ html, body {
 .container {
     display: flex;
     grid-template-columns: 3fr 3fr;
-    grid-gap: 100px;
+    grid-gap: 5%;
     padding: 20px;
 }
 .scontainer {
@@ -67,14 +67,17 @@ html, body {
 .column img {
     width: 400px;
     border-radius: 15px;
+    width: 100%;
 }
 .bigimg img {
     width: 710px;
     border-radius: 15px;
+    width: 100%;
 }
 .bigimg2 img {
     width: 759px;
     border-radius: 15px;
+    width: 100%;
 }
 html {
     background-color: royalblue;
