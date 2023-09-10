@@ -1,5 +1,4 @@
 const specialDates = [
-    { month: 1, date: 14, video: "poem.mp4", text: "damn thats deep kat" },
     { month: 6, date: 25, video: "birthday.mp4", text: "july 25th baby" },
     { month: 7, date: 11, video: "dogdays.mp4", text: "summer's gone" },
     { month: 7, date: 22, video: "schoolsin.mp4", text: "and the chaos begins" },
