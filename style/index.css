@@ -64,17 +64,12 @@ html, body {
     border-radius: 15px;
 }
  
-.columnleft img, .columnright img {
+.columnleft img, .columncenter img, .columnright img {
     height: 100;
     width: 100%;
     border-radius: 15px;
 }
 
-.columncenter img {
-    height: 100;
-    width: 100%;
-    border-radius: 15px;
-}
 html {
     background-color: royalblue;
 }
