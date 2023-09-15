@@ -45,9 +45,10 @@ html, body {
     border-top-left-radius: 15px;
 }
 .container {
-    display: block;
+    display: flex;
+    grid-template-columns: 3fr 3fr;
+    grid-gap: 5%;
     padding: 20px;
-    overflow: auto;
 }
 
 .column {
@@ -55,9 +56,16 @@ html, body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Align text to the top */
     border-radius: 15px;
+    flex: 1;
+}
+
+h1 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 b {
     font-size: 24px;
