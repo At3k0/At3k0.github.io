@@ -1,5 +1,5 @@
 #  About
-Soo, if you don't go to or not affiliated with Bridges Academy, I'd like to kindly tell you to go away please<br>
+Soooooooooooo, if you don't go to or not affiliated with Bridges Academy, I'd like to kindly tell you to go away please<br>
 This site is for writing down halarious quotes from people there<br>
 It's also where I post my comedic videos, because I'm not gonna purchase another domain just for that (most are unlisted because kids act in them)
 # Requests

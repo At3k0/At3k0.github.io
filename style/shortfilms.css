@@ -80,6 +80,9 @@ iframe {
     border-radius: 15px;
     width: 90%;
 }
+.comingsoon {
+    border-radius: 15px;
+}
 .center-content {
     font-size: 24px;
     font-weight: bold;
