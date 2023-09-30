@@ -28,4 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
       event.preventDefault();
       loadContent("quotes.html");
     });
+    indexLink.addEventListener("click", function(event) {
+      event.preventDefault();
+      loadContent("index.html");
   });
