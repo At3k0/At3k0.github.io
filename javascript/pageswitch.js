@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
           contentContainer.innerHTML = data;
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => console.error('oopsie poopsie something went wrong:', error));
     }
     var shortfilmsLink = document.querySelector("a[href='shortfilms.html']");
     var candidsLink = document.querySelector("a[href='candids.html']");
@@ -27,9 +27,5 @@ document.addEventListener("DOMContentLoaded", function() {
     quotesLink.addEventListener("click", function(event) {
       event.preventDefault();
       loadContent("quotes.html");
-    });
-    indexLink.addEventListener("click", function(event) {
-      event.preventDefault();
-      loadContent("index.html");
     });
   });

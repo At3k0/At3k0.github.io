@@ -28,6 +28,7 @@ html, body {
     flex-grow: 1;
     z-index: 2;
 }
+
 .footer {
     font-size: 24px;
     font-weight: bold;
@@ -43,16 +44,20 @@ html, body {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
+
 .container {
     display: flex;
     grid-template-columns: 3fr 3fr;
     grid-gap: 5%;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
 .scontainer {
     display: block;
     padding: 20px;
 }
+
 .column {
     background-color: #f2f2f2;
     padding: 20px;
@@ -73,25 +78,50 @@ html, body {
 html {
     background-color: royalblue;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 a:hover {
     color: darkslategray;
 }
+
 .center-content {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     flex-grow: 1;
 }
+
 .line {
     margin-bottom: 10px;
     border: none;
     border-top: 1px solid grey;
     width: 5%;
 }
+
+.quoteform, .songtext {
+    display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.songvideo {
+    border-radius: 15px;
+    width: 560px;
+    height: 315px;
+    margin: 0 auto;
+    display: block;
+}
+
 ::-webkit-scrollbar {
     width: 0;
 }
