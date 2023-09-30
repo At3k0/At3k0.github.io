@@ -67,41 +67,34 @@ html, body {
     height: auto;
     width: 400px;
 }
-
 html {
     background-color: royalblue;
 }
-
 a {
     text-decoration: none;
 }
 a:hover {
     color: darkslategray;
 }
-
 iframe {
     border-radius: 15px;
     width: 90%;
 }
-
 .comingsoon {
     border-radius: 15px;
 }
-
 .center-content {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     flex-grow: 1;
 }
-
 .line {
     margin-bottom: 10px;
     border: none;
     border-top: 1px solid grey;
     width: 5%;
 }
-
 ::-webkit-scrollbar {
     width: 0;
 }
