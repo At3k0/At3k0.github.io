@@ -12,6 +12,7 @@ Wanna contact me about something else? DM me on discord - @alecdiramerian
 # Credits
 Alec Diramerian (myself) - Coding<br>
 Myles O' Meara - Providing quotes<br>
+Abby Mathess - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
 Christian Solis - Allowing me to yoink quotes off his quote board<br>
 David Hekimian - Helping me set this up because making a website and having it hosted is definitally a very easy process<br>
