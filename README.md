@@ -10,9 +10,9 @@ If you're wondering why I wanted to address that in the readme file, it's becaus
 If you don't want your name next to the quote to prove that you said it, that's fine, I have infinite question marks to use. I can also give credit to you here (in Credits) if you suggest one yourself<br>
 Wanna contact me about something else? DM me on discord - @alecdiramerian
 # Credits
-Alec Diramerian (myself) - Coding<br>
 Myles O' Meara - Providing quotes<br>
 Abby Mathess - Providing a quote<br>
+Ava Federgreen - Providing a quote
 "annonymous student" - Providing a quote<br>
 Christian Solis - Allowing me to yoink quotes off his quote board<br>
 David Hekimian - Helping me set this up because making a website and having it hosted is definitally a very easy process<br>
