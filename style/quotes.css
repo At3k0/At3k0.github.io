@@ -7,8 +7,6 @@ html, body {
 
 .container {
     display: flex;
-    grid-template-columns: repeat(2, 3fr);
-    grid-gap: 5%;
     height: 100%;
     justif/*congrats you found the secret
 All I need's a little love in my life
@@ -126,8 +124,19 @@ a:hover {
 .page {
     display: none;
 }
+
 .page.active {
     display: block;
+}
+
+.pagenum {
+    font-size: 20px;
+}
+
+button {
+    border-radius: 15px;
+    border-color: royalblue;
+    font-family: "Karla", sans-serif;
 }
 ::-webkit-scrollbar {
     width: 0;

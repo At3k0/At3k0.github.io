@@ -8,8 +8,8 @@
 	    <title>Bridges Hall of Fame</title>
 	    <link rel="icon" type="image/x-icon" href="images/smallogo.png">
 	    <link rel="stylesheet" type="text/css" href="style/index.css">
-	    <script src="videodates/videodates.js"></script>
-	    <script src="pageswitch.js"></script>
+	    <script src="javascript/videodates.js"></script>
+	    <script src="javascript/pageswitch.js"></script>
 	</head> 
 	<body>
 	    <header>
@@ -92,33 +92,34 @@
 	    <!--i tried to fix it again, it always decides it doesnt want to work-->
 	    <script>
 	        let currentPage = 1;
-
+	        
 	        function showPage(pageNumber) {
+	        	for (let i = 1; i <= 5; i++) {
+	        		document.querySelector(".page.page-" + i).classList.remove("active");
+	        	}
 
-	            for (let i = 1; i <= 4; i++) {
-	                document.querySelector(".page.page-" + i).classList.remove("active");
-	            }
+	        	document.querySelector(".page.page-" + pageNumber).classList.add("active");
+	        	currentPage = pageNumber;
 
-	            document.querySelector(".page.page-" + pageNumber).classList.add("active");
-	            currentPage = pageNumber;
-
-	            if (pageNumber === 4) {
-	                document.getElementById("division").innerText = "MS Quotes";
-	            } else {
-	            	document.getElementById("division").innerText = "HS Quotes";
-	            }
+	        	if (pageNumber === 5) {
+	        		document.getElementById("division").innerText = "MS Quotes";
+	        	} else {
+	        		document.getElementById("division").innerText = "HS Quotes";
+	        	}
 	        }
 
 	        function goForward() {
-	            if (currentPage < 4) {
-	                showPage(currentPage + 1);
-	            }
+	        	if (currentPage < 5) {
+	        		showPage(currentPage + 1);
+	        	}
+	        	document.getElementById("pagenum").innerText = currentPage;
 	        }
 
 	        function goBack() {
-	            if (currentPage > 1) {
-	                showPage(currentPage - 1);
-	            }
+	        	if (currentPage > 1) {
+	        		showPage(currentPage - 1);
+	        	}
+	        	document.getElementById("pagenum").innerText = currentPage;
 	        }
 	        showPage(currentPage);
 	    </script>
