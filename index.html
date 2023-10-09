@@ -23,6 +23,10 @@
 		    <span class="quoteform">
 		    	<a href="https://forms.gle/1rS7JwsfzxzZ4B2V7" class="txt">Click here to request quotes!</a>
 		    </span>
+		    <br>
+		    <span class="quoteform">
+			    NOTE: No quotes will be added until the website refresh!
+			</span>
 	    </div>
 	    <div id="home">
 			<div style="text-align: center;">
@@ -90,38 +94,90 @@
 	    </footer>
 	    <!--putting the script below in index is a temp solution for quotebook page switching issues, i will try to fix later-->
 	    <!--i tried to fix it again, it always decides it doesnt want to work-->
+	    <!--will be fixed after website refresh!-->
 	    <script>
-	        let currentPage = 1;
-	        
-	        function showPage(pageNumber) {
+	        let currentPageSF = 1;
+	        let currentPageQ = 1;
+
+	        /*SHORT FILMS*/
+	        function showPageSF(pageNumberSF) {
+	        	for (let i = 1; i <= 7; i++) {
+	        		document.querySelector(".page.page-" + i).classList.remove("active");
+	        	}
+
+	        	document.querySelector(".page.page-" + pageNumberSF).classList.add("active");
+	        	currentPageSF = pageNumberSF;
+
+	        	if (pageNumberSF === 1) {
+	        		document.getElementById("division").innerText = "Teacher's Bane";
+	        	} else if (pageNumberSF === 2) {
+	        		document.getElementById("division").innerText = "Teacher's Bane - goofy edition";
+	        	} else if (pageNumberSF === 3) {
+	        		document.getElementById("division").innerText = "???";
+	        	} else if (pageNumberSF === 4) {
+	        		document.getElementById("division").innerText = "Shakespeare Shorts (no cap) - goofy edition";
+	        	} else if (pageNumberSF === 5) {
+	        		document.getElementById("division").innerText = "Flight AKD-69420";
+	        	} else if (pageNumberSF === 6) {
+	        		document.getElementById("division").innerText = "Dixon Falls Off the Swing";
+	        	} else if (pageNumberSF === 7) {
+	        		document.getElementById("division").innerText = "World War 3 Trailer - but in Terraria";
+	        	}
+	        }
+
+	        function goForwardSF() {
+	        	if (currentPageSF < 7) {
+	        		showPageSF(currentPageSF + 1);
+	        	} else {
+	        		showPageSF(1);
+	        	}
+	        	document.getElementById("pagenum").innerText = currentPageSF;
+	        }
+
+	        function goBackSF() {
+	        	if (currentPageSF > 1) {
+	        		showPageSF(currentPageSF - 1);
+	        	} else {
+	        		showPageSF(7);
+	        	}
+	        	document.getElementById("pagenum").innerText = currentPageSF;
+	        }
+	        showPageSF(currentPageSF);
+
+	        /*QUOTES*/
+	        function showPageQ(pageNumberQ) {
 	        	for (let i = 1; i <= 5; i++) {
 	        		document.querySelector(".page.page-" + i).classList.remove("active");
 	        	}
 
-	        	document.querySelector(".page.page-" + pageNumber).classList.add("active");
-	        	currentPage = pageNumber;
+	        	document.querySelector(".page.page-" + pageNumberQ).classList.add("active");
+	        	currentPageQ = pageNumberQ;
 
-	        	if (pageNumber === 5) {
+	        	if (pageNumberQ === 5) {
 	        		document.getElementById("division").innerText = "MS Quotes";
 	        	} else {
 	        		document.getElementById("division").innerText = "HS Quotes";
 	        	}
 	        }
 
-	        function goForward() {
-	        	if (currentPage < 5) {
-	        		showPage(currentPage + 1);
+	        function goForwardQ() {
+	        	if (currentPageQ < 5) {
+	        		showPageQ(currentPageQ + 1);
+	        	} else {
+	        		showPageQ(1);
 	        	}
-	        	document.getElementById("pagenum").innerText = currentPage;
+	        	document.getElementById("pagenum").innerText = currentPageQ;
 	        }
 
-	        function goBack() {
-	        	if (currentPage > 1) {
-	        		showPage(currentPage - 1);
+	        function goBackQ() {
+	        	if (currentPageQ > 1) {
+	        		showPageQ(currentPageQ - 1);
+	        	} else {
+	        		showPageQ(5);
 	        	}
-	        	document.getElementById("pagenum").innerText = currentPage;
+	        	document.getElementById("pagenum").innerText = currentPageQ;
 	        }
-	        showPage(currentPage);
+	        showPageQ(currentPageQ);
 	    </script>
 	</body>
 </html>
