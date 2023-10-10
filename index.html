@@ -1,183 +1,314 @@
 <!DOCTYPE html>
-<html> 
+<html>
 	<head>
 		<!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3446825382037299"
      crossorigin="anonymous"></script>-->
-	    <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <title>Bridges Hall of Fame</title>
-	    <link rel="icon" type="image/x-icon" href="images/smallogo.png">
-	    <link rel="stylesheet" type="text/css" href="style/index.css">
-	    <script src="javascript/videodates.js"></script>
-	    <script src="javascript/pageswitch.js"></script>
-	</head> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bridges Hall of Fame</title>
+		<link rel="icon" type="image/x-icon" href="images/smallogo.png">
+		<link rel="stylesheet" type="text/css" href="style/index.css">
+		<script src="javascript/videodates.js"></script>
+	</head>
 	<body>
-	    <header>
-	        <div class="navbar">
-	            <div class="logo">
-	                <a href=""><img src="images/smallogo.png"></a>
-	            </div>
-	        </div>
-	    </header>
-	    <div style="text-align: center;">
-		    <span class="quoteform">
-		    	<a href="https://forms.gle/1rS7JwsfzxzZ4B2V7" class="txt">Click here to request quotes!</a>
-		    </span>
-		    <br>
-		    <span class="quoteform">
-			    NOTE: No quotes will be added until the website refresh!
-			</span>
-	    </div>
-	    <div id="home">
-			<div style="text-align: center;">
-			    <iframe
-			    	class="songvideo"
-				    id="songvideo"
-				    width="560"
-				    height="315"
-				    src=""
-				    frameborder="0"
-				    allowfullscreen>
-			    </iframe>
-			    <p id="songtext" class="songtext"></p>
-			</div>
-		    <div class="container">
-		        <div class="column">
-		        	<div class="columnleft">
-		        		<a href="shortfilms.html"><img src="images/shortfilmsimg.png"></a>
-			        	<a href="shortfilms.html"><p>My short films! (more coming soon)</p></a>
-		        	</div>
-		        </div>
-		        <div class="column">
-		        	<div class="columncenter">
-		        		<a href="candids.html"><img src="images/candidsimg.png"></a>
-		        		<a href="candids.html"><p>Random images from Bridges</p></a>
-		        	</div>
-		        </div>
-		        <div class="column">
-		        	<div class="columnright">
-		        		<a href="quotes.html"><img src="images/quotesimg.png"></a>
-		            	<a href="quotes.html"><p>Or anything said without context.</p></a>
-		        	</div>
-		        </div>
-		    </div>
-		    <div class="scontainer">
-		    	<div class="column">
-		    		<h1>Information</h1>
-		    		<p>
-		    			Bridgeshof.com is a personal website I made to store all the dumb
-		    			quotes and candids from this hurricane of a school.
-		    			<br>
-		    			It's also my
-		    			place to put my short films, since the Bridges Vimeo account STILL
-		    			hasn't posted them...
-		    		</p>
-		    	</div>
-		    </div>
-	    </div>
-	    <footer>
-	    	<div class="footer">
-	    		<div class="center-content">
-	    			copyright literally nobody 2023
-	    			<hr class="line">
-					Run by Alec Diramerian
-					<hr class="line">
-					<a href="https://github.com/AlecDiramerian/bhof.github.io" class="l">GitHub</a>
-					 || 
-					<a href="https://www.instagram.com/bridges_hof/" class="l">Instagram</a>
-					 || 
-					<a href="https://www.youtube.com/channel/UCejJ30l_YptNpTt_Kd_-SRA" class="l">YouTube</a>
-					<hr class="line">
-					Contact me at alecdiramerian@gmail.com
+		<header>
+			<div class="navbar">
+				<div class="logo">
+					<img onclick="showDefault()" src="images/smallogo.png">
 				</div>
-	    	</div>
-	    </footer>
-	    <!--putting the script below in index is a temp solution for quotebook page switching issues, i will try to fix later-->
-	    <!--i tried to fix it again, it always decides it doesnt want to work-->
-	    <!--will be fixed after website refresh!-->
-	    <script>
-	        let currentPageSF = 1;
-	        let currentPageQ = 1;
-
-	        /*SHORT FILMS*/
-	        function showPageSF(pageNumberSF) {
-	        	for (let i = 1; i <= 7; i++) {
-	        		document.querySelector(".page.page-" + i).classList.remove("active");
-	        	}
-
-	        	document.querySelector(".page.page-" + pageNumberSF).classList.add("active");
-	        	currentPageSF = pageNumberSF;
-
-	        	if (pageNumberSF === 1) {
-	        		document.getElementById("division").innerText = "Teacher's Bane";
-	        	} else if (pageNumberSF === 2) {
-	        		document.getElementById("division").innerText = "Teacher's Bane - goofy edition";
-	        	} else if (pageNumberSF === 3) {
-	        		document.getElementById("division").innerText = "???";
-	        	} else if (pageNumberSF === 4) {
-	        		document.getElementById("division").innerText = "Shakespeare Shorts (no cap) - goofy edition";
-	        	} else if (pageNumberSF === 5) {
-	        		document.getElementById("division").innerText = "Flight AKD-69420";
-	        	} else if (pageNumberSF === 6) {
-	        		document.getElementById("division").innerText = "Dixon Falls Off the Swing";
-	        	} else if (pageNumberSF === 7) {
-	        		document.getElementById("division").innerText = "World War 3 Trailer - but in Terraria";
-	        	}
-	        }
-
-	        function goForwardSF() {
-	        	if (currentPageSF < 7) {
-	        		showPageSF(currentPageSF + 1);
-	        	} else {
-	        		showPageSF(1);
-	        	}
-	        	document.getElementById("pagenum").innerText = currentPageSF;
-	        }
-
-	        function goBackSF() {
-	        	if (currentPageSF > 1) {
-	        		showPageSF(currentPageSF - 1);
-	        	} else {
-	        		showPageSF(7);
-	        	}
-	        	document.getElementById("pagenum").innerText = currentPageSF;
-	        }
-	        showPageSF(currentPageSF);
-
-	        /*QUOTES*/
-	        function showPageQ(pageNumberQ) {
-	        	for (let i = 1; i <= 5; i++) {
-	        		document.querySelector(".page.page-" + i).classList.remove("active");
-	        	}
-
-	        	document.querySelector(".page.page-" + pageNumberQ).classList.add("active");
-	        	currentPageQ = pageNumberQ;
-
-	        	if (pageNumberQ === 5) {
-	        		document.getElementById("division").innerText = "MS Quotes";
-	        	} else {
-	        		document.getElementById("division").innerText = "HS Quotes";
-	        	}
-	        }
-
-	        function goForwardQ() {
-	        	if (currentPageQ < 5) {
-	        		showPageQ(currentPageQ + 1);
-	        	} else {
-	        		showPageQ(1);
-	        	}
-	        	document.getElementById("pagenum").innerText = currentPageQ;
-	        }
-
-	        function goBackQ() {
-	        	if (currentPageQ > 1) {
-	        		showPageQ(currentPageQ - 1);
-	        	} else {
-	        		showPageQ(5);
-	        	}
-	        	document.getElementById("pagenum").innerText = currentPageQ;
-	        }
-	        showPageQ(currentPageQ);
-	    </script>
+				<br>
+				<div class="navbarlinks">
+					<a onclick="showPage1()" class="navbarlink">Short Films</a>
+					<a onclick="showPage2()" class="navbarlink">Candids</a>
+					<a onclick="showPage3()" class="navbarlink">Quotes</a>
+				</div>
+			</div>
+		</header>
+		<div style="text-align: center;">
+			<span class="quoteform">
+				<a href="https://forms.gle/1rS7JwsfzxzZ4B2V7" class="txt">Click here to request quotes!</a>
+			</span>
+			<br>
+		</div>
+		<div style="text-align: center;">
+			<iframe class="songvideo" id="songvideo" width="560" height="315" src="" frameborder="0" allowfullscreen="" style="display: none;"></iframe>
+			<p id="songtext" class="songtext" style="display: none;"></p>
+		</div>
+		<div id="default" class="default">
+			<div class="container">
+				<div class="column">
+					<div class="columnleft">
+						<img src="images/shortfilmsimg.png" onclick="showPage1()">
+						<p onclick="showPage1()">My short films</p>
+					</div>
+				</div>
+				<div class="column">
+					<div class="columncenter">
+						<img src="images/candidsimg.png" onclick="showPage2()">
+						<p onclick="showPage2()">Random images from Bridges</p>
+					</div>
+				</div>
+				<div class="column">
+					<div class="columnright">
+						<img src="images/quotesimg.png" onclick="showPage3()">
+						<p onclick="showPage3()">The Bridges Academy Quotebook</p>
+					</div>
+				</div>
+			</div>
+			<div class="scontainer">
+				<div class="column">
+					<h1>Information</h1>
+					<p> Bridgeshof.com is a personal website I made to store all the dumb quotes and candids from this hurricane of a school. <br> It's also my place to put my short films, since the Bridges Vimeo account STILL hasn't posted them... </p>
+				</div>
+			</div>
+		</div>
+		<div id="p1" class="p1">
+			<div class="container">
+				<div class="column">
+					<h1 id="divisionSF">Teacher's Bane</h1>
+					<b>
+						<div class="sfpage sfpage-1 active">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/IaG5XPOW9cc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<p>The fan favorite</p>
+						</div>
+						<div class="sfpage sfpage-2">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/S_uhfeleOdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<p>Don't trust me when I'm bored :)</p>
+						</div>
+						<div class="sfpage sfpage-3">
+							<img class="comingsoon" width="560" height="315" src="images/when.png">
+							<p>coming this spring</p>
+						</div>
+						<div class="sfpage sfpage-4">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/6lm-AGp-szU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<p>Bridges' play made goofy.</p>
+						</div>
+						<div class="sfpage sfpage-5">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/ERArvgDBJZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<p>My first short film... Not well made</p>
+						</div>
+						<div class="sfpage sfpage-6">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/Xy6nl8dwcbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<p>My second short film... Also not well made</p>
+						</div>
+						<div class="sfpage sfpage-7">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/Mg_RJc6KiEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<p>Thanks for showing me the original, Elias</p>
+						</div>
+					</b>
+					<div>
+						<button onclick="goBackSF()">Previous</button>
+						<span class="pagenumSF"> Page <span id="pagenumSF">1</span>/7 </span>
+						<button onclick="goForwardSF()">Next</button>
+					</div>
+					<!--<div class="column"><h1>Short Film Hall of Fame (coming soon)</h1><p>(ok the reason is i havent got permission to post anything here yet)</p></div> probably gonna wait until the next film festival for this-->
+				</div>
+			</div>
+		</div>
+		<div id="p2" class="p2">
+			<div class="container">
+				<div class="column">
+					<div class="columnleft">
+						<img src="images/saveriogpt.jpeg">
+						<br>
+						<p>Saverio is a cheater oooohhh</p>
+					</div>
+				</div>
+				<div class="column">
+					<div class="columncenter">
+						<img src="images/scottpen.JPG">
+						<br>
+						<p>I stole one of scott's pens. <br>I regret nothing </p>
+					</div>
+				</div>
+				<div class="column">
+					<div class="columnright">
+						<img src="images/bradmaid.jpeg">
+						<br>
+						<p>Brad maid? More like Braid</p>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="container">
+				<div class="column bigimg">
+					<div class="columnleft">
+						<img src="images/os.jpeg">
+						<br>
+						<p>Trigger warning</p>
+					</div>
+				</div>
+				<div class="column bigimg2">
+					<div class="columnright">
+						<img src="images/mylespano.jpg">
+						<br>
+						<p>Well, uh... this certainly is an image</p>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="container">
+				<div class="column">
+					<div class="columnleft">
+						<img src="images/noodle.jpeg">
+						<br>
+						<p>Noodle-head</p>
+					</div>
+				</div>
+				<div class="column">
+					<div class="columncenter">
+						<img src="images/hack.jpeg">
+						<br>
+						<p>I am the one who stole your IPs <br>in 2021-2022 </p>
+					</div>
+				</div>
+				<div class="column">
+					<div class="columnright">
+						<img src="images/mstable.jpeg">
+						<br>
+						<p>Found under an MS lunch table</p>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="container">
+				<div class="column bigimg">
+					<div class="columnleft">
+						<img src="images/lays.JPG">
+						<br>
+						<p>I am the Layax. I speak for the chips</p>
+					</div>
+				</div>
+				<div class="column bigimg2">
+					<div class="columnright">
+						<img src="images/chesthair.jpeg">
+						<br>
+						<p>I could never sum him up in a better way</p>
+					</div>
+				</div>
+			</div>
+			<br>
+		</div>
+		<div id="p3" class="p3">
+			<div class="container">
+				<div class="column">
+					<h1 id="divisionQ">HS Quotes</h1>
+					<b>
+						<div class="page page-1 active">
+						"That is so uncool and not fast" -Noah N.
+						<br>
+						"Mealz was jit trippin so he wasn't feeling bussin’ bussin’ fr fr on god no cap so he was finna cry" -Noah N.
+						<br>
+						"Noah Nelscan LOVES World War II" -Noah N.
+						<br>
+						"Things are gonna get W I C K E D" -Noah N.
+						<br>
+						"...and then she showed her..." -Liam H.
+						<br>
+						"ME GUSTA INHALAR COCAÍNA" -Chris L.
+						<br>
+						"Stop saying nutty words!" -Me
+						<br>
+						"Rocks in your socks while using google docs when I have chicken pox" -Me
+						<br>
+						"If you use 'tu' instead of 'usted' while talking to the doctor, he will purposely fail your surgery" -Me
+						<br>
+						"Seleucids? More like selling kids" -Me
+					</div>
+					<div class="page page-2">
+						"You are more ancient than Madonna’s boobs" -Ezra E.
+						<br>
+						"This video was sponsored by Raid Shadow Legends" -Candi Milo
+						<br>
+						"Guys Sans Undertale is real I think he is my dad" -Josh R.
+						<br>
+						"Myles, you forgot to walk the fish!" -Cayl K.
+						<br>
+						"I'm a total chocolate milker" -Lily K.
+						<br>
+						"How many Phoenixlings could you take in a fight?" -Myles O.M.
+						<br>
+						"Please don't bite my other parts" -Myles O.M.
+						<br>
+						"I'm gonna marry my daughter" -Myles O.M.
+						<br>
+						"My name is Isaiah and I am a he/him" -Isaiah S.
+						<br>
+						"Stop milking me!" -Isaiah S.
+					</div>
+					<div class="page page-3">
+						"This is the most normal school of all time" -Abby M.
+						<br>
+						"Chris was eating his math homework at carpool" -Abby M.
+						<br>
+						"Alec Dhar-menian" -Tal G.
+						<br>
+						"Sus Amigos" -Elizabeth H. <!--she actually said that im so sorry-->
+						<br>
+						"Gustavo said I have schizophrenia" -Miles E.
+						<br>
+						"I almost capped that bottle flip, no cap" -Cole W.
+						<br>
+						"Maybe the real gaslighters were the friends we made along the way" -Kyra C.
+						<br>
+						"My homework ate my dog" -Anonymous
+						<br>
+						"Staff infections taste good" -Vivian S.
+						<br>
+						"Please don't lick my Jillow" -Elsa D.
+					</div>
+					<div class="page page-4">
+						"Everything is snortable" -Andrew C.
+						<br>
+						"How do you feel about the ending?" "Yeah" -Interaction between JT C. and Skye H.
+						<br>
+						"and...saving THAT for blackmailing purposes" -Sarah Q.
+					</div>
+					<div class="page page-5">
+						"Chris L. is the nicest person I've got rejected by" -Xia F.
+						<br>
+						"'Hurley' starts with an 'F'" -Christian S.
+						<br>
+						"Alec imma bomb your house" -Zoe M.
+						<br>
+						"Not gonna lie, Mary Poppins is hot" -Josh E.
+						<br>
+						"This gum is so tender" -Josh E.
+						<br>
+						"What if I possessed a child?" -Chris S.
+						<br>
+						"Don’t do TikTok, kids" -Mealz M.
+						<br>
+						"25 dollars and I'll make out with the skull" -Oliver B.
+						<br>
+						"You take your meds and YOU disappear" -Alex E.
+						<br>
+						"B.C. stands for 'Before Charlie and the Chocolate Factory'" -Eli R.
+						<br>
+						"Scott will be notified" -???
+					</div>
+					</b>
+					<div>
+						<button onclick="goBackQ()">Previous</button>
+						<span class="pagenumQ"> Page <span id="pagenumQ">1</span>/5 </span>
+						<button onclick="goForwardQ()">Next</button>
+					</div>
+				</div>
+				<!--phoenix quotes coming in 3-5 buisness days-->
+			</div>
+		</div>
+		<footer>
+			<div class="footer">
+				<div class="center-content"> copyright literally nobody 2023
+					<hr class="line"> Run by Alec Diramerian
+					<hr class="line">
+					<a href="https://github.com/AlecDiramerian/bhof.github.io" class="l">GitHub</a> || <a href="https://www.instagram.com/bridges_hof/" class="l">Instagram</a> || <a href="https://www.youtube.com/channel/UCejJ30l_YptNpTt_Kd_-SRA" class="l">YouTube</a>
+					<hr class="line"> Contact me at alecdiramerian@gmail.com
+				</div>
+			</div>
+		</footer>
+		<script src="javascript/pageswitch.js" type="text/javascript"></script>
+		<script src="javascript/quotepages.js" type="text/javascript"></script>
+		<script src="javascript/shortfilmspages.js" type="text/javascript"></script>
 	</body>
 </html>

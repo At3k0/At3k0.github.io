@@ -25,9 +25,10 @@ function toggleContent() {
                 t.innerHTML = `<img src="images/sunwontrise.png" alt="${date.text}" style="max-width: 500px;">`;
             } else {
                 v.src = `videodates/${date.video}`;
+                v.style.display = "block";
+                t.style.display = "inline-flex";
                 t.textContent = date.text;
             }
-            document.getElementById("brvideodates").style.display = "block";
             return;
         }
     }
@@ -35,7 +36,6 @@ function toggleContent() {
     if (today.getMonth() === 11 && today.getDate() <= 12) {
         v.style.display = "none";
         t.innerHTML = `<a href="${specialDates[5].playlist}" target="_blank"><img src="videodates/${specialDates[5].image}" alt="${specialDates[5].text}" style="max-width: 200px;"><br>${specialDates[5].text}</a>`;
-        document.getElementById("brvideodates").style.display = "block";
     } else {
         v.style.display = "none";
         t.style.display = "none";

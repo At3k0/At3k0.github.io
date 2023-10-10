@@ -62,15 +62,15 @@ a:hover {
     width: 5%;
 }
 
-.page {
+.qpage {
     display: none;
 }
 
-.page.active {
+.qpage.active {
     display: block;
 }
 
-.pagenum {
+.pagenumQ {
     font-size: 20px;
 }
 

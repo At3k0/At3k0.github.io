@@ -1,33 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let currentPage = 1;
+let currentPageQ = 1;
 
-    function showPage(pageNumber) {
-        for (let i = 1; i <= 6; i++) {
-            document.querySelector(".page.page-" + i).classList.remove("active");
-        }
-
-        document.querySelector(".page.page-" + pageNumber).classList.add("active");
-        currentPage = pageNumber;
-
-        if (pageNumber === 5) {
-            document.getElementById("division").innerText = "MS Quotes";
-        } else {
-            document.getElementById("division").innerText = "HS Quotes";
-        }
+function showPageQ(pageNumberQ) {
+    for (let i = 1; i <= 5; i++) {
+        document.querySelector(".qpage.qpage-" + i).classList.remove("active");
     }
 
-    function goForward() {
-        if (currentPage < 5) {
-            showPage(currentPage + 1);
-        }
-        document.getElementById("pagenum").innerText = pageNumber;
-    }
+    document.querySelector(".qpage.qpage-" + pageNumberQ).classList.add("active");
+    currentPageQ = pageNumberQ;
 
-    function goBack() {
-        if (currentPage > 1) {
-            showPage(currentPage - 1);
-        }
+    if (pageNumberQ === 5) {
+        document.getElementById("divisionQ").innerText = "MS Quotes";
+    } else {
+        document.getElementById("divisionQ").innerText = "HS Quotes";
     }
+}
 
-    showPage(currentPage);
-});
+function goForwardQ() {
+    if (currentPageQ < 5) {
+        showPageQ(currentPageQ + 1);
+    } else {
+        showPageQ(1);
+    }
+    document.getElementById("pagenumQ").innerText = currentPageQ;
+}
+
+function goBackQ() {
+    if (currentPageQ > 1) {
+        showPageQ(currentPageQ - 1);
+    } else {
+        showPageQ(5);
+    }
+    document.getElementById("pagenumQ").innerText = currentPageQ;
+}
+showPageQ(currentPageQ);
