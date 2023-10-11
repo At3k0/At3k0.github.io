@@ -1,19 +1,23 @@
 #  About
-Soooooooooooo, if you don't go to or not affiliated with Bridges Academy, I'd like to kindly tell you to go away please<br>
-This site is for writing down halarious quotes from people there<br>
-It's also where I post my comedic videos, because I'm not gonna purchase another domain just for that (most are unlisted because kids act in them)
+Yup, I was serious about making this. The Bridges Vimeo didn't post the 2023 MS film festival, so here we are<br>
+There are three pages on here:<br>
+Short Films - All my short films, other people's short films will be coming in 3-5 buisness days<br>
+Candids - Random images from Bridges that didn't make it into the yearbook<br>
+Quotes - The Bridges Academy Quotebook, in the form of a webpage
 # Requests
-If you want to add a quote, you can use the issues tab. I count them as issues because it's an issue if I don't have all the dumbness in my collection. heh.<br>
-If you want to take down one of YOUR quotes, let me know, and I'll take it down<br>
-However, if you want me to take down the entire website because you don't like how it's about the school or something, I'd like to say this in the nicest way possible, but I don't really care. It's my website and I'll do what I want with it. And I know you don't want to go through all the legal trouble.<br>
-If you're wondering why I wanted to address that in the readme file, it's because it's happened before, so I just want to make sure someone doesn't come crying<br>
-If you don't want your name next to the quote to prove that you said it, that's fine, I have infinite question marks to use. I can also give credit to you here (in Credits) if you suggest one yourself<br>
-Wanna contact me about something else? DM me on discord - @alecdiramerian
+[Want to request a Candid? Click here!]<br>
+[Want to request a Quote? Click here!]<br>
+If you want to request a quote/candid to be removed, scroll down to the "Contact" section<br>
 # Credits
 Myles O' Meara - Providing quotes<br>
 Abby Mathess - Providing a quote<br>
-Ava Federgreen - Providing a quote
+Ava Federgreen - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
 Christian Solis - Allowing me to yoink quotes off his quote board<br>
-David Hekimian - Helping me set this up because making a website and having it hosted is definitally a very easy process<br>
-[insert name of whoever made the bridges logo] - making the bridges logo
+David Hekimian - Helping me set this up
+# Contact
+Email: alecdiramerian@gmail.com<br>
+Discord: @alecdiramerian
+
+[want to request a candid? click here!]: https://forms.gle/z2F7er1nemraYQyr6
+[want to request a quote? click here!]: https://forms.gle/FW84K2qrrsttKQ1A9
