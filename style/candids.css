@@ -22,24 +22,10 @@ html, body {
     border-radius: 15px;
 }
 
-.column img {
-    width: 400px;
-    border-radius: 15px;
+.column img, .bigimg img, .bigimg2 img {
+    width: 100%;
     max-width: 100%;
-    height: auto;
-}
-
-.bigimg img {
-    width: 710px;
     border-radius: 15px;
-    max-width: 100%;
-    height: auto;
-}
-
-.bigimg2 img {
-    width: 759px;
-    border-radius: 15px;
-    max-width: 100%;
     height: auto;
 }
 
@@ -61,12 +47,14 @@ a:hover {
     text-align: center;
     flex-grow: 1;
 }
+
 .line {
     margin-bottom: 10px;
     border: none;
     border-top: 1px solid grey;
     width: 5%;
 }
+
 ::-webkit-scrollbar {
     width: 0;
 }
