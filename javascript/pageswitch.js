@@ -54,4 +54,3 @@ function updateCSSLink(href) {
 }
 
 showDefault();
-

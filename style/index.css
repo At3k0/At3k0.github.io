@@ -12,13 +12,13 @@ html, body {
 .navbar {
     display: block;
     background-color: #333;
-    color: #fff;
+    color: white;
     padding: 5px 0px 10px;
-    border-radius: 15px 15px 0 0;
+    border-radius: 0 0 15px 15px;
 }
 
 .navbarlink{
-    background-color: #f2f2f2;
+    background-color: white;
     padding: 5px;
     flex: 1;
     border-radius: 15px;
@@ -47,7 +47,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
     background-color: #333;
-    color: #fff;
+    color: white;
     border-radius: 15px 15px 0 0;
 }
 
@@ -64,7 +64,7 @@ html, body {
 }
 
 .column {
-    background-color: #f2f2f2;
+    background-color: white;
     padding: 20px;
     flex-direction: column;
     display: flex;
@@ -80,8 +80,18 @@ html, body {
     border-radius: 15px;
 }
 
-.navbarlink:hover, img:hover, .columnleft:hover, .columncenter:hover, .columnright:hover {
+img:hover, button:hover, .navbarlink:hover, .columnleft:hover, .columncenter:hover, .columnright:hover {
     cursor: pointer;
+}
+
+button {
+    border-radius: 15px;
+    border-color: dodgerblue;
+    font-family: "Karla", sans-serif;
+}
+
+button:hover {
+    background-color: floralwhite;
 }
 
 html {
@@ -113,13 +123,16 @@ a:hover {
 
 .quoteform, .songtext {
     display: inline-flex;
-    margin: 10px;
-    background-color: white;
     border-radius: 15px;
     padding: 10px;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+}
+
+.songtext {
+    background-color: white;
+    margin: 10px;
 }
 
 .songvideo {
@@ -128,6 +141,14 @@ a:hover {
     height: 315px;
     margin: 0 auto;
     display: block;
+}
+
+.txt {
+    background-color: white;
+    padding: 10px;
+    flex: 1;
+    border-radius: 15px;
+    font-weight: bold;
 }
 
 ::-webkit-scrollbar {
