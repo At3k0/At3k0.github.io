@@ -35,6 +35,14 @@ function showPage3() {
   updateCSSLink('style/quotes.css');
 }
 
+function openQuotesForm() {
+  window.open("https://forms.gle/1rS7JwsfzxzZ4B2V7");
+}
+
+function openCandidsForm() {
+  window.open("https://forms.gle/19PAqcWP1ZffHae8A");
+}
+
 showDefault();
 
 function updateCSSLink(href) {
