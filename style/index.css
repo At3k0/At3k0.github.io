@@ -80,7 +80,7 @@ html, body {
     border-radius: 15px;
 }
 
-img:hover, button:hover, .navbarlink:hover, .columnleft:hover, .columncenter:hover, .columnright:hover {
+img:hover, button:hover, .hover:hover, .navbarlink:hover, .indtxt:hover {
     cursor: pointer;
 }
 
@@ -88,6 +88,7 @@ button {
     border-radius: 15px;
     border-color: dodgerblue;
     font-family: "Karla", sans-serif;
+    font-size: 20px;
 }
 
 button:hover {
