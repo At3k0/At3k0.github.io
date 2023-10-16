@@ -13,6 +13,7 @@ Myles O' Meara - Providing quotes<br>
 Abby Mathess - Providing a quote<br>
 Ava Federgreen - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
+Mealz Mokran - Providing a quote<br>
 Christian Solis - Allowing me to yoink quotes off his quote board<br>
 David Hekimian - Helping me set this up
 # Contact
