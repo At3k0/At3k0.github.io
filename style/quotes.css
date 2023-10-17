@@ -14,6 +14,7 @@ html, body {
 }
 
 .column {
+    height: 370px;
     background-color: white;
     padding: 24px;
     display: flex;
@@ -22,9 +23,13 @@ html, body {
     border-radius: 15px;
     flex: 1;
     margin: 0 200px 10px;
-    font-size: 25px;
+    font-size: 23px;
     text-align: center;
     flex-grow: 1;
+}
+
+.buttons {
+    position: absolute;
 }
 
 h1 {

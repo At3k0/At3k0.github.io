@@ -10,6 +10,7 @@ Quotes - The Bridges Academy Quotebook, in the form of a webpage
 If you want to request a quote/candid to be removed, scroll down to the "Contact" section<br>
 # Credits
 Myles O' Meara - Providing quotes<br>
+Rence Alder - Providing quotes<br>
 Abby Mathess - Providing a quote<br>
 Ava Federgreen - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
