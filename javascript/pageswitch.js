@@ -1,37 +1,37 @@
-const defs = document.getElementById("default");
-const p1s = document.getElementById("p1");
-const p2s = document.getElementById("p2");
-const p3s = document.getElementById("p3");
+const home = document.getElementById("home");
+const shortfilms = document.getElementById("shortfilms");
+const candids = document.getElementById("candids");
+const quotes = document.getElementById("quotes");
 
-function showDefault() {
-  defs.style.display = "block";
-  p1s.style.display = "none";
-  p2s.style.display = "none";
-  p3s.style.display = "none";
+function showHome() {
+  home.style.display = "block";
+  shortfilms.style.display = "none";
+  candids.style.display = "none";
+  quotes.style.display = "none";
   updateCSSLink('style/index.css');
 }
 
-function showPage1() {
-  defs.style.display = "none";
-  p1s.style.display = "block";
-  p2s.style.display = "none";
-  p3s.style.display = "none";
+function showShortFilms() {
+  home.style.display = "none";
+  shortfilms.style.display = "block";
+  candids.style.display = "none";
+  quotes.style.display = "none";
   updateCSSLink('style/shortfilms.css');
 }
 
-function showPage2() {
-  defs.style.display = "none";
-  p1s.style.display = "none";
-  p2s.style.display = "block";
-  p3s.style.display = "none";
+function showCandids() {
+  home.style.display = "none";
+  shortfilms.style.display = "none";
+  candids.style.display = "block";
+  quotes.style.display = "none";
   updateCSSLink('style/candids.css');
 }
 
-function showPage3() {
-  defs.style.display = "none";
-  p1s.style.display = "none";
-  p2s.style.display = "none";
-  p3s.style.display = "block";
+function showQuotes() {
+  home.style.display = "none";
+  shortfilms.style.display = "none";
+  candids.style.display = "none";
+  quotes.style.display = "block";
   updateCSSLink('style/quotes.css');
 }
 

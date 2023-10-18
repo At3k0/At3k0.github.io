@@ -122,7 +122,7 @@ a:hover {
     width: 5%;
 }
 
-.quoteform, .songtext {
+.gforms, .songtext {
     display: inline-flex;
     border-radius: 15px;
     padding: 10px;

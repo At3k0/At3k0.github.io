@@ -15,29 +15,29 @@
 		<header>
 			<div class="navbar">
 				<div class="logo">
-					<img onclick="showDefault()" src="images/smallogo.png" class="hover">
+					<img onclick="showHome()" src="images/smallogo.png" class="hover">
 				</div>
 				<br>
 				<div class="navbarlinks">
-					<button onclick="showPage1()" class="navbarlink">
+					<button onclick="showShortFilms()" class="navbarlink">
 						Short Films
 					</button>
-					<button onclick="showPage2()" class="navbarlink">
+					<button onclick="showCandids()" class="navbarlink">
 						Candids
 					</button>
-					<button onclick="showPage3()" class="navbarlink">
+					<button onclick="showQuotes()" class="navbarlink">
 						Quotes
 					</button>
 				</div>
 			</div>
 		</header>
 		<div style="text-align: center;">
-			<span class="quoteform">
+			<span class="gforms">
 				<button onclick="openQuotesForm()" class="txt">
 					Click here to request quotes!
 				</button>
 			</span>
-			<span class="quoteform">
+			<span class="gforms">
 				<button onclick="openCandidsForm()" class="txt">
 					Click here to request candids!
 				</button>
@@ -52,28 +52,28 @@
 				
 			</p>
 		</div>
-		<div id="default" class="default">
+		<div id="home">
 			<div class="container">
 				<div class="column">
 					<div class="columnleft">
-						<img src="images/shortfilmsimg.png" onclick="showPage1()">
-						<p onclick="showPage1()" class="indtxt">
+						<img src="images/shortfilmsimg.png" onclick="showShortFilms()">
+						<p onclick="showShortFilms()" class="indtxt">
 							My short films
 						</p>
 					</div>
 				</div>
 				<div class="column">
 					<div class="columncenter">
-						<img src="images/candidsimg.png" onclick="showPage2()">
-						<p onclick="showPage2()" class="indtxt">
+						<img src="images/candidsimg.png" onclick="showCandids()">
+						<p onclick="showCandids()" class="indtxt">
 							Random images from Bridges
 						</p>
 					</div>
 				</div>
 				<div class="column">
 					<div class="columnright">
-						<img src="images/quotesimg.png" onclick="showPage3()">
-						<p onclick="showPage3()" class="indtxt">
+						<img src="images/quotesimg.png" onclick="showQuotes()">
+						<p onclick="showQuotes()" class="indtxt">
 							The Bridges Academy Quotebook
 						</p>
 					</div>
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="p1" class="p1">
+		<div id="shortfilms">
 			<div class="container">
 				<div class="column">
 					<h1 id="divisionSF">
@@ -155,7 +155,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="p2" class="p2">
+		<div id="candids">
 			<div class="container">
 				<div class="column">
 					<div class="columnleft">
@@ -263,7 +263,7 @@
 			</div>
 			<br>
 		</div>
-		<div id="p3" class="p3">
+		<div id="quotes">
 			<div class="container">
 				<div class="column">
 					<h1 id="divisionQ">HS Quotes</h1>
@@ -355,6 +355,7 @@
 						</div>
 						<div class="qpage qpage-5">
 							"Rubber? I was rubber once. They locked me in a room. A rats room. A rats room filled with crazy, and crazy makes me rubber. Rubber? I was rubber once..." -Rence A.
+							<br>
 							"Watch yo jacket" -Gabby F.
 						</div>
 						<div class="qpage qpage-6">
