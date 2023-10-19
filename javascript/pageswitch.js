@@ -43,7 +43,7 @@ function openCandidsForm() {
   window.open("https://forms.gle/19PAqcWP1ZffHae8A");
 }
 
-showDefault();
+showHome();
 
 function updateCSSLink(href) {
   const head = document.getElementsByTagName('head')[0];
@@ -61,4 +61,4 @@ function updateCSSLink(href) {
   }
 }
 
-showDefault();
+showHome();
