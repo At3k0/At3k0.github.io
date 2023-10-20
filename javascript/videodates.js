@@ -1,11 +1,11 @@
 const specialDates = [
-    { month: 6, date: 25, video: "birthday.mp4", text: "july 25th baby" },
-    { month: 7, date: 11, video: "dogdays.mp4", text: "cats are better" },
+    { month: 6, date: 25, video: "birthday.mp4", text: "i am now 16. sorry if i hit you with a car"},
+    { month: 7, date: 11, video: "dogdays.mp4", text: "and the cat days are here"},
     { month: 7, date: 22, video: "schoolsin.mp4", text: "and the chaos begins" },
-    { month: 8, date: 23, image: "sunwillnotrise.png", sun: "sun", text: "THE SUN WILL NOT RISE" },
-    { month: 9, date: 1, video: "spooky.mp4", text: "spooky begins" },
-    { month: 9, date: 19, video: "shake.mp4", text: "SHAKE IT OFF"},
-    { month: 11, date: 1, image: "christmasplaylistimg.png", playlist: "https://www.youtube.com/playlist?list=PL0s0N2avSv5eU9BDBymqdismmjwIEZ69-", text: "click for bridgeshof.com 12 days of christmas videos" },
+    { month: 8, date: 23, image: "sunwillnotrise.png", sun: "sun", text: "THE SUN WILL NOT RISE"},
+    { month: 9, date: 1, video: "spooky.mp4", text: "spooky begins"},
+    { month: 9, date: 19, video: "shake.mp4", text: "It's the Great SHAKEout, isn't it?"},
+    { month: 11, date: 1, image: "christmasplaylistimg.png", playlist: "https://www.youtube.com/playlist?list=PL0s0N2avSv5eU9BDBymqdismmjwIEZ69-", text: "alec 12 days of christmas playlist"},
 ];
 
 function toggleContent() {
