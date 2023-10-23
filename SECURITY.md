@@ -8,3 +8,4 @@ all
 
 email me at alecdiramerian@gmail.com
 or dm me on discord @alecdiramerian
+if you dont have gmail or discord just use the issues tab

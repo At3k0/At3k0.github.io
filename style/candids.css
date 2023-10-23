@@ -7,26 +7,29 @@ html, body {
 
 .container {
     display: flex;
-    grid-template-columns: 3fr 3fr;
-    grid-gap: 5%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .column {
     background-color: white;
-    padding: 20px;
-    flex-direction: column;
+    padding: 24px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: flex-start;
-    flex: 1;
     border-radius: 15px;
+    flex: 1;
+    margin: 0 200px 10px;
+    font-size: 25px;
+    text-align: center;
+    flex-grow: 1;
 }
 
-.column img, .bigimg img, .bigimg2 img {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 15px;
-    height: auto;
+h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 html {
@@ -41,6 +44,11 @@ a:hover {
     color: darkslategray;
 }
 
+img {
+    border-radius: 15px;
+    max-width: 100%;
+}
+
 .center-content {
     font-size: 24px;
     font-weight: bold;
@@ -53,6 +61,27 @@ a:hover {
     border: none;
     border-top: 1px solid grey;
     width: 5%;
+}
+
+.cpage {
+    display: none;
+}
+
+.cpage.active {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.pagenumC {
+    font-size: 20px;
+}
+
+button {
+    border-radius: 15px;
+    border-color: dodgerblue;
+    font-family: "Karla", sans-serif;
+    background-color: white;
 }
 
 ::-webkit-scrollbar {

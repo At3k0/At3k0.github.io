@@ -11,6 +11,7 @@ If you want to request a quote/candid to be removed, scroll down to the "Contact
 # Credits
 Myles O' Meara - Providing quotes<br>
 Rence Alder - Providing quotes<br>
+Keiren George - Providing quotes<br>
 Abby Mathess - Providing a quote<br>
 Ava Federgreen - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
@@ -22,6 +23,7 @@ Christian Solis - Allowing me to yoink quotes off his quote board<br>
 David Hekimian - Helping me set this up
 # Contact
 Email: alecdiramerian@gmail.com<br>
+or<br>
 Discord: @alecdiramerian
 
 [want to request a candid? click here!]: https://forms.gle/z2F7er1nemraYQyr6
