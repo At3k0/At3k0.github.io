@@ -1,21 +1,24 @@
 let currentPageSF = 1;
-const pageTitlesSF = [
-    "Teacher's Bane",
-    "Teacher's Bane, but everything goes wrong",
-    "Teacher's Bane, but everything goes wrong 2",
-    "???",
-    "Shakespeare Shorts (no cap) - goofy edition",
-    "Flight AKD-69420",
-    "Dixon Falls Off the Swing",
-    "World War 3 Trailer - but in Terraria"
+const pageDataSF = [
+    { title: "Teacher's Bane", url: "https://www.youtube.com/embed/IaG5XPOW9cc", description: "The one and only"},
+    { title: "Teacher's Bane, but everything goes wrong", url: "https://www.youtube.com/embed/S_uhfeleOdc", description: "Teacher's Bane, but it's different!"},
+    { title: "Teacher's Bane, but everything goes wrong 2", url: "images/when.png", description: "Coming in December 2023"},
+    { title: "???", url: "images/when.png", description: "Coming with the 2024 HS film festival"},
+    { title: "Shakespeare Shorts (no cap) - goofy edition", url: "https://www.youtube.com/embed/6lm-AGp-szU", description: "''A certy-fied hood classic!''"},
+    { title: "Flight AKD-69420", url: "https://www.youtube.com/embed/ERArvgDBJZc", description: "My first (and worst) short film"},
+    { title: "Dixon Falls Off the Swing", url: "https://www.youtube.com/embed/Xy6nl8dwcbs", description: "My second (and uhh wecond) short film"},
+    { title: "World War 3 Trailer - but in Terraria", url: "https://www.youtube.com/embed/Mg_RJc6KiEU", description: "china"},
 ];
 
 function showPageSF(pageNumberSF) {
-    document.querySelector(".sfpage.active").classList.remove("active");
-    document.querySelector(`.sfpage.sfpage-${pageNumberSF}`).classList.add("active");
     currentPageSF = pageNumberSF;
-    document.getElementById("divisionSF").innerText = pageTitlesSF[currentPageSF - 1];
+    const page = pageDataSF[currentPageSF - 1];
+    document.getElementById("video").src = page.url;
+    document.getElementById("divisionSF").innerText = page.title;
     document.getElementById("pagenumSF").innerText = currentPageSF;
+    document.getElementById("desc").innerText = page.description;
+    document.getElementById("img").style.display = (pageNumberSF === 3 || pageNumberSF === 4) ? "block" : "none";
+    document.getElementById("video").style.display = (pageNumberSF !== 3 && pageNumberSF !== 4) ? "block" : "none";
 }
 
 function goForwardSF() {
