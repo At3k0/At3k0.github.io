@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: "Karla", sans-serif;
+    background-color: royalblue;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#alec {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 500px;
+    width: 320px;
+    display: flex;
+    margin: 0 auto;
+    animation-name: m;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+b {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+@keyframes m {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

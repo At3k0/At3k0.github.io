@@ -17,7 +17,7 @@ html, body {
     border-radius: 0 0 15px 15px;
 }
 
-.navbarlink{
+.navbarlink {
     background-color: white;
     padding: 5px;
     flex: 1;
@@ -136,6 +136,14 @@ a:hover {
     margin: 10px;
 }
 
+.new {
+    background-color: white;
+    padding: 5px;
+    flex: 1;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
 .songvideo {
     border-radius: 15px;
     width: 560px;
@@ -151,6 +159,10 @@ a:hover {
     border-radius: 15px;
     font-weight: bold;
 }
+
+.navbarimg {
+    width: 3%;
+}
 /*.ano {
     background-color: white;
     padding: 15px;
@@ -159,6 +171,23 @@ a:hover {
     font-weight: bold;
     font-size: 100px;
 }archived in case i need to make another*/
+
+.fix {
+    position:fixed;
+    bottom: 2%;
+    left: 95.5%;
+}
+
+.fix:hover {
+    width: 6%;
+    left: 92.5%;
+}
+
+.fixt {
+    position:fixed;
+    bottom: 10%;
+    left: 95.5%;
+}
 
 ::-webkit-scrollbar {
     width: 0;
