@@ -11,29 +11,59 @@ html, body {
 }
 
 #alec {
-    background-color: #f2f2f2;
+    background-color: white;
     padding: 10px;
     border-radius: 500px;
     width: 320px;
     display: flex;
     margin: 0 auto;
-    animation-name: m;
-    animation-duration: 5000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: m 5s infinite linear;
+}
+
+#reset {
+    bottom: 20%;
+}
+
+#skin {
+    bottom: 16.5%;
+}
+
+#alec:hover, button:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: floralwhite;
 }
 
 b {
     background-color: white;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 15px;
+}
+
+button {
+    border-radius: 15px;
+    border-color: dodgerblue;
+    font-family: "Karla", sans-serif;
+    font-size: 20px;
+}
+
+#newalec {
+    display: none;
+    top: 10px;
+    position: fixed;
+    font-size: 50px;
+}
+
+#newalecb:hover {
+    cursor: pointer;
 }
 
 @keyframes m {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
