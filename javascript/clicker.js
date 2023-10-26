@@ -22,7 +22,7 @@ const updateDisplay = () => {
 	} else if (skin === 2) {
 		alec.src = alectype === 0 ? 'images/nate.png' : 'images/nate2.png'
 	} else {
-		alec.src = alectype === 0 ? 'images/alecfaceup.png' : 'images/babyalec.png';
+		alec.src = alectype === 0 ? 'images/alec.png' : 'images/alec2.png';
 	}
 };
 
@@ -42,7 +42,7 @@ document.getElementById('skin').addEventListener('click', () => {
     const skinchange = prompt("Which skin do you want to use? (Alec, Abby, or Nate)", "").toLowerCase();
     if (skinchange === "alec") {
         skin = 0;
-        alec.src = alectype === 0 ? 'images/alecfaceup.png' : 'images/babyalec.png';
+        alec.src = alectype === 0 ? 'images/alec.png' : 'images/alec2.png';
     } else if (skinchange === "abby") {
     	skin = 1;
         alec.src = alectype === 0 ? 'images/abby.png' : 'images/abby2.png';
@@ -74,7 +74,7 @@ alec.addEventListener('mousedown', () => {
 	} else if (skin === 2) {
 		alec.src = alectype === 0 ? 'images/natemush.png' : 'images/nate2mush.png';
 	} else {
-	    alec.src = alectype === 0 ? 'images/alecfaceupmush.png' : 'images/babyalecmush.png';
+	    alec.src = alectype === 0 ? 'images/alecmush.png' : 'images/alec2mush.png';
 	}
 });
 
@@ -84,6 +84,6 @@ alec.addEventListener('mouseup', () => {
 	} else if (skin === 2) {
 		alec.src = alectype === 0 ? 'images/nate.png' : 'images/nate2.png'
 	} else {
-		alec.src = alectype === 0 ? 'images/alecfaceup.png' : 'images/babyalec.png';
+		alec.src = alectype === 0 ? 'images/alec.png' : 'images/alec2.png';
 	}
 });
