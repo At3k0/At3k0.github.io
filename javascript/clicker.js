@@ -10,7 +10,7 @@ const autoclick = () => {
 	nume += cps;
 	document.getElementById('num').innerText = nume;
 }
-
+ 
 //saving
 if (localStorage.getItem('nume')) nume = parseInt(localStorage.getItem('nume'));
 if (localStorage.getItem('alectype')) alectype = parseInt(localStorage.getItem('alectype'));
