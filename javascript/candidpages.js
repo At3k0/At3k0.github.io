@@ -17,5 +17,5 @@ function goForwardC() {
 function goBackC() {
     showPageC(currentPageC > 1 ? currentPageC - 1 : 7);
 }
-
+ 
 showPageC(currentPageC);
