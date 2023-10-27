@@ -4,48 +4,64 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>
-			Alec Clicker v0.1
+			Alec Clicker v0.2.2
 		</title>
 		<link rel="icon" type="image/x-icon" href="images/smallogo.png">
 		<link rel="stylesheet" type="text/css" href="style/clicker.css">
 	</head>
 	<body>
-		<div>
-			<b>
-				Alec Clicker v0.2
+		<div id="maindiv">
+			<div>
+				<b>
+					Alec Clicker v0.2.2
+				</b>
+				<br>
+				<br>
+				<b>
+					(its cookie clicker)
+				</b>
+				<br>
+				<br>
+				<img src="images/alec.png" id="alec" onclick="bclick()">
+				<br>
+				<b id="num">
+					0
+				</b>
+				<br>
+				<br>
+				<b>Update v0.2.2 - New skin added</b>
+				<br>
+				<br>
+				<button id="skin">
+					Change Skin
+				</button>
+				<button id="reset">
+					Reset
+				</button>
+				<!--<button id="upgrades">
+					Upgrades
+				</button>
+				very buggy atm, will fix next-->
+			</div>
+		</div>
+		<div id="upgradesdiv">
+			<b id="autoclick1">
+				Buy Autoclicker for
+				<b id="autoclick1cost">
+					10
+				</b>
+				Alecs
 			</b>
-			<br>
-			<br>
-			<b>
-				(its cookie clicker)
-			</b>
-			<br>
-			<br>
-			<img src="images/alecfaceup.png" id="alec" onclick="bclick()">
-			<br>
-			<b id="num">
-				1
-			</b>
-			<br>
-			<br>
-			<b>Update v0.2 - Your progress now saves, new tier added, and 2 new skins added</b>
-			<br>
-			<br>
-			<button id="skin">
-				Change Skin
-			</button>
-			<button id="reset">
-				Reset
+			<button id="back">
+				Go back
 			</button>
 		</div>
-		<div id="newalec">
+		<div id="newalec" class="numanim">
 			<b>Hey! You have enough alecs to buy a new one!</b>
 			<br>
 			<br>
 			<b id="newalecb" onclick="nbclick()">Click me to buy it!</b>
 		</div>
-		
-
 		<script src="javascript/clicker.js" type="text/javascript"></script>
 	</body>
 </html>

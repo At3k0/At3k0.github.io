@@ -11,14 +11,17 @@ If you want to request a quote/candid to be removed, scroll down to the "Contact
 # Credits
 Myles O' Meara - Providing quotes<br>
 Rence Alder - Providing quotes<br>
-Keiren George - Providing quotes<br>
 Abby Mathess - Providing a quote<br>
-Ava Federgreen - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
 Mealz Mokran - Providing a quote<br>
 Christopher Laurence - Providing a quote<br>
 Gabby Frear - Providing a quote<br>
 "gossip gurl" - Providing a quote<br>
+Keiran George - Providing quotes & a candid<br>
+Ava Federgreen - Providing a quote & a candid<br>
+Xiaoxia Fogg - Providing a candid<br>
+Gwen Karaba<br>
+
 Christian Solis - Allowing me to yoink quotes off his quote board<br>
 David Hekimian - Helping me set this up
 # Contact

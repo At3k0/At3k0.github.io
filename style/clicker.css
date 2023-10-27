@@ -60,6 +60,22 @@ button {
     cursor: pointer;
 }
 
+#maindiv {
+    display: block;
+}
+
+#upgradesdiv {
+    display: none;
+}
+
+#autoclick1, #autoclick1cost {
+    background-color: slategrey;
+}
+
+#autoclick1:hover, #autoclick1cost:hover {
+    cursor: pointer;
+}
+
 @keyframes m {
     from {
         transform: rotate(0deg);
