@@ -28,13 +28,13 @@ setInterval(saveProgress, 60000);
 const updateDisplay = () => {
     document.getElementById('num').innerText = nume;
     if (skin === 1) {
-		alec.src = alectype === 0 ? 'images/abby.png' : 'images/abby2.png';
+		alec.src = alectype === 0 ? 'images/abby.png' : (alectype === 1 ? 'images/abby2.png' : 'images/sadlycl.png');
 	} else if (skin === 2) {
-		alec.src = alectype === 0 ? 'images/nate.png' : 'images/nate2.png';
+		alec.src = alectype === 0 ? 'images/nate.png' : (alectype === 1 ? 'images/nate2.png' : 'images/nate3.png');
 	} else if (skin === 3) {
-		alec.src = alectype === 0 ? 'images/dash.png' : 'images/dash2.png'
+		alec.src = alectype === 0 ? 'images/dash.png' : (alectype === 1 ? 'images/dash2.png' : 'images/sadlycl.png');
 	} else {
-		alec.src = alectype === 0 ? 'images/alec.png' : 'images/alec2.png';
+		alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
 	}
 };
 
@@ -42,16 +42,16 @@ document.getElementById('skin').addEventListener('click', () => {
     const skinchange = prompt("Which skin do you want to use? (Alec, Abby, Nate, or Dash)", "").toLowerCase();
     if (skinchange === "alec") {
         skin = 0;
-        alec.src = alectype === 0 ? 'images/alec.png' : 'images/alec2.png';
+        alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
     } else if (skinchange === "abby") {
     	skin = 1;
-        alec.src = alectype === 0 ? 'images/abby.png' : 'images/abby2.png';
+        alec.src = alectype === 0 ? 'images/abby.png' : (alectype === 1 ? 'images/abby2.png' : 'images/sadlycl.png');
     } else if (skinchange === "nate") {
     	skin = 2;
-        alec.src = alectype === 0 ? 'images/nate.png' : 'images/nate2.png';
+        alec.src = alectype === 0 ? 'images/nate.png' : (alectype === 1 ? 'images/nate2.png' : 'images/nate3.png');
     } else if (skinchange === "dash") {
     	skin = 3;
-        alec.src = alectype === 0 ? 'images/dash.png' : 'images/dash2.png';
+        alec.src = alectype === 0 ? 'images/dash.png' : (alectype === 1 ? 'images/dash2.png' : 'images/sadlycl.png');
     }
 });
 
@@ -90,15 +90,15 @@ document.getElementById('reset').addEventListener('click', () => {
 //clicks
 const bclick = () => {
     clickSFX.cloneNode().play();
-    nume += alectype === 0 ? 1 : 5;
+    nume += alectype === 0 ? 1 : (alectype === 1 ? 5 : 10);
     document.getElementById('num').innerText = nume;
-    document.getElementById('newalec').style.display = nume >= 50 && alectype === 0 ? "block" : "none";
+    document.getElementById('newalec').style.display = (nume >= 50 && alectype === 0) || (nume >= 500 && alectype === 1) ? "block" : "none";
     saveProgress();
 };
 
 const nbclick = () => {
-    alec.src = 'images/babyalec.png';
     alectype++;
+    alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
     document.getElementById('newalec').style.display = "none";
     updateDisplay();
     saveProgress();
@@ -106,25 +106,25 @@ const nbclick = () => {
 
 alec.addEventListener('mousedown', () => {
 	if (skin === 1) {
-		alec.src = alectype === 0 ? 'images/abbymush.png' : 'images/abby2mush.png';
+		alec.src = alectype === 0 ? 'images/abbymush.png' : (alectype === 1 ? 'images/abby2mush.png' : 'images/sadlyclmush.png');
 	} else if (skin === 2) {
-		alec.src = alectype === 0 ? 'images/natemush.png' : 'images/nate2mush.png';
+		alec.src = alectype === 0 ? 'images/natemush.png' : (alectype === 1 ? 'images/nate2mush.png' : 'images/nate3mush.png');
 	} else if (skin === 3) {
-		alec.src = alectype === 0 ? 'images/dashmush.png' : 'images/dash2mush.png'
+		alec.src = alectype === 0 ? 'images/dashmush.png' : (alectype === 1 ? 'images/dash2mush.png' : 'images/sadlyclmush.png');
 	} else {
-	    alec.src = alectype === 0 ? 'images/alecmush.png' : 'images/alec2mush.png';
+	    alec.src = alectype === 0 ? 'images/alecmush.png' : (alectype === 1 ? 'images/alec2mush.png' : 'images/alec3mush.png');
 	}
 });
 
 alec.addEventListener('mouseup', () => {
 	if (skin === 1) {
-		alec.src = alectype === 0 ? 'images/abby.png' : 'images/abby2.png';
+		alec.src = alectype === 0 ? 'images/abbt.png' : (alectype === 1 ? 'images/abby2.png' : 'images/sadlycl.png');
 	} else if (skin === 2) {
-		alec.src = alectype === 0 ? 'images/nate.png' : 'images/nate2.png'
+		alec.src = alectype === 0 ? 'images/nate.png' : (alectype === 1 ? 'images/nate2.png' : 'images/nate3.png');
 	} else if (skin === 3) {
-		alec.src = alectype === 0 ? 'images/dash.png' : 'images/dash2.png'
+		alec.src = alectype === 0 ? 'images/dash.png' : (alectype === 1 ? 'images/dash2.png' : 'images/sadlycl.png');
 	} else {
-		alec.src = alectype === 0 ? 'images/alec.png' : 'images/alec2.png';
+		alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
 	}
 });
 

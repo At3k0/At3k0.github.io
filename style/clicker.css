@@ -1,3 +1,4 @@
+/*main stuff*/
 html, body {
     height: 100%;
     margin: 0;
@@ -8,6 +9,19 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+b {
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+button {
+    border-radius: 15px;
+    border-color: dodgerblue;
+    font-family: "Karla", sans-serif;
+    font-size: 20px;
 }
 
 #alec {
@@ -28,36 +42,11 @@ html, body {
     bottom: 16.5%;
 }
 
-#alec:hover, button:hover {
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: floralwhite;
-}
-
-b {
-    background-color: white;
-    padding: 5px;
-    border-radius: 15px;
-}
-
-button {
-    border-radius: 15px;
-    border-color: dodgerblue;
-    font-family: "Karla", sans-serif;
-    font-size: 20px;
-}
-
 #newalec {
     display: none;
     top: 10px;
     position: fixed;
     font-size: 50px;
-}
-
-#newalecb:hover {
-    cursor: pointer;
 }
 
 #maindiv {
@@ -72,10 +61,16 @@ button {
     background-color: slategrey;
 }
 
-#autoclick1:hover, #autoclick1cost:hover {
+/*hover*/
+#autoclick1:hover, #autoclick1cost:hover, #newalecb:hover, #alec:hover, button:hover {
     cursor: pointer;
 }
 
+button:hover {
+    background-color: floralwhite;
+}
+
+/*animation*/
 @keyframes m {
     from {
         transform: rotate(0deg);
