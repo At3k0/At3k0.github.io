@@ -11,13 +11,14 @@ html, body {
     text-align: center;
 }
 
-b {
+b, span {
     background-color: white;
     padding: 5px;
     border-radius: 15px;
 }
 
 button {
+    background-color: white;
     border-radius: 15px;
     border-color: dodgerblue;
     font-family: "Karla", sans-serif;
@@ -54,11 +55,28 @@ button {
 }
 
 #upgradesdiv {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 325px;
+    background-color: lightskyblue;
+    overflow-y: auto;
+    padding: 5px;
+    transition: right 0.5s;
+    border-radius: 15px;
 }
 
-#autoclick1, #autoclick1cost {
-    background-color: slategrey;
+#autoclick1, #autoclick1cost, #soonupg {
+    display: inline-block;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    margin: 1px;
+    cursor: pointer;
+}
+
+#soonupg {
+    background-color: slategray;
 }
 
 /*hover*/
