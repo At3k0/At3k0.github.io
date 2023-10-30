@@ -76,7 +76,7 @@ button {
     border-radius: 15px;
 }
 
-#autoclick1, #autoclick1cost, #soonupg {
+#autoclick1, #autoclick1cost, #autoclick2, #autoclick2cost, #soonupg {
     display: inline-block;
     padding: 5px;
     background-color: white;
@@ -89,9 +89,24 @@ button {
     background-color: slategray;
 }
 
+#descbox {
+    position: absolute;
+    display: none;
+    background-color: white;
+    opacity: 0.9;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px outset dodgerblue;
+    z-index: 1;
+}
+
 /*hover*/
-#autoclick1:hover, #autoclick1cost:hover, #newalecb:hover, #alec:hover, button:hover {
+#autoclick1:hover, #autoclick1cost:hover, #autoclick2:hover, #autoclick2cost:hover, #newalecb:hover, #alec:hover, #autoclick1:hover, #autoclick2:hover, button:hover {
     cursor: pointer;
+}
+
+#soonupg:hover {
+    cursor: not-allowed;
 }
 
 button:hover {

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>
-			Alec Clicker v0.3.1
+			Alec Clicker v0.4
 		</title>
 		<link rel="icon" type="image/x-icon" href="images/smallogo.png">
 		<link rel="stylesheet" type="text/css" href="style/clicker.css">
@@ -16,7 +16,7 @@
 					You feel like making Alecs. But nobody wants to eat your Alecs (thank god)
 				</b>
 				<b>
-					Alec Clicker v0.3.1
+					Alec Clicker v0.4
 				</b>
 				<br>
 				<br>
@@ -25,14 +25,14 @@
 				</b>
 				<br>
 				<br>
-				<img src="images/alec.png" id="alec" onclick="bclick()">
+				<img src="images/alec.png" id="alec" alt="alec" title="alec" onclick="bclick()">
 				<br>
 				<b id="num">
 					0
 				</b>
 				<br>
 				<br>
-				<b>Update v0.3.1 - NEWS!!!</b>
+				<b>Update v0.4 - New skin, new upgrade, more news, and more mores!</b>
 				<br>
 				<br>
 				<button id="skin">
@@ -44,16 +44,22 @@
 				<button id="upgrades">
 					Upgrades
 				</button>
-				
+				<div id="descbox">
+					e
+				</div>
 			</div>
 		</div>
 		<div id="upgradesdiv">
 			<button id="autoclick1">
-				Buy Autoclicker x1
+				Buy Autoclicker
 				<b id="autoclick1cost">$10</b>
 			</button>
+			<button id="autoclick2">
+				Buy Alec Factory
+				<b id="autoclick2cost">$100</b>
+			</button>
 			<button id="soonupg">
-				Coming Soon-er
+				Coming Sooner
 				<b id="soonupg">$?</b>
 			</button>
 			<button id="soonupg">
@@ -73,11 +79,7 @@
 				<b id="soonupg">$?</b>
 			</button>
 			<button id="soonupg">
-				Coming in a while
-				<b id="soonupg">$?</b>
-			</button>
-			<button id="soonupg">
-				Coming in 6-10 buisness days
+				Coming in 5-10 buisness days
 				<b id="soonupg">$?</b>
 			</button>
 			<button id="soonupg">
@@ -103,6 +105,6 @@
 			<br>
 			<b id="newalecb" onclick="nbclick()">Click me to buy it!</b>
 		</div>
-		<script src="javascript/clicker.js" type="text/javascript"></script>
+		<script src="javascript/clicker.js"></script>
 	</body>
 </html>
