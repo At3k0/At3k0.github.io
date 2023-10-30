@@ -11,7 +11,7 @@ html, body {
     text-align: center;
 }
 
-b, span {
+b {
     background-color: white;
     padding: 5px;
     border-radius: 15px;
@@ -52,6 +52,16 @@ button {
 
 #maindiv {
     display: block;
+}
+
+#news {
+    position: fixed;
+    display: flex;
+    text-align: center;
+    right: 50%;
+    top: 1%;
+    transform: translateX(50%);
+    margin: 0;
 }
 
 #upgradesdiv {

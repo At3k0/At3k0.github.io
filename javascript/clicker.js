@@ -5,6 +5,29 @@ let skin = 0;
 let cps = 0;
 let autoclick1cost = 10;
 let upgradeonscreen = 0;
+let previousNewsIndex = -1;
+const newslist = [
+	'you lost the game',
+	'local teacher calls students her "bane", gets schoolwide attention',
+	'always dead',
+	'Donkey Kong gets called a bathrobe, commits various crimes',
+	'the Scottius Swickius of The Bridgium Acadimium has been notified about your Alec buisness',
+	'🪿 quack',
+	'local Alec gets five adults soaking wet, sings "Dancing Queen" afterwards',
+	'Phoenixling breaks vending machine again, gets banned',
+	'Phoenix fire extinguisher public filming leaves many confused',
+	'im running out of things to put here',
+	"I'M THE BETTER CHRIS!",
+	'local Karaoke Kevin rickrolls Joe Biden, house gets destroyed',
+	'Alma goes down again, causes mass confusion',
+	'oui oui french nathanial b',
+	'Nintendo gets sued by R.J. Palacio claiming that their new game, "Super Mario Bros Wonder" infringes her book series, "Wonder"',
+	'local dog revived by being transported into WordWorld and rebuilt with letters',
+	'murica pants',
+	'local Alec gets called Yacklemore, becomes a rapper',
+	'GUYS IM FROM 2084! APPLE HAS RELEASED THEIR IPHONE 41 PLUS SUPER MAX SLIM TITANIUM MINI AND NINTENDO RELEASED SUPER MARIO 65, A GIANT EGG WILL CRUSH THE EARTH IN 2085, PLEASE BELEIVE ME IM NOT CRAZY!',
+	"Sun is shinin' in the sky, there ain't a cloud in sight, it's stopped rainin', everybody's in the play, and don't you know, It's a beautiful new day? Runnin' down the avenue, see how the sun shines brightly in the city, on the streets where once was pity, Mr. Blue Sky is living here today, Mr. Blue Sky, please tell us why you had to hide away for so long, so long, where did we go wrong? Mr. Blue Sky, please tell us why you had to hide away for so long, so long, where did we go wrong? Hey you with the pretty face, welcome to the human race! A celebration, Mr. Blue Sky's up there waitin' And today is the day we've waited for! Mr. Blue Sky, please tell us why you had to hide away for so long, so long, where did we go wrong? Hey there, Mr. Blue, we're so pleased to be with you, look around, see what you do, everybody smiles at you hey there, Mr. Blue we're so pleased to be with you, look around, see what you do, everybody smiles at you. Mr. Blue, you did it right, but soon comes Mr. Night, creepin' over, now his hand is on your shoulder, never mind, I'll remember you this, I'll remember you this way! Mr. Blue Sky, please tell us why, you had to hide away for so long, so long, where did we go wrong? Hey there Mr. Blue, sky, we're so pleased to be with you, sky, look around see what you do, skye, ,verybody smiles at you",
+];
 const clickSFX = new Audio('audio/mcclick.mp3');
 const errorSFX = new Audio('audio/error.mp3');
 const alec = document.getElementById('alec');
@@ -12,6 +35,22 @@ const autoclick = () => {
 	nume += cps;
 	document.getElementById('num').innerText = nume;
 }
+const news = () => {
+	let randomIndex;
+	do {
+		randomIndex = Math.floor(Math.random() * newslist.length);
+	} while (randomIndex === previousNewsIndex);
+
+	previousNewsIndex = randomIndex;
+
+	const randomNewsItem = newslist[randomIndex];
+	return randomNewsItem;
+};
+
+const newsichooseyou = () => {
+  const finalnews = news();
+  document.getElementById('news').innerText = 'News: ' + finalnews;
+};
  
 //saving
 if (localStorage.getItem('nume')) nume = parseInt(localStorage.getItem('nume'));
@@ -163,6 +202,7 @@ alec.addEventListener('mouseup', () => {
 	}
 });
 
-//functions
+//more
+setInterval(newsichooseyou, 5000);
 setInterval(autoclick, 1000);
 updateDisplay();
