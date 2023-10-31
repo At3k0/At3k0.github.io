@@ -12,6 +12,7 @@ let upgradeonscreen = 0;
 let previousNewsIndex = -1;
 const clickSFX = new Audio('audio/mcclick.mp3');
 const errorSFX = new Audio('audio/error.mp3');
+const scotlandSFX = new Audio('audio/scotland.mp3');
 const alec = document.getElementById('alec');
 const autoclick1 = document.getElementById('autoclick1');
 const autoclick2 = document.getElementById('autoclick2');
@@ -57,6 +58,7 @@ const newslist = [
 	'Man turns in to the entire solar system, continues to teach humanities',
 	'"nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah"',
 	//other
+	'NEVER LET JACK BAKER COOK, yeah its in his name, BUT IT NEVER WORKS OUT IN THE END!'
 	"30 year old man recites Noah Nelken's most famous quote, awarded with standing ovation (yes this actually happened, his name is Mike, no it wasn't the teacher)",
 	'🪿 quack',
 	'you lost the game',
@@ -242,7 +244,7 @@ upgradesbutton.addEventListener('click', () => {
 		});
 		autoclick3.addEventListener('click', () => {
 			if (autoclick3cost <= alecAmount) {
-				clickSFX.cloneNode().play();
+				scotlandSFX.cloneNode().play();
 				cps += 30;
 				alecAmount -= autoclick3cost;
 				autoclick3cost = autoclick3cost + Math.ceil(autoclick3cost * 0.15);
@@ -282,6 +284,7 @@ resetbutton.addEventListener('click', () => {
 		cps = 0;
 		autoclick1cost = 10;
 		autoclick2cost = 100;
+		autoclick3cost = 1000;
 		updateDisplay();
 		saveProgress();
 		document.location.reload();
