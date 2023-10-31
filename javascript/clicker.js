@@ -5,6 +5,8 @@ let totalAlecAmount = 0;
 let alectype = 0;
 let skin = 0;
 let cps = 0;
+let wyattmode = 0;
+let boughtwyattmode = 0;
 let autoclick1cost = 10;
 let autoclick2cost = 100;
 let autoclick3cost = 1000;
@@ -21,6 +23,7 @@ const descbox = document.getElementById('descbox');
 const skinbutton = document.getElementById('skin');
 const resetbutton = document.getElementById('reset');
 const upgradesbutton = document.getElementById('upgrades');
+const wyattmodebutton = document.getElementById('wyattmode');
 const changelogbutton = document.getElementById('changelogb');
 const newslist = [
 	//local news
@@ -126,6 +129,7 @@ if (localStorage.getItem('cps')) cps = parseInt(localStorage.getItem('cps'));
 if (localStorage.getItem('autoclick1cost')) autoclick1cost = parseInt(localStorage.getItem('autoclick1cost'));
 if (localStorage.getItem('autoclick2cost')) autoclick2cost = parseInt(localStorage.getItem('autoclick2cost'));
 if (localStorage.getItem('autoclick3cost')) autoclick3cost = parseInt(localStorage.getItem('autoclick3cost'));
+if (localStorage.getItem('boughtwyattmode')) boughtwyattmode = parseInt(localStorage.getItem('boughtwyattmode'));
 
 const saveProgress = () => {
 	localStorage.setItem('alecAmount', alecAmount);
@@ -135,6 +139,7 @@ const saveProgress = () => {
 	localStorage.setItem('autoclick1cost', autoclick1cost);
 	localStorage.setItem('autoclick2cost', autoclick2cost);
 	localStorage.setItem('autoclick3cost', autoclick3cost);
+	localStorage.setItem('boughtwyattmode', boughtwyattmode);
 };
 
 setInterval(saveProgress, 60000);
@@ -424,6 +429,36 @@ window.addEventListener('load', function () {
 	document.getElementById('content').style.display = 'block';
 });
 
+if (boughtwyattmode === 1) {
+	wyattmodebutton.innerText = 'TOGGLE WYATT MODE';
+}
+
+wyattmodebutton.addEventListener('click', () => {
+	clickSFX.cloneNode().play();
+	if (boughtwyattmode === 0 && alecAmount >= 100000000) {
+		boughtwyattmode = 1;
+		wyattmodebutton.innerText = 'TOGGLE WYATT MODE';
+	} else if (wyattmode === 0 && boughtwyattmode === 1) {
+		document.getElementById('content').style.backgroundImage = 'url("images/why.jpeg")';
+		document.getElementById('news').innerText = 'WYATT MODE ACTIVATED';
+		document.getElementById('actitle').innerText = 'WYATT CLICKER';
+		document.getElementById('itscc').innerText = '(its WYATT CLICKER)';
+		skinbutton.innerText = 'WYCHANGE WYSKIN'
+		resetbutton.innerText = 'WYRESET';
+		upgradesbutton.innerText = 'WYUPGRADES';
+		wyattmode = 1;
+	} else if (wyattmode === 1 && boughtwyattmode === 1) {
+		document.getElementById('content').style.backgroundImage = 'none';
+		document.getElementById('news').innerText = 'WYATT MODE deactivated';
+		document.getElementById('actitle').innerText = 'Alec Clicker';
+		document.getElementById('itscc').innerText = '(its cookie clicker)';
+		skinbutton.innerText = 'Change Skin'
+		resetbutton.innerText = 'Reset';
+		upgradesbutton.innerText = 'Upgrades';
+		wyattmode = 0;
+	}
+
+});
 setInterval(newsichooseyou, 5000);
 setInterval(autoclick, 1000);
 updateDisplay();
