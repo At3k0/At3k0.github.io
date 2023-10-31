@@ -4,107 +4,226 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>
-			Alec Clicker v0.4
+			Alec Clicker v0.5
 		</title>
 		<link rel="icon" type="image/x-icon" href="images/smallogo.png">
 		<link rel="stylesheet" type="text/css" href="style/clicker.css">
 	</head>
 	<body>
-		<div id="maindiv">
-			<div>
-				<b id="news">
-					You feel like making Alecs. But nobody wants to eat your Alecs (thank god)
-				</b>
-				<b>
-					Alec Clicker v0.4
-				</b>
-				<br>
-				<br>
-				<b>
-					(its cookie clicker)
-				</b>
-				<br>
-				<br>
-				<img src="images/alec.png" id="alec" alt="alec" title="alec" onclick="bclick()">
-				<br>
-				<b id="num">
-					0
-				</b>
-				<br>
-				<br>
-				<b>Update v0.4 - New skin, new upgrade, more news, and more mores!</b>
-				<br>
-				<br>
-				<button id="skin">
-					Change Skin
-				</button>
-				<button id="reset">
-					Reset
-				</button>
-				<button id="upgrades">
-					Upgrades
-				</button>
-				<div id="descbox">
-					e
+		<div id="loading">
+			<img src="images/loading.gif" alt="Loading..."/>
+			<br>
+			<b>Loading...</b>
+		</div>
+		<div id="content">
+			<div id="maindiv">
+				<div>
+					<b id="news">
+						You feel like making Alecs. But nobody wants to eat your Alecs (thank god)
+					</b>
+					<b>
+						Alec Clicker v0.5
+					</b>
+					<br>
+					<br>
+					<b>
+						(its cookie clicker)
+					</b>
+					<br>
+					<br>
+					<img src="images/alec.png" id="alec" alt="alec" title="alec" onclick="bclick()">
+					<br>
+					<b id="num">
+						Alecs: 0
+					</b>
+					<b id="aps">
+						APS: 0
+					</b>
+					<b id="totalnum">
+						0
+					</b>
+					<br>
+					<br>
+					<button id="changelogb">
+						Update v0.5 - Click me for changelog!
+					</button>
+					<br>
+					<br>
+					<button id="skin">
+						Change Skin
+					</button>
+					<button id="reset">
+						Reset
+					</button>
+					<button id="upgrades">
+						Upgrades
+					</button>
+					<div id="descbox">
+						e
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id="upgradesdiv">
-			<button id="autoclick1">
-				Buy Autoclicker
-				<b id="autoclick1cost">$10</b>
-			</button>
-			<button id="autoclick2">
-				Buy Alec Factory
-				<b id="autoclick2cost">$100</b>
-			</button>
-			<button id="soonupg">
-				Coming Sooner
-				<b id="soonupg">$?</b>
-			</button>
-			<button id="soonupg">
-				Coming Soon
-				<b id="soonupg">$?</b>
-			</button>
-			<button id="soonupg">
-				Coming Later
-				<b id="soonupg">$?</b>
-			</button>
-			<button id="soonupg">
-				Coming Later-er
-				<b id="soonupg">$?</b>
-			</button>
-			<button id="soonupg">
-				Coming Later-er-er
-				<b id="soonupg">$?</b>
-			</button>
-			<button id="soonupg">
-				Coming in 5-10 buisness days
-				<b id="soonupg">$?</b>
-			</button>
-			<button id="soonupg">
-				Coming when pigs fly
-				<b id="soonupg">$?</b>
-			</button>
-			<button id="soonupg">
-				Not coming soon <!--haha funny hypixel skyblock reference-->
-				<b id="soonupg">$?</b>
-			</button>
-			<button id="soonupg">
-				Coming on 3/7/24
-				<b id="soonupg">$?</b>
-			</button>
-			<button id="soonupg">
-				Coming when I get a gf <!--this may take a while-->
-				<b id="soonupg">$?</b>
-			</button>
+			<div id="upgradesdiv">
+				<button id="autoclick1">
+					Buy Autoclicker
+					<b id="autoclick1cost">$10</b>
+				</button>
+				<button id="autoclick2">
+					Buy Alec Factory
+					<b id="autoclick2cost">$100</b>
+				</button>
+				<button id="autoclick3">
+					Buy Scotland
+				<b id="autoclick3cost">$?</b>
+				</button>
+				<button id="soonupg">
+					Coming Sooner
+					<b id="soonupg">$?</b>
+				</button>
+				<button id="soonupg">
+					Coming Soon
+					<b id="soonupg">$?</b>
+				</button>
+				<button id="soonupg">
+					Coming Later
+					<b id="soonupg">$?</b>
+				</button>
+				<button id="soonupg">
+					Coming Later-er
+					<b id="soonupg">$?</b>
+				</button>
+				<button id="soonupg">
+					Coming in 5-9 buisness days
+					<b id="soonupg">$?</b>
+				</button>
+				<button id="soonupg">
+					Coming when pigs fly
+					<b id="soonupg">$?</b>
+				</button>
+				<button id="soonupg">
+					Not coming soon <!--haha funny hypixel skyblock reference-->
+					<b id="soonupg">$?</b>
+				</button>
+				<button id="soonupg">
+					Coming on 3/7/24
+					<b id="soonupg">$?</b>
+				</button>
+				<button id="soonupg">
+					Coming when I get a gf <!--this may take a while-->
+					<b id="soonupg">$?</b>
+				</button>
+			</div>
 		</div>
 		<div id="newalec">
-			<b>Hey! You have enough alecs to buy a new one!</b>
-			<br>
-			<br>
-			<b id="newalecb" onclick="nbclick()">Click me to buy it!</b>
+			<b id="newalecb" onclick="nbclick()">Click me to buy a new Alec!</b>
 		</div>
+		<b id="changelog">
+			Update v0.5
+			<br>
+			- added changelog
+			<br>
+			- fixed ava not showing up as an option to change skin
+			<br>
+			- buying new alec tier now correctly removes money
+			<br>
+			- added total alecs & total APS (alecs per second) counter
+			<br>
+			- reset progress because sadly renaming a variable deletes the data.
+			<br>
+			- added animation for the 'buying a new alec' ui
+			<br>
+			- did some news stuff
+			<br>
+			- probably more that i forgot
+			<br>
+			<br>
+			Update v0.4
+			<br>
+			- new clicker upgrade
+			<br>
+			- ava skin
+			<br>
+			- more news
+			<br>
+			- error sfx and icons
+			<br>
+			- tooltips
+			<br>
+			- more stuff I forgot about
+			<br>
+			<br>
+			Update v0.3.1 
+			<br>
+			- NEWS!!!!!!!!!!!!
+			<br>
+			<br>
+			Update v0.3
+			<br>
+			- added upgrades
+			<br>
+			- added a new skin
+			<br>
+			- sound effect stuff
+			<br>
+			<br>
+			Update v0.2.3 
+			<br>
+			- get 500 alecs to get a new one! works with alec and nate only
+			<br>
+			<br>
+			Update v0.2.2 
+			<br>
+			- fixed mush (again)
+			<br>
+			- dash skin
+			<br>
+			- something else I forgot
+			<br>
+			- not sure what else to add sooooo...
+			<br>
+			peg plus cat
+			<br>
+			peg plus cat
+			<br>
+			1, 2, 3 yeah, come on let's go
+			<br>
+			4, 5, 6 hey, what do you know
+			<br>
+			7, 8, 9 woah, what comes next
+			<br>
+			10, 10 you're the best
+			<br>
+			we are two na na na na na
+			<br>
+			me plus you na na na na na
+			<br>
+			we're peg plus cat
+			<br>
+			peg plus cat
+			<br>
+			peg plus cat
+			<br>
+			peg plus cat
+			<br>
+			<br>
+			Update v0.2.1
+			<br>
+			- fixed mush
+			<br>
+			<br>
+			Update v0.2
+			<br>
+			- alec clicker now autosaves, has a new upgrade tier, and has skins
+			<br>
+			<br>
+			NEW PAGE!!!
+			<br>
+			- Introducing... Alec clicker!
+			<br>
+			- You click my face, the number goes up, aaaand that's it (it's a work in progress)
+			<br>
+			- More updates coming soon!
+		</b>
 		<script src="javascript/clicker.js"></script>
 	</body>
 </html>

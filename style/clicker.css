@@ -44,10 +44,10 @@ button {
 }
 
 #newalec {
-    display: none;
-    top: 10px;
     position: fixed;
     font-size: 50px;
+    left: -100%;
+    transition: left 0.5s;
 }
 
 #maindiv {
@@ -76,7 +76,7 @@ button {
     border-radius: 15px;
 }
 
-#autoclick1, #autoclick1cost, #autoclick2, #autoclick2cost, #soonupg {
+#autoclick1, #autoclick1cost, #autoclick2, #autoclick2cost, #autoclick3, #autoclick3cost, #soonupg {
     display: inline-block;
     padding: 5px;
     background-color: white;
@@ -91,7 +91,6 @@ button {
 
 #descbox {
     position: absolute;
-    display: none;
     background-color: white;
     opacity: 0.9;
     padding: 10px;
@@ -100,8 +99,25 @@ button {
     z-index: 1;
 }
 
+#changelog {
+    position: fixed;
+    bottom: -100%;
+    max-height: 50%;
+    overflow-y: auto;
+    transition: bottom 0.5s;
+}
+
+#loading img {
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+}
+#content, #descbox {
+    display: none;
+}
+
 /*hover*/
-#autoclick1:hover, #autoclick1cost:hover, #autoclick2:hover, #autoclick2cost:hover, #newalecb:hover, #alec:hover, #autoclick1:hover, #autoclick2:hover, button:hover {
+#autoclick1:hover, #autoclick1cost:hover, #autoclick2:hover, #autoclick2cost:hover, #autoclick3:hover, #auoclick3cost:hover, #newalecb:hover, #alec:hover, #autoclick1:hover, #autoclick2:hover, button:hover {
     cursor: pointer;
 }
 
