@@ -9,7 +9,8 @@ let wyattmode = 0;
 let boughtwyattmode = 0;
 let autoclick1cost = 10;
 let autoclick2cost = 100;
-let autoclick3cost = 1000;
+let autoclick3cost = 5000;
+let autoclick4cost = 100000;
 let upgradeonscreen = 0;
 let previousNewsIndex = -1;
 const clickSFX = new Audio('audio/mcclick.mp3');
@@ -19,6 +20,7 @@ const alec = document.getElementById('alec');
 const autoclick1 = document.getElementById('autoclick1');
 const autoclick2 = document.getElementById('autoclick2');
 const autoclick3 = document.getElementById('autoclick3');
+const autoclick4 = document.getElementById('autoclick4');
 const descbox = document.getElementById('descbox');
 const skinbutton = document.getElementById('skin');
 const resetbutton = document.getElementById('reset');
@@ -36,6 +38,7 @@ const newslist = [
 	'local man loses snapchat steak of 4 days, steals the constituition',
 	'local Phoenixling says "Skibidi toilet in Ohio sussy baka among us rizz balls at 3AM", gets kicked out of four square game',
 	"local Saverio almost 🤌🤌🤌ed a Phoenixling with A 🤌🤌🤌ING METAL WATER BOTTLE. WOW.",
+	'local Charles steals the look of Alec, gets called a swine',
 	//legal news
 	'Nintendo gets sued by R.J. Palacio claiming that their new game, "Super Mario Bros Wonder" infringes her book series, "Wonder"',
 	'Kratt brothers sued by Chris Pratt, claims their names are too similar',
@@ -61,6 +64,7 @@ const newslist = [
 	'Man turns in to the entire solar system, continues to teach humanities',
 	'"nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah" "nuh uh" "uh yeah"',
 	//other
+	"Rooms? I was rooms once. They crazied me in a lock, a rats lock. A rats locked with crazy, and crazy makes me rooms.",
 	'NEVER LET JACK BAKER COOK, yeah its in his name, BUT IT NEVER WORKS OUT IN THE END!',
 	"30 year old man recites Noah Nelken's most famous quote, awarded with standing ovation (yes this actually happened, his name is Mike, no it wasn't the teacher)",
 	'🪿 quack',
@@ -94,6 +98,7 @@ const buttons = [
 	autoclick1,
 	autoclick2,
 	autoclick3,
+	autoclick4,
 	skinbutton,
 	resetbutton,
 	upgradesbutton,
@@ -107,6 +112,8 @@ const autoclick = () => {
 	document.getElementById('num').innerText = 'Alecs: ' + alecAmount;
 	document.getElementById('totalnum').innerText = 'Total Alecs: ' + totalAlecAmount;
 };
+
+//news
 const news = () => {
 	let randomIndex;
 	do {
@@ -129,6 +136,7 @@ if (localStorage.getItem('cps')) cps = parseInt(localStorage.getItem('cps'));
 if (localStorage.getItem('autoclick1cost')) autoclick1cost = parseInt(localStorage.getItem('autoclick1cost'));
 if (localStorage.getItem('autoclick2cost')) autoclick2cost = parseInt(localStorage.getItem('autoclick2cost'));
 if (localStorage.getItem('autoclick3cost')) autoclick3cost = parseInt(localStorage.getItem('autoclick3cost'));
+if (localStorage.getItem('autoclick4cost')) autoclick4cost = parseInt(localStorage.getItem('autoclick4cost'));
 if (localStorage.getItem('boughtwyattmode')) boughtwyattmode = parseInt(localStorage.getItem('boughtwyattmode'));
 
 const saveProgress = () => {
@@ -139,6 +147,7 @@ const saveProgress = () => {
 	localStorage.setItem('autoclick1cost', autoclick1cost);
 	localStorage.setItem('autoclick2cost', autoclick2cost);
 	localStorage.setItem('autoclick3cost', autoclick3cost);
+	localStorage.setItem('autoclick4cost', autoclick4cost);
 	localStorage.setItem('boughtwyattmode', boughtwyattmode);
 };
 
@@ -152,18 +161,23 @@ const updateDisplay = () => {
 	document.getElementById('autoclick1cost').innerText = '$' + autoclick1cost;
 	document.getElementById('autoclick2cost').innerText = '$' + autoclick2cost;
 	document.getElementById('autoclick3cost').innerText = '$' + autoclick3cost;
-	if (skin === 1) {
-		alec.src = alectype === 0 ? 'images/abby.png' : (alectype === 1 ? 'images/abby2.png' : 'images/sadlycl.png');
-	} else if (skin === 2) {
-		alec.src = alectype === 0 ? 'images/nate.png' : (alectype === 1 ? 'images/nate2.png' : 'images/nate3.png');
-	} else if (skin === 3) {
-		alec.src = alectype === 0 ? 'images/dash.png' : (alectype === 1 ? 'images/dash2.png' : 'images/sadlycl.png');
-	} else if (skin === 4) {
-		alec.src = alectype === 0 ? 'images/chris.png' : (alectype === 1 ? 'images/chris2.png' : 'images/chris3.png');
-	} else if (skin === 5) {
-		alec.src = alectype === 0 ? 'images/ava.png' : (alectype === 1 ? 'images/ava2.png' : 'images/ava3.png');
+	document.getElementById('autoclick4cost').innerText = '$' + autoclick4cost;
+	if (wyattmode === 1) {
+		alec.src = 'images/why.jpeg';
 	} else {
-		alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
+		if (skin === 1) {
+			alec.src = alectype === 0 ? 'images/abby.png' : (alectype === 1 ? 'images/abby2.png' : 'images/sadlycl.png');
+		} else if (skin === 2) {
+			alec.src = alectype === 0 ? 'images/nate.png' : (alectype === 1 ? 'images/nate2.png' : 'images/nate3.png');
+		} else if (skin === 3) {
+			alec.src = alectype === 0 ? 'images/dash.png' : (alectype === 1 ? 'images/dash2.png' : 'images/sadlycl.png');
+		} else if (skin === 4) {
+			alec.src = alectype === 0 ? 'images/chris.png' : (alectype === 1 ? 'images/chris2.png' : 'images/chris3.png');
+		} else if (skin === 5) {
+			alec.src = alectype === 0 ? 'images/ava.png' : (alectype === 1 ? 'images/ava2.png' : 'images/ava3.png');
+		} else {
+			alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
+		}
 	}
 };
 
@@ -225,7 +239,7 @@ upgradesbutton.addEventListener('click', () => {
 		autoclick2.addEventListener('click', () => {
 			if (autoclick2cost <= alecAmount) {
 				clickSFX.cloneNode().play();
-				cps += 5;
+				cps += 30;
 				alecAmount -= autoclick2cost;
 				autoclick2cost = autoclick2cost + Math.ceil(autoclick2cost * 0.15);
 				document.getElementById('autoclick2cost').innerText = '$' + autoclick2cost;
@@ -250,7 +264,7 @@ upgradesbutton.addEventListener('click', () => {
 		autoclick3.addEventListener('click', () => {
 			if (autoclick3cost <= alecAmount) {
 				scotlandSFX.cloneNode().play();
-				cps += 30;
+				cps += 300;
 				alecAmount -= autoclick3cost;
 				autoclick3cost = autoclick3cost + Math.ceil(autoclick3cost * 0.15);
 				document.getElementById('autoclick3cost').innerText = '$' + autoclick3cost;
@@ -272,6 +286,31 @@ upgradesbutton.addEventListener('click', () => {
 				}
 			}
 		});
+		autoclick4.addEventListener('click', () => {
+			if (autoclick4cost <= alecAmount) {
+				clickSFX.cloneNode().play();
+				cps += 10000;
+				alecAmount -= autoclick4cost;
+				autoclick4cost = autoclick4cost + Math.ceil(autoclick4cost * 0.15);
+				document.getElementById('autoclick4cost').innerText = '$' + autoclick4cost;
+				document.getElementById('num').innerText = 'Alecs: ' + alecAmount;
+				document.getElementById('aps').innerText = 'APS: ' + cps;
+				saveProgress();
+			} else {
+				errorSFX.cloneNode().play();
+				for (let i = 0; i < 5; i++) {
+					setTimeout(function() {
+						autoclick4.style.backgroundColor = "red";
+						document.getElementById('autoclick4cost').style.backgroundColor = "red";
+					}, i * 200);
+
+					setTimeout(function() {
+						autoclick4.style.backgroundColor = "white";
+						document.getElementById('autoclick4cost').style.backgroundColor = "white";
+					}, (i + 0.5) * 200);
+				}
+			}
+		});
 	} else {
 		upgradeonscreen = 0;
 		document.getElementById('upgradesdiv').style.right = "-100%";
@@ -287,10 +326,11 @@ resetbutton.addEventListener('click', () => {
 		totalAlecAmount = 0;
 		alectype = 0;
 		cps = 0;
+		boughtwyattmode = 0;
 		autoclick1cost = 10;
 		autoclick2cost = 100;
-		autoclick3cost = 1000;
-		updateDisplay();
+		autoclick3cost = 5000;
+		autoclick4cost = 100000;
 		saveProgress();
 		document.location.reload();
 	}
@@ -337,34 +377,42 @@ const nbclick = () => {
 
 
 alec.addEventListener('mousedown', () => {
-	if (skin === 1) {
-		alec.src = alectype === 0 ? 'images/abbymush.png' : (alectype === 1 ? 'images/abby2mush.png' : 'images/sadlyclmush.png');
-	} else if (skin === 2) {
-		alec.src = alectype === 0 ? 'images/natemush.png' : (alectype === 1 ? 'images/nate2mush.png' : 'images/nate3mush.png');
-	} else if (skin === 3) {
-		alec.src = alectype === 0 ? 'images/dashmush.png' : (alectype === 1 ? 'images/dash2mush.png' : 'images/sadlyclmush.png');
-	} else if (skin === 4) {
-		alec.src = alectype === 0 ? 'images/chrismush.png' : (alectype === 1 ? 'images/chris2mush.png' : 'images/chris3mush.png');
-	} else if (skin === 5) {
-		alec.src = alectype === 0 ? 'images/avamush.png' : (alectype === 1 ? 'images/ava2mush.png' : 'images/ava3mush.png');
+	if (wyattmode === 1) {
+		alec.src = 'images/why.jpeg';
 	} else {
-		alec.src = alectype === 0 ? 'images/alecmush.png' : (alectype === 1 ? 'images/alec2mush.png' : 'images/alec3mush.png');
+		if (skin === 1) {
+			alec.src = alectype === 0 ? 'images/abbymush.png' : (alectype === 1 ? 'images/abby2mush.png' : 'images/sadlyclmush.png');
+		} else if (skin === 2) {
+			alec.src = alectype === 0 ? 'images/natemush.png' : (alectype === 1 ? 'images/nate2mush.png' : 'images/nate3mush.png');
+		} else if (skin === 3) {
+			alec.src = alectype === 0 ? 'images/dashmush.png' : (alectype === 1 ? 'images/dash2mush.png' : 'images/sadlyclmush.png');
+		} else if (skin === 4) {
+			alec.src = alectype === 0 ? 'images/chrismush.png' : (alectype === 1 ? 'images/chris2mush.png' : 'images/chris3mush.png');
+		} else if (skin === 5) {
+			alec.src = alectype === 0 ? 'images/avamush.png' : (alectype === 1 ? 'images/ava2mush.png' : 'images/ava3mush.png');
+		} else {
+			alec.src = alectype === 0 ? 'images/alecmush.png' : (alectype === 1 ? 'images/alec2mush.png' : 'images/alec3mush.png');
+		}
 	}
 });
 
 alec.addEventListener('mouseup', () => {
-	if (skin === 1) {
-		alec.src = alectype === 0 ? 'images/abby.png' : (alectype === 1 ? 'images/abby2.png' : 'images/sadlycl.png');
-	} else if (skin === 2) {
-		alec.src = alectype === 0 ? 'images/nate.png' : (alectype === 1 ? 'images/nate2.png' : 'images/nate3.png');
-	} else if (skin === 3) {
-		alec.src = alectype === 0 ? 'images/dash.png' : (alectype === 1 ? 'images/dash2.png' : 'images/sadlycl.png');
-	} else if (skin === 4) {
-		alec.src = alectype === 0 ? 'images/chris.png' : (alectype === 1 ? 'images/chris2.png' : 'images/chris3.png');
-	} else if (skin === 5) {
-		alec.src = alectype === 0 ? 'images/ava.png' : (alectype === 1 ? 'images/ava2.png' : 'images/ava3.png');
+	if (wyattmode === 1) {
+		alec.src = 'images/why.jpeg';
 	} else {
-		alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
+		if (skin === 1) {
+			alec.src = alectype === 0 ? 'images/abby.png' : (alectype === 1 ? 'images/abby2.png' : 'images/sadlycl.png');
+		} else if (skin === 2) {
+			alec.src = alectype === 0 ? 'images/nate.png' : (alectype === 1 ? 'images/nate2.png' : 'images/nate3.png');
+		} else if (skin === 3) {
+			alec.src = alectype === 0 ? 'images/dash.png' : (alectype === 1 ? 'images/dash2.png' : 'images/sadlycl.png');
+		} else if (skin === 4) {
+			alec.src = alectype === 0 ? 'images/chris.png' : (alectype === 1 ? 'images/chris2.png' : 'images/chris3.png');
+		} else if (skin === 5) {
+			alec.src = alectype === 0 ? 'images/ava.png' : (alectype === 1 ? 'images/ava2.png' : 'images/ava3.png');
+		} else {
+			alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
+		}
 	}
 });
 
@@ -399,6 +447,9 @@ buttons.forEach((button) => {
 				break;
 			case autoclick3:
 				text = "The name 'Alec' is technically Scottish, even though I'm Armenian...";
+				break;
+			case autoclick4:
+				text = "Used as a mating call, very effective";
 				break;
 			case skinbutton:
 				text = "Make your Alecs look different!";
@@ -439,26 +490,30 @@ wyattmodebutton.addEventListener('click', () => {
 		boughtwyattmode = 1;
 		wyattmodebutton.innerText = 'TOGGLE WYATT MODE';
 	} else if (wyattmode === 0 && boughtwyattmode === 1) {
-		document.getElementById('content').style.backgroundImage = 'url("images/why.jpeg")';
+		document.body.style.backgroundImage = 'url("images/why.jpeg")';
+        document.body.style.backgroundSize = 'cover';
 		document.getElementById('news').innerText = 'WYATT MODE ACTIVATED';
-		document.getElementById('actitle').innerText = 'WYATT CLICKER';
-		document.getElementById('itscc').innerText = '(its WYATT CLICKER)';
-		skinbutton.innerText = 'WYCHANGE WYSKIN'
+		skinbutton.innerText = 'WYCHANGE WYSKIN';
 		resetbutton.innerText = 'WYRESET';
 		upgradesbutton.innerText = 'WYUPGRADES';
 		wyattmode = 1;
+		updateDisplay();
 	} else if (wyattmode === 1 && boughtwyattmode === 1) {
-		document.getElementById('content').style.backgroundImage = 'none';
+		document.body.style.backgroundImage = 'none';
 		document.getElementById('news').innerText = 'WYATT MODE deactivated';
-		document.getElementById('actitle').innerText = 'Alec Clicker';
-		document.getElementById('itscc').innerText = '(its cookie clicker)';
-		skinbutton.innerText = 'Change Skin'
+		skinbutton.innerText = 'Change Skin';
 		resetbutton.innerText = 'Reset';
 		upgradesbutton.innerText = 'Upgrades';
 		wyattmode = 0;
+		updateDisplay();
 	}
 
 });
+
+function plusalot() {
+  alecAmount += 1000000000000000000;
+}
+
 setInterval(newsichooseyou, 5000);
 setInterval(autoclick, 1000);
 updateDisplay();
