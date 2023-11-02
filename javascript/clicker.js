@@ -13,6 +13,7 @@ let autoclick2cost = 100;
 let autoclick3cost = 5000;
 let autoclick4cost = 100000;
 let autoclick5cost = 10000000;
+let autoclick6cost = 3000000000;
 let upgradeonscreen = 0;
 let previousNewsIndex = -1;
 const clickSFX = new Audio('audio/mcclick.mp3');
@@ -25,6 +26,7 @@ const autoclick2 = document.getElementById('autoclick2');
 const autoclick3 = document.getElementById('autoclick3');
 const autoclick4 = document.getElementById('autoclick4');
 const autoclick5 = document.getElementById('autoclick5');
+const autoclick6 = document.getElementById('autoclick6');
 const descbox = document.getElementById('descbox');
 const skinbutton = document.getElementById('skin');
 const resetbutton = document.getElementById('reset');
@@ -110,6 +112,7 @@ const buttons = [
 	autoclick3,
 	autoclick4,
 	autoclick5,
+	autoclick6,
 	skinbutton,
 	resetbutton,
 	upgradesbutton,
@@ -148,6 +151,7 @@ if (localStorage.getItem('autoclick2cost')) autoclick2cost = parseInt(localStora
 if (localStorage.getItem('autoclick3cost')) autoclick3cost = parseInt(localStorage.getItem('autoclick3cost'));
 if (localStorage.getItem('autoclick4cost')) autoclick4cost = parseInt(localStorage.getItem('autoclick4cost'));
 if (localStorage.getItem('autoclick5cost')) autoclick5cost = parseInt(localStorage.getItem('autoclick5cost'));
+if (localStorage.getItem('autoclick6cost')) autoclick6cost = parseInt(localStorage.getItem('autoclick6cost'));
 if (localStorage.getItem('boughtwyattmode')) boughtwyattmode = parseInt(localStorage.getItem('boughtwyattmode'));
 
 const saveProgress = () => {
@@ -161,6 +165,7 @@ const saveProgress = () => {
 	localStorage.setItem('autoclick3cost', autoclick3cost);
 	localStorage.setItem('autoclick4cost', autoclick4cost);
 	localStorage.setItem('autoclick5cost', autoclick5cost);
+	localStorage.setItem('autoclick6cost', autoclick6cost);
 	localStorage.setItem('boughtwyattmode', boughtwyattmode);
 };
 
@@ -176,6 +181,7 @@ const updateDisplay = () => {
 	document.getElementById('autoclick3cost').innerText = '$' + formatNumberWithCommas(autoclick3cost);
 	document.getElementById('autoclick4cost').innerText = '$' + formatNumberWithCommas(autoclick4cost);
 	document.getElementById('autoclick5cost').innerText = '$' + formatNumberWithCommas(autoclick5cost);
+	document.getElementById('autoclick6cost').innerText = '$' + formatNumberWithCommas(autoclick6cost);
 	if (wyattmode === 1) {
 		alec.src = 'images/why.jpeg';
 	} else {
@@ -189,6 +195,8 @@ const updateDisplay = () => {
 			alec.src = alectype === 0 ? 'images/chris.png' : (alectype === 1 ? 'images/chris2.png' : 'images/chris3.png');
 		} else if (skin === 5) {
 			alec.src = alectype === 0 ? 'images/ava.png' : (alectype === 1 ? 'images/ava2.png' : 'images/ava3.png');
+		} else if (skin === 6) {
+			alec.src = alectype === 0 ? 'images/rence.png' : (alectype === 1 ? 'images/rence2.png' : 'images/rence3.png');
 		} else {
 			alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
 		}
@@ -205,9 +213,10 @@ skinbutton.addEventListener('click', () => {
 	dash: ['dash.png', 'dash2.png', 'sadlycl.png'],
 	chris: ['chris.png', 'chris2.png', 'chris3.png'],
 	ava: ['ava.png', 'ava2.png', 'ava3.png'],
+	rence: ['rence.png', 'rence2.png', 'rence3.png'],
 };
 
-const skinchange = prompt("Which skin do you want to use? (Alec, Abby, Nate, Dash, Chris, or Ava)", "").toLowerCase();
+const skinchange = prompt("Which skin do you want to use? (Alec, Abby, Nate, Dash, Chris, Ava, or Rence)", "").toLowerCase();
 
 if (skinImages.hasOwnProperty(skinchange)) {
 	skin = Object.keys(skinImages).indexOf(skinchange);
@@ -348,6 +357,31 @@ upgradesbutton.addEventListener('click', () => {
 				}
 			}
 		});
+		autoclick6.addEventListener('click', () => {
+			if (autoclick6cost <= alecAmount) {
+				clickSFX.cloneNode().play();
+				cps += 10000000;
+				alecAmount -= autoclick6cost;
+				autoclick6cost = autoclick6cost + Math.ceil(autoclick6cost * 0.15);
+				document.getElementById('autoclick6cost').innerText = '$' + formatNumberWithCommas(autoclick6cost);
+				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
+				saveProgress();
+			} else {
+				errorSFX.cloneNode().play();
+				for (let i = 0; i < 5; i++) {
+					setTimeout(function() {
+						autoclick6.style.backgroundColor = "red";
+						document.getElementById('autoclick6cost').style.backgroundColor = "red";
+					}, i * 200);
+
+					setTimeout(function() {
+						autoclick6.style.backgroundColor = "white";
+						document.getElementById('autoclick6cost').style.backgroundColor = "white";
+					}, (i + 0.5) * 200);
+				}
+			}
+		});
 	} else {
 		upgradeonscreen = 0;
 		document.getElementById('upgradesdiv').style.right = "-100%";
@@ -369,6 +403,7 @@ resetbutton.addEventListener('click', () => {
 		autoclick3cost = 5000;
 		autoclick4cost = 100000;
 		autoclick5cost = 10000000;
+		autoclick6cost = 3000000000;
 		saveProgress();
 		document.location.reload();
 	}
@@ -428,6 +463,8 @@ alec.addEventListener('mousedown', () => {
 			alec.src = alectype === 0 ? 'images/chrismush.png' : (alectype === 1 ? 'images/chris2mush.png' : 'images/chris3mush.png');
 		} else if (skin === 5) {
 			alec.src = alectype === 0 ? 'images/avamush.png' : (alectype === 1 ? 'images/ava2mush.png' : 'images/ava3mush.png');
+		} else if (skin === 6) {
+			alec.src = alectype === 0 ? 'images/rencemush.png' : (alectype === 1 ? 'images/rence2mush.png' : 'images/rence3mush.png');
 		} else {
 			alec.src = alectype === 0 ? 'images/alecmush.png' : (alectype === 1 ? 'images/alec2mush.png' : 'images/alec3mush.png');
 		}
@@ -448,6 +485,8 @@ alec.addEventListener('mouseup', () => {
 			alec.src = alectype === 0 ? 'images/chris.png' : (alectype === 1 ? 'images/chris2.png' : 'images/chris3.png');
 		} else if (skin === 5) {
 			alec.src = alectype === 0 ? 'images/ava.png' : (alectype === 1 ? 'images/ava2.png' : 'images/ava3.png');
+		} else if (skin === 6) {
+			alec.src = alectype === 0 ? 'images/rence.png' : (alectype === 1 ? 'images/rence2.png' : 'images/rence3.png');
 		} else {
 			alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
 		}
@@ -491,6 +530,9 @@ buttons.forEach((button) => {
 				break;
 			case autoclick5:
 				text = "No, I definitally didn't run out of ideas, that would be crazy... ok yeah I ran out of ideas.";
+				break;
+			case autoclick6:
+				text = "Get Duo to force Alecs to do thier Duolingo lessons!";
 				break;
 			case skinbutton:
 				text = "Make your Alecs look different!";
@@ -550,10 +592,6 @@ wyattmodebutton.addEventListener('click', () => {
 	}
 
 });
-
-function plusalot() {
-	alecAmount += 1000000000000000000;
-}
 
 function updateAlecAmount(currentTime) {
 	const frameTime = currentTime - lastFrameTime;

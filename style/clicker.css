@@ -84,6 +84,7 @@ button {
 #autoclick3, #autoclick3cost,
 #autoclick4, #autoclick4cost,
 #autoclick5, #autoclick5cost,
+#autoclick6, #autoclick6cost,
 #soonupg {
     display: inline-block;
     padding: 5px;
@@ -125,7 +126,7 @@ button {
 }
 
 /*hover*/
-#autoclick1:hover, #autoclick1cost:hover, #autoclick2:hover, #autoclick2cost:hover, #autoclick3:hover, #auoclick3cost:hover, #newalecb:hover, #alec:hover, #autoclick1:hover, #autoclick2:hover, button:hover {
+#newalecb:hover, #alec:hover, button:hover {
     cursor: pointer;
 }
 
