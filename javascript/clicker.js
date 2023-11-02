@@ -229,9 +229,9 @@ upgradesbutton.addEventListener('click', () => {
 				cps += 1;
 				alecAmount -= autoclick1cost;
 				autoclick1cost = autoclick1cost + Math.ceil(autoclick1cost * 0.15);
-				document.getElementById('autoclick1cost').innerText = '$' + autoclick1cost;
-				document.getElementById('num').innerText = 'Alecs: ' + alecAmount;
-				document.getElementById('aps').innerText = 'APS: ' + cps;
+				document.getElementById('autoclick1cost').innerText = '$' + formatNumberWithCommas(autoclick1cost);
+				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
 				saveProgress();
 			} else {
 				errorSFX.cloneNode().play();
@@ -254,9 +254,9 @@ upgradesbutton.addEventListener('click', () => {
 				cps += 30;
 				alecAmount -= autoclick2cost;
 				autoclick2cost = autoclick2cost + Math.ceil(autoclick2cost * 0.15);
-				document.getElementById('autoclick2cost').innerText = '$' + autoclick2cost;
-				document.getElementById('num').innerText = 'Alecs: ' + alecAmount;
-				document.getElementById('aps').innerText = 'APS: ' + cps;
+				document.getElementById('autoclick2cost').innerText = '$' + formatNumberWithCommas(autoclick2cost);
+				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
 				saveProgress();
 			} else {
 				errorSFX.cloneNode().play();
@@ -279,9 +279,9 @@ upgradesbutton.addEventListener('click', () => {
 				cps += 300;
 				alecAmount -= autoclick3cost;
 				autoclick3cost = autoclick3cost + Math.ceil(autoclick3cost * 0.15);
-				document.getElementById('autoclick3cost').innerText = '$' + autoclick3cost;
-				document.getElementById('num').innerText = 'Alecs: ' + alecAmount;
-				document.getElementById('aps').innerText = 'APS: ' + cps;
+				document.getElementById('autoclick3cost').innerText = '$' + formatNumberWithCommas(autoclick3cost);
+				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
 				saveProgress();
 			} else {
 				errorSFX.cloneNode().play();
@@ -304,9 +304,9 @@ upgradesbutton.addEventListener('click', () => {
 				cps += 10000;
 				alecAmount -= autoclick4cost;
 				autoclick4cost = autoclick4cost + Math.ceil(autoclick4cost * 0.15);
-				document.getElementById('autoclick4cost').innerText = '$' + autoclick4cost;
-				document.getElementById('num').innerText = 'Alecs: ' + alecAmount;
-				document.getElementById('aps').innerText = 'APS: ' + cps;
+				document.getElementById('autoclick4cost').innerText = '$' + formatNumberWithCommas(autoclick4cost);
+				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
 				saveProgress();
 			} else {
 				errorSFX.cloneNode().play();
@@ -329,9 +329,9 @@ upgradesbutton.addEventListener('click', () => {
 				cps += 250000;
 				alecAmount -= autoclick5cost;
 				autoclick5cost = autoclick5cost + Math.ceil(autoclick5cost * 0.15);
-				document.getElementById('autoclick5cost').innerText = '$' + autoclick5cost;
-				document.getElementById('num').innerText = 'Alecs: ' + alecAmount;
-				document.getElementById('aps').innerText = 'APS: ' + cps;
+				document.getElementById('autoclick5cost').innerText = '$' + formatNumberWithCommas(autoclick5cost);
+				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
 				saveProgress();
 			} else {
 				errorSFX.cloneNode().play();
@@ -560,10 +560,8 @@ function updateAlecAmount(currentTime) {
 	const secondsElapsed = frameTime / 1000;
 	alecAmount += cps * secondsElapsed;
 	totalAlecAmount += cps * secondsElapsed;
-
-	document.getElementById('num').innerText = 'Alecs: ' + Math.floor(alecAmount);
-	document.getElementById('totalnum').innerText = 'Total Alecs: ' + Math.floor(totalAlecAmount);
-
+	document.getElementById('num').innerText = 'Alecs: ' + '$' + formatNumberWithCommas(Math.floor(alecAmount));
+	document.getElementById('totalnum').innerText = 'Total Alecs: ' + formatNumberWithCommas(Math.floor(totalAlecAmount));
 	lastFrameTime = currentTime;
 	requestAnimationFrame(updateAlecAmount);
 }
