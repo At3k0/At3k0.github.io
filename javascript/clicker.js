@@ -6,21 +6,25 @@ let alectype = 0;
 let skin = 0;
 let cps = 0;
 let wyattmode = 0;
+let lastFrameTime = performance.now();
 let boughtwyattmode = 0;
 let autoclick1cost = 10;
 let autoclick2cost = 100;
 let autoclick3cost = 5000;
 let autoclick4cost = 100000;
+let autoclick5cost = 10000000;
 let upgradeonscreen = 0;
 let previousNewsIndex = -1;
 const clickSFX = new Audio('audio/mcclick.mp3');
 const errorSFX = new Audio('audio/error.mp3');
+const autoclickSFX = new Audio('audio/autoclick.mp3');
 const scotlandSFX = new Audio('audio/scotland.mp3');
 const alec = document.getElementById('alec');
 const autoclick1 = document.getElementById('autoclick1');
 const autoclick2 = document.getElementById('autoclick2');
 const autoclick3 = document.getElementById('autoclick3');
 const autoclick4 = document.getElementById('autoclick4');
+const autoclick5 = document.getElementById('autoclick5');
 const descbox = document.getElementById('descbox');
 const skinbutton = document.getElementById('skin');
 const resetbutton = document.getElementById('reset');
@@ -38,7 +42,9 @@ const newslist = [
 	'local man loses snapchat steak of 4 days, steals the constituition',
 	'local Phoenixling says "Skibidi toilet in Ohio sussy baka among us rizz balls at 3AM", gets kicked out of four square game',
 	"local Saverio almost 🤌🤌🤌ed a Phoenixling with A 🤌🤌🤌ING METAL WATER BOTTLE. WOW.",
-	'local Charles steals the look of Alec, gets called a swine',
+	'local Charles steals the style of Alec, gets called a swine',
+	'local Middle School Bridges Confessions called a cyberbully by Kerinius Borzellius, but none of the "victims" agree',
+	'local shoe gets thrown at fundraiser guy, all students agree it was justified',
 	//legal news
 	'Nintendo gets sued by R.J. Palacio claiming that their new game, "Super Mario Bros Wonder" infringes her book series, "Wonder"',
 	'Kratt brothers sued by Chris Pratt, claims their names are too similar',
@@ -68,6 +74,10 @@ const newslist = [
 	'NEVER LET JACK BAKER COOK, yeah its in his name, BUT IT NEVER WORKS OUT IN THE END!',
 	"30 year old man recites Noah Nelken's most famous quote, awarded with standing ovation (yes this actually happened, his name is Mike, no it wasn't the teacher)",
 	'🪿 quack',
+	'🐸 ribbit',
+	'oi',
+	'OI',
+	'OOOOOOOOOIIIIIIIIII',
 	'you lost the game',
 	'Phoenixling breaks vending machine again, gets banned',
 	'Phoenix fire extinguisher public filming leaves many confused',
@@ -99,6 +109,7 @@ const buttons = [
 	autoclick2,
 	autoclick3,
 	autoclick4,
+	autoclick5,
 	skinbutton,
 	resetbutton,
 	upgradesbutton,
@@ -106,12 +117,10 @@ const buttons = [
 	aps,
 	totalnum
 ];
-const autoclick = () => {
-	alecAmount += cps;
-	totalAlecAmount += cps;
-	document.getElementById('num').innerText = 'Alecs: ' + alecAmount;
-	document.getElementById('totalnum').innerText = 'Total Alecs: ' + totalAlecAmount;
-};
+
+function formatNumberWithCommas(number) {
+	return number.toLocaleString();
+}
 
 //news
 const news = () => {
@@ -133,10 +142,12 @@ if (localStorage.getItem('alecAmount')) alecAmount = parseInt(localStorage.getIt
 if (localStorage.getItem('totalAlecAmount')) totalAlecAmount = parseInt(localStorage.getItem('totalAlecAmount'));
 if (localStorage.getItem('alectype')) alectype = parseInt(localStorage.getItem('alectype'));
 if (localStorage.getItem('cps')) cps = parseInt(localStorage.getItem('cps'));
+if (localStorage.getItem('skin')) skin = parseInt(localStorage.getItem('skin'));
 if (localStorage.getItem('autoclick1cost')) autoclick1cost = parseInt(localStorage.getItem('autoclick1cost'));
 if (localStorage.getItem('autoclick2cost')) autoclick2cost = parseInt(localStorage.getItem('autoclick2cost'));
 if (localStorage.getItem('autoclick3cost')) autoclick3cost = parseInt(localStorage.getItem('autoclick3cost'));
 if (localStorage.getItem('autoclick4cost')) autoclick4cost = parseInt(localStorage.getItem('autoclick4cost'));
+if (localStorage.getItem('autoclick5cost')) autoclick5cost = parseInt(localStorage.getItem('autoclick5cost'));
 if (localStorage.getItem('boughtwyattmode')) boughtwyattmode = parseInt(localStorage.getItem('boughtwyattmode'));
 
 const saveProgress = () => {
@@ -144,10 +155,12 @@ const saveProgress = () => {
 	localStorage.setItem('totalAlecAmount', totalAlecAmount);
 	localStorage.setItem('alectype', alectype);
 	localStorage.setItem('cps', cps);
+	localStorage.setItem('skin', skin);
 	localStorage.setItem('autoclick1cost', autoclick1cost);
 	localStorage.setItem('autoclick2cost', autoclick2cost);
 	localStorage.setItem('autoclick3cost', autoclick3cost);
 	localStorage.setItem('autoclick4cost', autoclick4cost);
+	localStorage.setItem('autoclick5cost', autoclick5cost);
 	localStorage.setItem('boughtwyattmode', boughtwyattmode);
 };
 
@@ -155,13 +168,14 @@ setInterval(saveProgress, 60000);
 
 //skins
 const updateDisplay = () => {
-	document.getElementById('num').innerText = 'Alecs: ' + alecAmount;
-	document.getElementById('aps').innerText = 'APS: ' + cps;
-	document.getElementById('totalnum').innerText = 'Total Alecs: ' + totalAlecAmount;
-	document.getElementById('autoclick1cost').innerText = '$' + autoclick1cost;
-	document.getElementById('autoclick2cost').innerText = '$' + autoclick2cost;
-	document.getElementById('autoclick3cost').innerText = '$' + autoclick3cost;
-	document.getElementById('autoclick4cost').innerText = '$' + autoclick4cost;
+	document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
+	document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
+	document.getElementById('totalnum').innerText = 'Total Alecs: ' + formatNumberWithCommas(totalAlecAmount);
+	document.getElementById('autoclick1cost').innerText = '$' + formatNumberWithCommas(autoclick1cost);
+	document.getElementById('autoclick2cost').innerText = '$' + formatNumberWithCommas(autoclick2cost);
+	document.getElementById('autoclick3cost').innerText = '$' + formatNumberWithCommas(autoclick3cost);
+	document.getElementById('autoclick4cost').innerText = '$' + formatNumberWithCommas(autoclick4cost);
+	document.getElementById('autoclick5cost').innerText = '$' + formatNumberWithCommas(autoclick5cost);
 	if (wyattmode === 1) {
 		alec.src = 'images/why.jpeg';
 	} else {
@@ -183,37 +197,35 @@ const updateDisplay = () => {
 
 skinbutton.addEventListener('click', () => {
 	clickSFX.cloneNode().play();
-	const skinchange = prompt("Which skin do you want to use? (Alec, Abby, Nate, Dash, Chris, or Ava)", "").toLowerCase();
-	if (skinchange === "alec") {
-		skin = 0;
-		alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
-	} else if (skinchange === "abby") {
-		skin = 1;
-		alec.src = alectype === 0 ? 'images/abby.png' : (alectype === 1 ? 'images/abby2.png' : 'images/sadlycl.png');
-	} else if (skinchange === "nate") {
-		skin = 2;
-		alec.src = alectype === 0 ? 'images/nate.png' : (alectype === 1 ? 'images/nate2.png' : 'images/nate3.png');
-	} else if (skinchange === "dash") {
-		skin = 3;
-		alec.src = alectype === 0 ? 'images/dash.png' : (alectype === 1 ? 'images/dash2.png' : 'images/sadlycl.png');
-	} else if (skinchange === "chris") {
-		skin = 4;
-		alec.src = alectype === 0 ? 'images/chris.png' : (alectype === 1 ? 'images/chris2.png' : 'images/chris3.png');
-	} else if (skinchange === "ava") {
-		skin = 5;
-		alec.src = alectype === 0 ? 'images/ava.png' : (alectype === 1 ? 'images/ava2.png' : 'images/ava3.png');
-	}
+
+	const skinImages = {
+	alec: ['alec.png', 'alec2.png', 'alec3.png'],
+	abby: ['abby.png', 'abby2.png', 'sadlycl.png'],
+	nate: ['nate.png', 'nate2.png', 'nate3.png'],
+	dash: ['dash.png', 'dash2.png', 'sadlycl.png'],
+	chris: ['chris.png', 'chris2.png', 'chris3.png'],
+	ava: ['ava.png', 'ava2.png', 'ava3.png'],
+};
+
+const skinchange = prompt("Which skin do you want to use? (Alec, Abby, Nate, Dash, Chris, or Ava)", "").toLowerCase();
+
+if (skinImages.hasOwnProperty(skinchange)) {
+	skin = Object.keys(skinImages).indexOf(skinchange);
+	alec.src = `images/${skinImages[skinchange][alectype]}`;
+}
 });
+
 
 //upgrades
 upgradesbutton.addEventListener('click', () => {
 	clickSFX.cloneNode().play();
 	if (upgradeonscreen === 0) {
 		upgradeonscreen = 1;
+		document.getElementById("news").classList.toggle("active");
 		document.getElementById('upgradesdiv').style.right = "0%";
 		autoclick1.addEventListener('click', () => {
 			if (autoclick1cost <= alecAmount) {
-				clickSFX.cloneNode().play();
+				autoclickSFX.cloneNode().play();
 				cps += 1;
 				alecAmount -= autoclick1cost;
 				autoclick1cost = autoclick1cost + Math.ceil(autoclick1cost * 0.15);
@@ -311,6 +323,31 @@ upgradesbutton.addEventListener('click', () => {
 				}
 			}
 		});
+		autoclick5.addEventListener('click', () => {
+			if (autoclick5cost <= alecAmount) {
+				clickSFX.cloneNode().play();
+				cps += 250000;
+				alecAmount -= autoclick5cost;
+				autoclick5cost = autoclick5cost + Math.ceil(autoclick5cost * 0.15);
+				document.getElementById('autoclick5cost').innerText = '$' + autoclick5cost;
+				document.getElementById('num').innerText = 'Alecs: ' + alecAmount;
+				document.getElementById('aps').innerText = 'APS: ' + cps;
+				saveProgress();
+			} else {
+				errorSFX.cloneNode().play();
+				for (let i = 0; i < 5; i++) {
+					setTimeout(function() {
+						autoclick5.style.backgroundColor = "red";
+						document.getElementById('autoclick5cost').style.backgroundColor = "red";
+					}, i * 200);
+
+					setTimeout(function() {
+						autoclick5.style.backgroundColor = "white";
+						document.getElementById('autoclick5cost').style.backgroundColor = "white";
+					}, (i + 0.5) * 200);
+				}
+			}
+		});
 	} else {
 		upgradeonscreen = 0;
 		document.getElementById('upgradesdiv').style.right = "-100%";
@@ -331,6 +368,7 @@ resetbutton.addEventListener('click', () => {
 		autoclick2cost = 100;
 		autoclick3cost = 5000;
 		autoclick4cost = 100000;
+		autoclick5cost = 10000000;
 		saveProgress();
 		document.location.reload();
 	}
@@ -440,7 +478,7 @@ buttons.forEach((button) => {
 
 		switch (button) {
 			case autoclick1:
-				text = "#savethehands";
+				text = "10/10 free autoclicker download full hd no virus 2023";
 				break;
 			case autoclick2:
 				text = "Like a baby factory, but better";
@@ -450,6 +488,9 @@ buttons.forEach((button) => {
 				break;
 			case autoclick4:
 				text = "Used as a mating call, very effective";
+				break;
+			case autoclick5:
+				text = "No, I definitally didn't run out of ideas, that would be crazy... ok yeah I ran out of ideas.";
 				break;
 			case skinbutton:
 				text = "Make your Alecs look different!";
@@ -511,9 +552,22 @@ wyattmodebutton.addEventListener('click', () => {
 });
 
 function plusalot() {
-  alecAmount += 1000000000000000000;
+	alecAmount += 1000000000000000000;
 }
 
+function updateAlecAmount(currentTime) {
+	const frameTime = currentTime - lastFrameTime;
+	const secondsElapsed = frameTime / 1000;
+	alecAmount += cps * secondsElapsed;
+	totalAlecAmount += cps * secondsElapsed;
+
+	document.getElementById('num').innerText = 'Alecs: ' + Math.floor(alecAmount);
+	document.getElementById('totalnum').innerText = 'Total Alecs: ' + Math.floor(totalAlecAmount);
+
+	lastFrameTime = currentTime;
+	requestAnimationFrame(updateAlecAmount);
+}
+
+requestAnimationFrame(updateAlecAmount);
 setInterval(newsichooseyou, 5000);
-setInterval(autoclick, 1000);
 updateDisplay();
