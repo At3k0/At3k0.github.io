@@ -20,6 +20,8 @@ const clickSFX = new Audio('audio/mcclick.mp3');
 const errorSFX = new Audio('audio/error.mp3');
 const autoclickSFX = new Audio('audio/autoclick.mp3');
 const scotlandSFX = new Audio('audio/scotland.mp3');
+const duoSFX = new Audio('audio/spanish.mp3');
+const chairSFX = new Audio('audio/chair.mp3');
 const alec = document.getElementById('alec');
 const autoclick1 = document.getElementById('autoclick1');
 const autoclick2 = document.getElementById('autoclick2');
@@ -33,6 +35,7 @@ const resetbutton = document.getElementById('reset');
 const upgradesbutton = document.getElementById('upgrades');
 const wyattmodebutton = document.getElementById('wyattmode');
 const changelogbutton = document.getElementById('changelogb');
+
 const newslist = [
 	//local news
 	'local teacher calls students her "bane", gets schoolwide attention',
@@ -54,6 +57,7 @@ const newslist = [
 	'Minions sued by monkeys claiming they were addicted to bananas first, both end up going to rehab',
 	'Tom Nook arrested after waking up resident at 2AM and forcing them to move',
 	//inside jokes
+	'I AM AN OPTIMUS PRIME EARTHER. THE EARTH IS SHAPED LIKE OPTIMUS PRIME, AND IT IS TRUE. YOU CANNOT DENY IT.',
 	'always dead',
 	'Donkey Kong gets called a bathrobe, commits various crimes',
 	'the Scottius Swickius of The Bridgium Acadimium has been notified about your Alec buisness',
@@ -125,6 +129,19 @@ function formatNumberWithCommas(number) {
 	return number.toLocaleString();
 }
 
+function abbreviateNumber(number) {
+	const abbreviations = ["", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "De", "Un", "Duodec", "Tredec", "if you got to this number, please stop playing and go outside, thank you :)"];
+	
+	const tier = Math.log10(Math.abs(number)) / 3 | 0;
+	if (tier === 0) return number;
+
+	const suffix = abbreviations[tier];
+	const scale = Math.pow(10, tier * 3);
+
+	const scaled = number / scale;
+	return scaled.toFixed(1) + suffix;
+}
+
 //news
 const news = () => {
 	let randomIndex;
@@ -173,15 +190,15 @@ setInterval(saveProgress, 60000);
 
 //skins
 const updateDisplay = () => {
-	document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
-	document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
-	document.getElementById('totalnum').innerText = 'Total Alecs: ' + formatNumberWithCommas(totalAlecAmount);
-	document.getElementById('autoclick1cost').innerText = '$' + formatNumberWithCommas(autoclick1cost);
-	document.getElementById('autoclick2cost').innerText = '$' + formatNumberWithCommas(autoclick2cost);
-	document.getElementById('autoclick3cost').innerText = '$' + formatNumberWithCommas(autoclick3cost);
-	document.getElementById('autoclick4cost').innerText = '$' + formatNumberWithCommas(autoclick4cost);
-	document.getElementById('autoclick5cost').innerText = '$' + formatNumberWithCommas(autoclick5cost);
-	document.getElementById('autoclick6cost').innerText = '$' + formatNumberWithCommas(autoclick6cost);
+	document.getElementById('num').innerText = 'Alecs: ' + abbreviateNumber(alecAmount);
+	document.getElementById('aps').innerText = 'APS: ' + abbreviateNumber(cps);
+	document.getElementById('totalnum').innerText = 'Total Alecs: ' + abbreviateNumber(totalAlecAmount);
+	document.getElementById('autoclick1cost').innerText = '$' + abbreviateNumber(autoclick1cost);
+	document.getElementById('autoclick2cost').innerText = '$' + abbreviateNumber(autoclick2cost);
+	document.getElementById('autoclick3cost').innerText = '$' + abbreviateNumber(autoclick3cost);
+	document.getElementById('autoclick4cost').innerText = '$' + abbreviateNumber(autoclick4cost);
+	document.getElementById('autoclick5cost').innerText = '$' + abbreviateNumber(autoclick5cost);
+	document.getElementById('autoclick6cost').innerText = '$' + abbreviateNumber(autoclick6cost);
 	if (wyattmode === 1) {
 		alec.src = 'images/why.jpeg';
 	} else {
@@ -238,9 +255,9 @@ upgradesbutton.addEventListener('click', () => {
 				cps += 1;
 				alecAmount -= autoclick1cost;
 				autoclick1cost = autoclick1cost + Math.ceil(autoclick1cost * 0.15);
-				document.getElementById('autoclick1cost').innerText = '$' + formatNumberWithCommas(autoclick1cost);
-				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
-				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
+				document.getElementById('autoclick1cost').innerText = '$' + abbreviateNumber(autoclick1cost);
+				document.getElementById('num').innerText = 'Alecs: ' + abbreviateNumber(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + abbreviateNumber(cps);
 				saveProgress();
 			} else {
 				errorSFX.cloneNode().play();
@@ -263,9 +280,9 @@ upgradesbutton.addEventListener('click', () => {
 				cps += 30;
 				alecAmount -= autoclick2cost;
 				autoclick2cost = autoclick2cost + Math.ceil(autoclick2cost * 0.15);
-				document.getElementById('autoclick2cost').innerText = '$' + formatNumberWithCommas(autoclick2cost);
-				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
-				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
+				document.getElementById('autoclick2cost').innerText = '$' + abbreviateNumber(autoclick2cost);
+				document.getElementById('num').innerText = 'Alecs: ' + abbreviateNumber(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + abbreviateNumber(cps);
 				saveProgress();
 			} else {
 				errorSFX.cloneNode().play();
@@ -288,9 +305,9 @@ upgradesbutton.addEventListener('click', () => {
 				cps += 300;
 				alecAmount -= autoclick3cost;
 				autoclick3cost = autoclick3cost + Math.ceil(autoclick3cost * 0.15);
-				document.getElementById('autoclick3cost').innerText = '$' + formatNumberWithCommas(autoclick3cost);
-				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
-				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
+				document.getElementById('autoclick3cost').innerText = '$' + abbreviateNumber(autoclick3cost);
+				document.getElementById('num').innerText = 'Alecs: ' + abbreviateNumber(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + abbreviateNumber(cps);
 				saveProgress();
 			} else {
 				errorSFX.cloneNode().play();
@@ -313,9 +330,9 @@ upgradesbutton.addEventListener('click', () => {
 				cps += 10000;
 				alecAmount -= autoclick4cost;
 				autoclick4cost = autoclick4cost + Math.ceil(autoclick4cost * 0.15);
-				document.getElementById('autoclick4cost').innerText = '$' + formatNumberWithCommas(autoclick4cost);
-				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
-				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
+				document.getElementById('autoclick4cost').innerText = '$' + abbreviateNumber(autoclick4cost);
+				document.getElementById('num').innerText = 'Alecs: ' + abbreviateNumber(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + abbreviateNumber(cps);
 				saveProgress();
 			} else {
 				errorSFX.cloneNode().play();
@@ -334,13 +351,13 @@ upgradesbutton.addEventListener('click', () => {
 		});
 		autoclick5.addEventListener('click', () => {
 			if (autoclick5cost <= alecAmount) {
-				clickSFX.cloneNode().play();
+				chairSFX.cloneNode().play();
 				cps += 250000;
 				alecAmount -= autoclick5cost;
 				autoclick5cost = autoclick5cost + Math.ceil(autoclick5cost * 0.15);
-				document.getElementById('autoclick5cost').innerText = '$' + formatNumberWithCommas(autoclick5cost);
-				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
-				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
+				document.getElementById('autoclick5cost').innerText = '$' + abbreviateNumber(autoclick5cost);
+				document.getElementById('num').innerText = 'Alecs: ' + abbreviateNumber(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + abbreviateNumber(cps);
 				saveProgress();
 			} else {
 				errorSFX.cloneNode().play();
@@ -359,13 +376,13 @@ upgradesbutton.addEventListener('click', () => {
 		});
 		autoclick6.addEventListener('click', () => {
 			if (autoclick6cost <= alecAmount) {
-				clickSFX.cloneNode().play();
+				duoSFX.cloneNode().play();
 				cps += 10000000;
 				alecAmount -= autoclick6cost;
-				autoclick6cost = autoclick6cost + Math.ceil(autoclick6cost * 0.15);
-				document.getElementById('autoclick6cost').innerText = '$' + formatNumberWithCommas(autoclick6cost);
-				document.getElementById('num').innerText = 'Alecs: ' + formatNumberWithCommas(alecAmount);
-				document.getElementById('aps').innerText = 'APS: ' + formatNumberWithCommas(cps);
+				autoclick6cost += Math.ceil(autoclick6cost * 0.15);
+				document.getElementById('autoclick6cost').innerText = '$' + abbreviateNumber(autoclick6cost);
+				document.getElementById('num').innerText = 'Alecs: ' + abbreviateNumber(alecAmount);
+				document.getElementById('aps').innerText = 'APS: ' + abbreviateNumber(cps);
 				saveProgress();
 			} else {
 				errorSFX.cloneNode().play();
@@ -384,7 +401,7 @@ upgradesbutton.addEventListener('click', () => {
 		});
 	} else {
 		upgradeonscreen = 0;
-		document.getElementById('upgradesdiv').style.right = "-100%";
+		document.getElementById('upgradesdiv').style.right = "-340px";
 	}
 });
 
@@ -433,7 +450,7 @@ const bclick = () => {
 	document.getElementById('totalnum').innerText = 'Total Alecs: ' + totalAlecAmount;
 	document.getElementById('num').innerText = 'Alecs: ' + alecAmount;
 	if (alecAmount >= 50 && alectype === 0 || alecAmount >= 500 && alectype === 1) {
-		document.getElementById('newalec').style.left = "0%";
+		document.getElementById('newalec').style.top = "10%";
 	}
 	saveProgress();
 };
@@ -442,7 +459,7 @@ const nbclick = () => {
 	clickSFX.cloneNode().play();
 	alectype++;
 	alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
-	document.getElementById('newalec').style.left = "-100%";
+	document.getElementById('newalec').style.top = "-100%";
 	alecAmount -= (alectype === 1) ? 50 : (alectype === 2) ? 500 : 0;
 	updateDisplay();
 	saveProgress();
@@ -494,7 +511,6 @@ alec.addEventListener('mouseup', () => {
 });
 
 //more
-
 function handleMouseOver(event, text) {
 	descbox.style.display = 'block';
 	descbox.innerText = text;
@@ -574,7 +590,7 @@ wyattmodebutton.addEventListener('click', () => {
 		wyattmodebutton.innerText = 'TOGGLE WYATT MODE';
 	} else if (wyattmode === 0 && boughtwyattmode === 1) {
 		document.body.style.backgroundImage = 'url("images/why.jpeg")';
-        document.body.style.backgroundSize = 'cover';
+		document.body.style.backgroundSize = 'cover';
 		document.getElementById('news').innerText = 'WYATT MODE ACTIVATED';
 		skinbutton.innerText = 'WYCHANGE WYSKIN';
 		resetbutton.innerText = 'WYRESET';
@@ -598,8 +614,8 @@ function updateAlecAmount(currentTime) {
 	const secondsElapsed = frameTime / 1000;
 	alecAmount += cps * secondsElapsed;
 	totalAlecAmount += cps * secondsElapsed;
-	document.getElementById('num').innerText = 'Alecs: ' + '$' + formatNumberWithCommas(Math.floor(alecAmount));
-	document.getElementById('totalnum').innerText = 'Total Alecs: ' + formatNumberWithCommas(Math.floor(totalAlecAmount));
+	document.getElementById('num').innerText = 'Alecs: ' + '$' + abbreviateNumber(Math.floor(alecAmount));
+	document.getElementById('totalnum').innerText = 'Total Alecs: ' + abbreviateNumber(Math.floor(totalAlecAmount));
 	lastFrameTime = currentTime;
 	requestAnimationFrame(updateAlecAmount);
 }

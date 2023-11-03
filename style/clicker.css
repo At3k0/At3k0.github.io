@@ -19,11 +19,16 @@ b {
 }
 
 button {
-    background-color: white;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
     border-radius: 15px;
-    border-color: dodgerblue;
+    padding: 10px 20px;
     font-family: "Karla", sans-serif;
     font-size: 20px;
+    position: relative;
+    bottom: -500px;
+    animation: buttonSlideIn 1s forwards;
 }
 
 #alec {
@@ -47,8 +52,8 @@ button {
 #newalec {
     position: fixed;
     font-size: 50px;
-    left: -100%;
-    transition: left 0.5s;
+    top: -100%;
+    transition: top 0.5s;
 }
 
 #maindiv {
@@ -64,14 +69,15 @@ button {
     transform: translateX(50%);
     margin: 0;
     width: 95%;
+    animation: newsSlideIn 1.2s forwards;
 }
 
 #upgradesdiv {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -340px;
     width: 325px;
-    height: 99%;
+    height: 100vh;
     background-color: lightskyblue;
     overflow-y: auto;
     padding: 5px;
@@ -114,6 +120,7 @@ button {
     max-height: 50%;
     overflow-y: auto;
     transition: bottom 0.5s;
+    opacity: 0.9;
 }
 
 #loading img {
@@ -135,10 +142,28 @@ button {
 }
 
 button:hover {
-    background-color: floralwhite;
+    background-color: lightskyblue;
 }
 
 /*animation*/
+@keyframes buttonSlideIn {
+    from {
+        bottom: -500px;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
+@keyframes newsSlideIn {
+    from {
+        top: -30px;
+    }
+    to {
+        top: 1%;
+    }
+}
+
 @keyframes m {
     from {
         transform: rotate(0deg);
