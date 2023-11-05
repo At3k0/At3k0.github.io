@@ -10,6 +10,7 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 0;
 }
 
 b {
@@ -39,6 +40,7 @@ button {
     display: flex;
     margin: 0 auto;
     animation: m 5s infinite linear;
+    z-index: 3;
 }
 
 #reset {
@@ -91,13 +93,19 @@ button {
 #autoclick4, #autoclick4cost,
 #autoclick5, #autoclick5cost,
 #autoclick6, #autoclick6cost,
+#autoclick7, #autoclick7cost,
+#autoclick8, #autoclick8cost,
+#autoclick9, #autoclick9cost,
+#autoclick10, #autoclick10cost,
+#autoclick11, #autoclick11cost,
+#autoclick12, #autoclick12cost,
+
 #soonupg {
     display: inline-block;
     padding: 5px;
     background-color: white;
     color: black;
     margin: 1px;
-    cursor: pointer;
 }
 
 #soonupg {
@@ -111,7 +119,7 @@ button {
     padding: 10px;
     border-radius: 15px;
     border: 1px outset dodgerblue;
-    z-index: 1;
+    z-index: 2;
 }
 
 #changelog {
@@ -128,8 +136,52 @@ button {
     height: 500px;
     border-radius: 15px;
 }
+
 #content, #descbox {
     display: none;
+}
+
+.slider {
+    font-family: "Karla", sans-serif;
+    position: fixed;
+    width: auto;
+    height: 100px;
+    top: 5%;
+    font-size: 24px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    animation: slideUpgrades 5s linear forwards;
+    z-index: -1;
+}
+
+.add {
+    font-family: "Karla", sans-serif;
+    position: absolute;
+    font-size: 24px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    opacity: 0;
+    animation: fadeOut 1s ease-out forwards;
+    pointer-events: none;
+}
+
+.fall {
+    position: absolute;
+    width: auto;
+    height: 100px;
+    bottom: 50%;
+    animation: fall 2s linear;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    width: auto;
+    height: 100px;
+    bottom: 50%;
+    animation: moveimg 2s linear;
+    opacity: 0;
+    z-index: -1;
 }
 
 /*hover*/
@@ -143,9 +195,28 @@ button {
 
 button:hover {
     background-color: lightskyblue;
+
 }
 
 /*animation*/
+@keyframes slideUpgrades {
+    0% {
+        left: -10%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes fall {
+    0% {
+        bottom: var(--initial-bottom);
+    }
+    100% {
+        bottom: 0%;
+    }
+}
+
 @keyframes buttonSlideIn {
     from {
         bottom: -500px;
@@ -164,11 +235,36 @@ button:hover {
     }
 }
 
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
 @keyframes m {
     from {
         transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes moveimg {
+    0% {
+        opacity: 1;
+        left: -10%;
+    }
+    99% {
+        opacity: 1;
+        left: 45%;
+    }
+    100% {
+        opacity: 0;
     }
 }
