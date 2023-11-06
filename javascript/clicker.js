@@ -54,6 +54,13 @@ const newslist = [
 	'local Charles steals the style of Alec, gets called a swine',
 	'local Middle School Bridges Confessions called a cyberbully by Kerinius Borzellius, but none of the "victims" agree',
 	'local shoe gets thrown at fundraiser guy, all students agree it was justified',
+	'local PSAT app turns man into a smurf',
+	'local Pinchy is good dog',
+	'local Speck is a good dog',
+	'local Monkey is a good dog',
+	'local Gilligan is a good dog',
+	'local Adonis is a good dog',
+	'local Archie will rest in peace',
 	//legal news
 	'Nintendo gets sued by R.J. Palacio claiming that their new game, "Super Mario Bros Wonder" infringes her book series, "Wonder"',
 	'Kratt brothers sued by Chris Pratt, claims their names are too similar',
@@ -136,7 +143,7 @@ const buttons = [
 ];
 
 function abbreviateNumber(number) {
-	const abbreviations = ["", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "De", "Un", "Duodec", "Tredec", "if you got to this number, please stop playing and go outside, thank you :)"];
+	const abbreviations = ["", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "De", "Un", "Dd", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod", "Vg", "Uvg", "if you got to this number, please stop playing and go outside, thank you :)"];
 	const tier = Math.log10(Math.abs(number)) / 3 | 0;
 	if (tier === 0) return number;
 	const suffix = abbreviations[tier];
@@ -683,5 +690,5 @@ function updateAlecAmount(currentTime) {
 }
 
 requestAnimationFrame(updateAlecAmount);
-setInterval(newsichooseyou, 5000);
+setInterval(newsichooseyou, 7500);
 updateDisplay();
