@@ -14,19 +14,20 @@ html, body {
 }
 
 .column {
-    height: 370px;
+    min-height: 370px;
+    min-width: 370px;
     background-color: white;
     padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 15px;
-    flex: 1;
-    margin: 0 200px 10px;
+    margin: 0 0 10px;
     font-size: 23px;
     text-align: center;
     flex-grow: 1;
 }
+
 
 .buttons {
     position: absolute;
