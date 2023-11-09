@@ -61,6 +61,14 @@ const newslist = [
 	`local Middle School Bridges Confessions called a cyberbully by Kerinius Borzellius, but none of the "victims" agree`,
 	`local shoe gets thrown at fundraiser guy, all students agree it was justified`,
 	`local PSAT app turns man into a smurf`,
+	//local pets
+	`local Samson is a good dog`,
+	`local Bentley is a good dog`,
+	`local Junebug is a good dog`,
+	`local Jack is a good dog`,
+	`local Penny is a good dog`,
+	`local Fish is a good dog`,
+	`local Chips is a good dog`,
 	`local Pinchy is good dog`,
 	`local Speck is a good dog`,
 	`local Monkey is a good dog`,
@@ -68,6 +76,10 @@ const newslist = [
 	`local Adonis is a good dog`,
 	`local Remy is a good dog`,
 	`local Owen is a good dog`,
+	`local Torch is a good crested gecko`,
+	`local Gecky is a good crested gecko`,
+	`local Vacuum Cleaner is a good Black Ghost Knifefish`, //yes this is a real pet
+	`local Zoe will rest in peace`,
 	`local Archie will rest in peace`,
 	//legal news
 	`Nintendo gets sued by R.J. Palacio claiming that their new game, "Super Mario Bros Wonder" infringes her book series, "Wonder"`,
