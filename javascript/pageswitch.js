@@ -35,6 +35,38 @@ function showQuotes() {
   updateCSSLink('style/quotes.css');
 }
 
+function showClicker() {
+  switch(window.location.protocol) {
+     case 'http:':
+       window.location.href = "clicker";
+       break;
+     case 'https:':
+      window.location.href = "clicker";
+       break;
+     case 'file:':
+       window.location.href = "clicker.html";
+       break;
+     default: 
+       console.log("idk");
+  }
+}
+
+function showBox() {
+  switch(window.location.protocol) {
+     case 'http:':
+       window.location.href = "box";
+       break;
+     case 'https:':
+      window.location.href = "box";
+       break;
+     case 'file:':
+       window.location.href = "box.html";
+       break;
+     default: 
+       console.log("idk");
+  }
+}
+
 function openQuotesForm() {
   window.open("https://forms.gle/1rS7JwsfzxzZ4B2V7");
 }

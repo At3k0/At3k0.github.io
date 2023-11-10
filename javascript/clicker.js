@@ -78,6 +78,7 @@ const newslist = [
 	`local Owen is a good dog`,
 	`local Torch is a good crested gecko`,
 	`local Gecky is a good crested gecko`,
+	`local Bean is a good cat`,
 	`local Vacuum Cleaner is a good Black Ghost Knifefish`, //yes this is a real pet
 	`local Zoe will rest in peace`,
 	`local Archie will rest in peace`,

@@ -27,6 +27,12 @@
 					<button onclick="showQuotes()" class="navbarlink">
 						Quotes
 					</button>
+					<button onclick="showClicker()" class="navbarlink">
+						Clicker
+					</button>
+					<button onclick="showBox()" class="navbarlink">
+						Box HOF
+					</button>
 				</div>
 			</div>
 		</header>
@@ -62,6 +68,11 @@
 			</p>
 		</div>
 		<div id="home">
+			<h1>
+				<div class="column">
+					Hall of Fame
+				</div>
+			</h1>
 			<div class="container">
 				<div class="column">
 					<div class="columnleft">
@@ -88,13 +99,42 @@
 					</div>
 				</div>
 			</div>
+			<h1>
+				<div class="column">
+					More
+				</div>
+			</h1>
+			<div class="container">
+				<div class="column">
+					<div class="columnleft2">
+						<img src="images/alec.png" onclick="showClicker()">
+						<p onclick="showClicker()" class="indtxt">
+							Alec Clicker
+						</p>
+						<img src="https://img.uline.com/is/image/uline/S-4061?$Mobile_Zoom$" onclick="showBox()">
+						<p onclick="showBox()" class="indtxt">
+							Box hall of fame
+						</p>
+					</div>
+				</div>
+				<div class="column">
+					<div class="columncenter2">
+						<p>Coming later</p>
+					</div>
+				</div>
+				<div class="column">
+					<div class="columnright2">
+						<p>Coming later</p>
+					</div>
+				</div>
+			</div>
 			<div class="scontainer">
 				<div class="column">
 					<h1>
 						Information
 					</h1>
 					<p>
-						Bridgeshof.com is a personal website I made to store all the dumb quotes and candids from this hurricane of a school. 
+						Bridgeshof.com is a personal website I made to store all the dumb quotes and candids from this hurricane of a school.
 						<br> 
 						It's also my place to put my short films, since the Bridges Vimeo account STILL hasn't posted them...
 					</p>
@@ -110,7 +150,6 @@
 					<div>
 						<b>
 							<iframe class="video" id="video" width="560" height="315" src="src" frameborder="0" allowfullscreen="" style="display: block;">
-
 							</iframe>
 							<img class="comingsoon" id="img" width="560" height="315" src="images/when.png" style="display: none;">
 							<p id="desc">
@@ -120,7 +159,7 @@
 					</div>
 					<div>
 						<button onclick="goBackSF()">Previous</button>
-						<span class="pagenumSF"> Page <span id="pagenumSF">1</span>/8 </span>
+						<span class="pagenumSF"> Page <span id="pagenumSF">1</span>/8</span>
 						<button onclick="goForwardSF()">Next</button>
 					</div>
 					<!--<div class="column"><h1>Short Film Hall of Fame (coming soon)</h1><p>(ok the reason is i havent got permission to post anything here yet)</p></div> probably gonna wait until the next film festival for this-->
@@ -136,6 +175,7 @@
 							<div>
 								<img src="images/candids/saveriogpt.png">
 								<p>saverio exposed!1!11!!1!!</p>
+								<p>Submitted by Wyatt Golden</p>
 							</div>
 							<div>
 								<img src="images/candids/2017.png">
@@ -150,10 +190,12 @@
 							<div>
 								<img src="images/candids/mylespano.png">
 								<p>s tier photography skills</p>
+								<p>Submitted by Myles O' Meara</p>
 							</div>
 							<div>
 								<img src="images/candids/lays.png">
 								<p>"I am the layax, I speak for the chips<br>gimmie your money or i'll break your hips"</p>
+								<p>Submitted by JT Chaiyakam</p>
 							</div>
 							<div>
 								<img src="images/candids/math.png">
@@ -164,6 +206,7 @@
 							<div>
 								<img src="images/candids/spanishdict.png">
 								<p>it's not just Duolingo that does this, apperantly</p>
+								<p>Submitted by Rence Alder</p>
 							</div>
 							<div>
 								<img src="images/candids/scottpen.png">
@@ -182,6 +225,7 @@
 							<div>
 								<img src="images/candids/summon.gif">
 								<p>HE HAS RISEN!</p>
+								<p>Submitted by Matthew Blackburn</p>
 							</div>
 							<div>
 								<img src="images/candids/quivera.gif">
@@ -196,6 +240,7 @@
 							<div>
 								<img src="images/candids/bradmaid.png">
 								<p>why would you do this brad</p>
+								<p>Submitted by my mother</p>
 							</div>
 							<div>
 								<img src="images/candids/chrispokemon.png">
@@ -214,20 +259,24 @@
 							<div>
 								<img src="images/candids/avadog.png">
 								<p>dog.</p>
+								<p>Submitted by Ava Federgreen</p>
 							</div>
 						</div>
 						<div class="cpage cpage-7">
 							<div>
 								<img src="images/candids/fortnite.png">
 								<p>kinda looks like 🗿</p>
+								<p>Submitted by Keiran George</p>
 							</div>
 							<div>
 								<img src="images/candids/hehe.png">
 								<p>pov: my mom after my friends leave</p>
+								<p>Submitted by Xiaoxia Fogg</p>
 							</div>
 							<div>
 								<img src="images/candids/gartic.png">
-								<p>nah thats cap (gwen was the one who sent this in dont sue me)</p>
+								<p>thats cap</p>
+								<p>Submitted by Gwen Karaba</p>
 							</div>
 						</div>
 						<div class="cpage cpage-8">
@@ -238,6 +287,7 @@
 							<div>
 								<img src="images/candids/perry.png">
 								<p>lily why would you do this</p>
+								<p>Submitted by Lily Kyllo</p>
 							</div>
 							<div>
 								<img src="images/candids/lie.png">
@@ -248,6 +298,11 @@
 							<div>
 								<img src="images/candids/maxsound.png">
 								<p>OMG NO WAY!</p>
+								<p>Submitted by Sarah Quan</p>
+							</div>
+							<div>
+								<img src="images/candids/wig.png">
+								<p>.</p>
 							</div>
 						</div>
 					</b>
