@@ -22,6 +22,7 @@ Ava Federgreen - Providing a quote & a candid<br>
 Xiaoxia Fogg - Providing a candid<br>
 Gwen Karaba - Providing a candid<br>
 Lily Kyllo - Providing a candid<br>
+Sarah Quan - Providing a candid<br>
 
 Christian Solis - Allowing me to yoink quotes off his quote board<br>
 David Hekimian - Helping me set this up
