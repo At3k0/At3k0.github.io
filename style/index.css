@@ -3,18 +3,39 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: "Karla", sans-serif;
+    background-color: royalblue;
 }
 
-.l {
-    color: royalblue;
-}
-
-.navbar {
-    display: block;
+header {
     background-color: #333;
     color: white;
     padding: 5px 0px 10px;
     border-radius: 0 0 15px 15px;
+}
+
+footer {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+footer a {
+    color: royalblue;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    border-radius: 15px;
+    border-color: dodgerblue;
+    font-family: "Karla", sans-serif;
+    font-size: 20px;
 }
 
 .navbarlink {
@@ -24,27 +45,13 @@ html, body {
     font-weight: bold;
 }
 
-.logo, p {
+.logo, p, span {
     font-size: 20px;
     font-weight: bold;
 }
 
-.footer {
-    font-size: 24px;
-    font-weight: bold;
-    flex-grow: 1;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #333;
-    color: white;
-    border-radius: 15px 15px 0 0;
-}
-
 .container {
     display: flex;
-    grid-template-columns: repeat(2, 3fr);
     grid-gap: 5%;
     padding: 0 20px;
 }
@@ -52,6 +59,12 @@ html, body {
 .scontainer {
     display: block;
     padding: 20px;
+}
+
+.mcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 20px;
 }
 
 .column {
@@ -64,59 +77,17 @@ html, body {
     flex: 1;
     border-radius: 15px;
 }
+
+.column2 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
  
 .columnleft img, .columncenter img, .columnright img {
     height: 90%;
     width: 100%;
     border-radius: 15px;
-}
-
-.columnleft2 img, .columncenter2 img, .columnright2 img {
-    float: left;
-    flex: 33.33%;
-    width: 20%;
-    border-radius: 15px;
-}
-
-.columnleft2 p {
-    float: left;
-    flex: 33.33%;
-    width: 20%;
-    border-radius: 15px;
-}
-
-img:hover, button:hover, .hover:hover, .navbarlink:hover, .indtxt:hover {
-    cursor: pointer;
-}
-
-button {
-    border-radius: 15px;
-    border-color: dodgerblue;
-    font-family: "Karla", sans-serif;
-    font-size: 20px;
-}
-
-button:hover {
-    background-color: floralwhite;
-}
-
-html {
-    background-color: royalblue;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    color: darkslategray;
-}
-
-.center-content {
-    font-size: 24px;
-    font-weight: bold;
-    flex-grow: 1;
 }
 
 .line {
@@ -154,10 +125,6 @@ a:hover {
     font-weight: bold;
 }
 
-.navbarimg {
-    width: 3%;
-}
-
 /*.ano {
     background-color: white;
     padding: 15px;
@@ -167,21 +134,37 @@ a:hover {
     font-size: 100px;
 }archived in case i need to make another*/
 
-.fix {
-    position: fixed;
-    bottom: 2%;
-    left: 95.5%;
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
-.fix:hover {
-    width: 6%;
-    left: 92.5%;
+.mimg {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    border-radius: 15px;
 }
 
-.fixt {
-    position:fixed;
-    bottom: 10%;
-    left: 95.5%;
+.mtxt {
+    margin-top: 10px;
+}
+
+img:hover, button:hover, .hover:hover, .navbarlink:hover, .indtxt:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: floralwhite;
+}
+
+a:hover {
+    color: darkslategray;
 }
 
 ::-webkit-scrollbar {

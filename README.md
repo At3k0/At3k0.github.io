@@ -17,6 +17,7 @@ Abby Mathess - Providing a quote<br>
 Christopher Laurence - Providing a quote<br>
 Gabby Frear - Providing a quote<br>
 "gossip gurl" - Providing a quote<br>
+"some bozo" - Providing a quote<br>
 Keiran George - Providing quotes & a candid<br>
 Ava Federgreen - Providing a quote & a candid<br>
 Xiaoxia Fogg - Providing a candid<br>

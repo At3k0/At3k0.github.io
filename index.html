@@ -13,28 +13,24 @@
 	</head>
 	<body style="text-align: center;">
 		<header>
-			<div class="navbar">
-				<div class="logo">
-					<img onclick="showHome()" src="images/smallogo.png" class="hover">
-				</div>
-				<div class="navbarlinks">
-					<button onclick="showShortFilms()" class="navbarlink">
-						Short Films
-					</button>
-					<button onclick="showCandids()" class="navbarlink">
-						Candids
-					</button>
-					<button onclick="showQuotes()" class="navbarlink">
-						Quotes
-					</button>
-					<button onclick="showClicker()" class="navbarlink">
-						Clicker
-					</button>
-					<button onclick="showBox()" class="navbarlink">
-						Box HOF
-					</button>
-				</div>
-			</div>
+			<img onclick="showHome()" src="images/smallogo.png" class="logo hover">
+			<nav>
+				<button onclick="showShortFilms()" class="navbarlink">
+					Short Films
+				</button>
+				<button onclick="showCandids()" class="navbarlink">
+					Candids
+				</button>
+				<button onclick="showQuotes()" class="navbarlink">
+					Quotes
+				</button>
+				<button onclick="showClicker()" class="navbarlink">
+					Clicker
+				</button>
+				<button onclick="showBox()" class="navbarlink">
+					Box HOF
+				</button>
+			</nav>
 		</header>
 		<!--<br>
 		<br>
@@ -104,29 +100,19 @@
 					More
 				</div>
 			</h1>
-			<div class="container">
-				<div class="column">
-					<div class="columnleft2">
-						<img src="images/alec.png" onclick="showClicker()">
-						<p onclick="showClicker()" class="indtxt">
-							Alec Clicker
-						</p>
-						<img src="https://img.uline.com/is/image/uline/S-4061?$Mobile_Zoom$" onclick="showBox()">
-						<p onclick="showBox()" class="indtxt">
-							Box hall of fame
-						</p>
-					</div>
-				</div>
-				<div class="column">
-					<div class="columncenter2">
-						<p>Coming later</p>
-					</div>
-				</div>
-				<div class="column">
-					<div class="columnright2">
-						<p>Coming later</p>
-					</div>
-				</div>
+			<div class="scontainer">
+			    <div class="column2">
+			        <div class="mcontainer">
+			            <div class="grid-item" onclick="showClicker()">
+			                <img class="mimg" src="images/alec.png">
+			                <span class="indtxt mtxt">Alec Clicker</span>
+			            </div>
+			            <div class="grid-item" onclick="showBox()">
+			                <img class="mimg" src="https://img.uline.com/is/image/uline/S-4061?$Mobile_Zoom$">
+			                <span class="indtxt mtxt">Box HOF</span>
+			            </div>
+			        </div>
+			    </div>
 			</div>
 			<div class="scontainer">
 				<div class="column">
@@ -336,11 +322,13 @@
 							<br>
 							"eatin charcoal to become a furnace" -Chris L.
 							<br>
-							"Stop saying nutty words!" -Me
+							"I could probably beat Goku pretty easily" -Chris L.
 							<br>
-							"Rocks in your socks while using google docs when I have chicken pox" -Me
+							"Stop saying nutty words!" -Me
 						</div>
 						<div class="qpage qpage-2">
+							"Rocks in your socks while using google docs when I have chicken pox" -Me
+							<br>
 							"If you use 'tu' instead of 'usted' while talking to the doctor, he will purposely fail your surgery" -Me
 							<br>
 							"Seleucids? More like selling kids" -Me
@@ -358,10 +346,10 @@
 							"I'm a total chocolate milker" -Lily K.
 							<br>
 							"How many Phoenixlings could you take in a fight?" -Myles O.M.
-							<br>
-							"Please don't bite my other parts" -Myles O.M.
 						</div>
 						<div class="qpage qpage-3">
+							"Please don't bite my other parts" -Myles O.M.
+							<br>
 							"I'm gonna marry my daughter" -Myles O.M.
 							<br>
 							"Is Santa a pimp? Because he loves his ho ho hoes!" -Myles O.M.
@@ -379,10 +367,10 @@
 							"My homework ate my dog" -Anonymous
 							<br>
 							"Alec Dhar-menian" -Tal G.
-							<br>
-							"Better Call Tal" -Tal G.
 						</div>
 						<div class="qpage qpage-4">
+							"Better Call Tal" -Tal G.
+							<br>
 							"Sus Amigos" -Elizabeth H. <!--she actually said that im so sorry-->
 							<br>
 							"Gustavo said I have schizophrenia" -Miles E.
@@ -400,10 +388,10 @@
 							"Everything is snortable" -Andrew C.
 							<br>
 							"How do you feel about the ending?" "Yeah" -Interaction between JT C. and Skye H.
-							<br>
-							"and...saving THAT for blackmailing purposes" -Sarah Q.
 						</div>
 						<div class="qpage qpage-5">
+							"and...saving THAT for blackmailing purposes" -Sarah Q.
+							<br>
 							"This school is people who are neurospicy" -Gwen K.
 							<br>
 							"CHRIS. SHUT THE F*** UP." -Ava F.
@@ -419,10 +407,10 @@
 							"Rubber? I was rubber once. They locked me in a room. A rats room. A rats room filled with crazy, and crazy makes me rubber. Rubber? I was rubber once..." -Rence A.
 							<br>
 							"Watch yo jacket" -Gabby F.
-							<br>
-							"Gregsual intercourse" -Jack W. <!--i'll probably have to remove this one since i dont think greg would be happy with this-->
 						</div>
 						<div class="qpage qpage-6">
+							"Gregsual intercourse" -Jack W. <!--i'll probably have to remove this one since i dont think greg would be happy with this-->
+							<br>
 							"Tal, don't write 'A. S. S.' on your paper" -Kirk S.
 							<br>
 							"Are you mindful momenting?" Caroline S.
@@ -488,8 +476,7 @@
 			</div>
 		</div>
 		<footer>
-			<div class="footer">
-				<div class="center-content">
+			<div style="flex-grow: 1;">
 					copyright literally nobody 2023
 					<hr class="line">
 					Run by Alec Diramerian
@@ -512,13 +499,7 @@
 					</a>
 					on GitHub
 				</div>
-			</div>
 		</footer>
-		<a href="clicker.html">
-			<button class="fixt">New!</button>
-			<br>
-			<img src="images/alec.png" class="navbarimg fix navbarlink">
-		</a>
 		<script src="javascript/pageswitch.js"></script>
 		<script src="javascript/quotepages.js"></script>
 		<script src="javascript/candidpages.js"></script>
