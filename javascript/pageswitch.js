@@ -1,83 +1,41 @@
-const home = document.getElementById("home");
-const shortfilms = document.getElementById("shortfilms");
-const candids = document.getElementById("candids");
-const quotes = document.getElementById("quotes");
+const getElementById = id => document.getElementById(id);
 
-function showHome() {
-  home.style.display = "block";
-  shortfilms.style.display = "none";
-  candids.style.display = "none";
-  quotes.style.display = "none";
-  updateCSSLink('style/index.css');
-}
+const home = getElementById("home");
+const shortfilms = getElementById("shortfilms");
+const candids = getElementById("candids");
+const quotes = getElementById("quotes");
 
-function showShortFilms() {
-  home.style.display = "none";
-  shortfilms.style.display = "block";
-  candids.style.display = "none";
-  quotes.style.display = "none";
-  updateCSSLink('style/shortfilms.css');
-}
-
-function showCandids() {
-  home.style.display = "none";
-  shortfilms.style.display = "none";
-  candids.style.display = "block";
-  quotes.style.display = "none";
-  updateCSSLink('style/candids.css');
-}
-
-function showQuotes() {
+const showElement = (element, href) => {
   home.style.display = "none";
   shortfilms.style.display = "none";
   candids.style.display = "none";
-  quotes.style.display = "block";
-  updateCSSLink('style/quotes.css');
-}
+  quotes.style.display = "none";
 
-function showClicker() {
-  switch(window.location.protocol) {
-     case 'http:':
-       window.location.href = "clicker";
-       break;
-     case 'https:':
-      window.location.href = "clicker";
-       break;
-     case 'file:':
-       window.location.href = "clicker.html";
-       break;
-     default: 
-       console.log("idk");
-  }
-}
+  element.style.display = "block";
+  updateCSSLink(href);
+};
 
-function showBox() {
-  switch(window.location.protocol) {
-     case 'http:':
-       window.location.href = "box";
-       break;
-     case 'https:':
-      window.location.href = "box";
-       break;
-     case 'file:':
-       window.location.href = "box.html";
-       break;
-     default: 
-       console.log("idk");
-  }
-}
+const showHome = () => showElement(home, 'style/index.css');
+const showShortFilms = () => showElement(shortfilms, 'style/shortfilms.css');
+const showCandids = () => showElement(candids, 'style/candids.css');
+const showQuotes = () => showElement(quotes, 'style/quotes.css');
 
-function openQuotesForm() {
-  window.open("https://forms.gle/1rS7JwsfzxzZ4B2V7");
-}
+const redirectToPage = page => {
+  const protocol = window.location.protocol;
+  const redirectPage = protocol === 'file:' ? `${page}.html` : page;
+  window.location.href = redirectPage;
+};
 
-function openCandidsForm() {
-  window.open("https://forms.gle/19PAqcWP1ZffHae8A");
-}
+const showClicker = () => redirectToPage("clicker");
+const showBox = () => redirectToPage("box");
+const showRiddle = () => redirectToPage("scorecard");
 
-showHome();
+const openForm = url => window.open(url);
 
-function updateCSSLink(href) {
+const openQuotesForm = () => openForm("https://forms.gle/1rS7JwsfzxzZ4B2V7");
+const openCandidsForm = () => openForm("https://forms.gle/19PAqcWP1ZffHae8A");
+
+const updateCSSLink = href => {
   const head = document.getElementsByTagName('head')[0];
   const existingLink = document.getElementById('dynamic-css');
 
@@ -91,6 +49,6 @@ function updateCSSLink(href) {
     newLink.href = href;
     head.appendChild(newLink);
   }
-}
+};
 
 showHome();
