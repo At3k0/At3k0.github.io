@@ -503,7 +503,7 @@ changelogbutton.addEventListener('click', () => {
 
 //clicks
 const bclick = () => {
-	const a = Math.ceil(cps * 0.5 + totalAlecAmount * 0.0005);
+	const a = Math.ceil(cps * 0.6 + totalAlecAmount * 0.0006);
 	clickSFX.cloneNode().play();
 	alecAmount += (a < 1) ? 1 : a;
 	totalAlecAmount += (a < 1) ? 1 : a;
