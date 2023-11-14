@@ -26,13 +26,16 @@ let autoclick12cost = 14000000000000;
 const clickSFX = new Audio('audio/mcclick.mp3');
 const errorSFX = new Audio('audio/error.mp3');
 const autoclickSFX = new Audio('audio/autoclick.mp3');
+const factorySFX = new Audio('audio/factory.mp3');
 const scotlandSFX = new Audio('audio/scotland.mp3');
 const flannelSFX = new Audio('audio/flannel.mp3');
 const chairSFX = new Audio('audio/chair.mp3');
 const duoSFX = new Audio('audio/spanish.mp3');
 const trainSFX = new Audio('audio/train.mp3');
 const milkSFX = new Audio('audio/milk.mp3');
+const cloneSFX = new Audio('audio/clone.mp3');
 const meowSFX = new Audio('audio/meow.mp3');
+const chompSFX = new Audio('audio/chomp.mp3');
 const summonSFX = new Audio('audio/summon.mp3');
 const alec = document.getElementById('alec');
 const descbox = document.getElementById('descbox');
@@ -324,17 +327,20 @@ function addAutoclickListener(element, cost, cpsMultiplier, index) {
 		if (cost <= alecAmount) {
 			const soundEffects = {
 				0: autoclickSFX,
+				1: factorySFX,
 				2: scotlandSFX,
 				3: flannelSFX,
 				4: chairSFX,
 				5: duoSFX,
 				6: trainSFX,
 				7: milkSFX,
+				8: cloneSFX,
 				9: meowSFX,
+				10: chompSFX,
 				11: summonSFX,
 			};
 
-			const excludedIndices = [0, 2, 3, 4, 5, 6, 7, 9, 11];
+			const excludedIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 			(index !== 0 && !excludedIndices.includes(index)) ? clickSFX.cloneNode().play(): (soundEffects[index] && soundEffects[index].cloneNode().play());
 
 			const container = document.querySelector(".container");
