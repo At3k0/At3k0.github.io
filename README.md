@@ -9,8 +9,8 @@ Quotes - The Bridges Academy Quotebook, in the form of a webpage
 [Want to request a Quote? Click here!]<br>
 If you want to request a quote/candid to be removed, scroll down to the "Contact" section<br>
 # Credits
+Rence Alder - Providing quotes (6) and pet names (a lot)<br>
 Myles O' Meara - Providing quotes (5 maybe 6)<br>
-Rence Alder - Providing quotes (4)<br>
 Mealz Mokran - Providing quotes (3)<br>
 Abby Mathess - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
@@ -26,7 +26,11 @@ Lily Kyllo - Providing a candid<br>
 Sarah Quan - Providing a candid<br>
 
 Christian Solis - Allowing me to yoink quotes off his quote board<br>
-David Hekimian - Helping me set this up
+David Hekimian - Helping me set this up<br>
+
+(below are instagram handles)
+@colejw2007 - Provided a candid<br>
+
 # Contact
 Email: alecdiramerian@gmail.com<br>
 or<br>

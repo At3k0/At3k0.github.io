@@ -84,6 +84,12 @@ const newslist = [
 	`local Torch is a good crested gecko`,
 	`local Gecky is a good crested gecko`,
 	`local Bean is a good cat`,
+	`local Key is a good cat`, //pet owned by Kirk S.
+	`local Baby Key is a good cat`, //pet owned by Kirk S.
+	`local Tiny Key is a good cat`, //pet owned by Kirk S.
+	`local Key is a good cat`, //pet owned by Kirk S.
+	`local Rex is a good cat`, //pet owned by Rence A.
+	`local Blu is a good cat`, //pet owned by Rence A.
 	`local Vacuum Cleaner is a good Black Ghost Knifefish`, //yes this is a real pet
 	`local bill is a good bill`, //pet owned by bill
 	`local Zoe will rest in peace`,
@@ -284,6 +290,8 @@ const updateDisplay = () => {
 			alec.src = alectype === 0 ? 'images/ava.png' : (alectype === 1 ? 'images/ava2.png' : 'images/ava3.png');
 		} else if (skin === 6) {
 			alec.src = alectype === 0 ? 'images/rence.png' : (alectype === 1 ? 'images/rence2.png' : 'images/rence3.png');
+		} else if (skin === 7) {
+			alec.src = alectype === 0 ? 'images/riley.png' : (alectype === 1 ? 'images/riley2.png' : 'images/riley3.png');
 		} else {
 			alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
 		}
@@ -301,9 +309,10 @@ skinbutton.addEventListener('click', () => {
 		chris: ['chris.png', 'chris2.png', 'chris3.png'],
 		ava: ['ava.png', 'ava2.png', 'ava3.png'],
 		rence: ['rence.png', 'rence2.png', 'rence3.png'],
+		riley: ['riley.png', 'riley2.png', 'riley3.png'],
 	};
 
-	const skinchange = prompt("Which skin do you want to use? (Alec, Abby, Nate, Dash, Chris, Ava, or Rence)", "").toLowerCase();
+	const skinchange = prompt("Which skin do you want to use? (Alec, Abby, Nate, Dash, Chris, Ava, Rence, or Riley?)", "").toLowerCase();
 
 	if (skinImages.hasOwnProperty(skinchange)) {
 		skin = Object.keys(skinImages).indexOf(skinchange);
@@ -560,6 +569,8 @@ alec.addEventListener('mousedown', () => {
 			alec.src = alectype === 0 ? 'images/avamush.png' : (alectype === 1 ? 'images/ava2mush.png' : 'images/ava3mush.png');
 		} else if (skin === 6) {
 			alec.src = alectype === 0 ? 'images/rencemush.png' : (alectype === 1 ? 'images/rence2mush.png' : 'images/rence3mush.png');
+		} else if (skin === 7) {
+			alec.src = alectype === 0 ? 'images/rileymush.png' : (alectype === 1 ? 'images/riley2mush.png' : 'images/riley3mush.png');
 		} else {
 			alec.src = alectype === 0 ? 'images/alecmush.png' : (alectype === 1 ? 'images/alec2mush.png' : 'images/alec3mush.png');
 		}
@@ -582,6 +593,8 @@ alec.addEventListener('mouseup', () => {
 			alec.src = alectype === 0 ? 'images/ava.png' : (alectype === 1 ? 'images/ava2.png' : 'images/ava3.png');
 		} else if (skin === 6) {
 			alec.src = alectype === 0 ? 'images/rence.png' : (alectype === 1 ? 'images/rence2.png' : 'images/rence3.png');
+		} else if (skin === 7) {
+			alec.src = alectype === 0 ? 'images/riley.png' : (alectype === 1 ? 'images/riley2.png' : 'images/riley3.png');
 		} else {
 			alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
 		}
