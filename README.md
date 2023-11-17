@@ -28,8 +28,8 @@ Sarah Quan - Providing a candid<br>
 Christian Solis - Allowing me to yoink quotes off his quote board<br>
 David Hekimian - Helping me set this up<br>
 
-(below are instagram handles)
-@colejw2007 - Provided a candid<br>
+(below are instagram handles)<br>
+@colejw2007 - Providing a candid<br>
 
 # Contact
 Email: alecdiramerian@gmail.com<br>
