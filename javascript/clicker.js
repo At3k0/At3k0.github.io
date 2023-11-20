@@ -23,6 +23,7 @@ let autoclick9cost = 5100000000;
 let autoclick10cost = 75000000000;
 let autoclick11cost = 1000000000000;
 let autoclick12cost = 14000000000000;
+let autoclick13cost = 170000000000000;
 const clickSFX = new Audio('audio/mcclick.mp3');
 const errorSFX = new Audio('audio/error.mp3');
 const autoclickSFX = new Audio('audio/autoclick.mp3');
@@ -37,6 +38,7 @@ const cloneSFX = new Audio('audio/clone.mp3');
 const meowSFX = new Audio('audio/meow.mp3');
 const chompSFX = new Audio('audio/chomp.mp3');
 const summonSFX = new Audio('audio/summon.mp3');
+const birdSFX = new Audio('audio/bird.mp3');
 const alec = document.getElementById('alec');
 const descbox = document.getElementById('descbox');
 const skinbutton = document.getElementById('skin');
@@ -52,6 +54,7 @@ const newslist = [
 	`Sun is shinin' in the sky, there ain't a cloud in sight, it's stopped rainin', everybody's in the play, and don't you know, It's a beautiful new day? Runnin' down the avenue, see how the sun shines brightly in the city, on the streets where once was pity, Mr. Blue Sky is living here today, Mr. Blue Sky, please tell us why you had to hide away for so long, so long, where did we go wrong? Mr. Blue Sky, please tell us why you had to hide away for so long, so long, where did we go wrong? Hey you with the pretty face, welcome to the human race! A celebration, Mr. Blue Sky's up there waitin' And today is the day we've waited for! Mr. Blue Sky, please tell us why you had to hide away for so long, so long, where did we go wrong? Hey there, Mr. Blue, we're so pleased to be with you, look around, see what you do, everybody smiles at you hey there, Mr. Blue we're so pleased to be with you, look around, see what you do, everybody smiles at you. Mr. Blue, you did it right, but soon comes Mr. Night, creepin' over, now his hand is on your shoulder, never mind, I'll remember you this, I'll remember you this way! Mr. Blue Sky, please tell us why, you had to hide away for so long, so long, where did we go wrong? Hey there Mr. Blue, sky, we're so pleased to be with you, sky, look around see what you do, skye, ,verybody smiles at you`,
 	`I would like to reach out my hand. I may see you, I may tell you to run. (on my way, on my way) You know what they say about the young. Well pick me up with golden hand. I may see you, I may tell you to run. (on my way, on my way) You know what they say about the young. Well, I would like to hold my little hand, and we will run, we will, we will crawl, we will, I would like to hold my little hand, and we will run, we will, we will crawl, send me on my way (on my way) Send me on my way (on my way) Send me on my way (on my way) Send me on my way (on my way) Send me on my way (on my way) Send me on my way (on my way) Send me on my way (on my way) Mm hmm (on my way) I would like to reach out my hand, I may see you, I may tell you to run (on my way, on my way) You know what they say about the young. Now pick me up with golden hand, I may see you, I may tell you to run (on my way, on my way) You know what they say about the young. Well, I would like to hold my little hand, and we will run, we will, we will crawl, we will, I would like to hold my little hand, and we will run, we will, we will crawl, send me on my way (on my way) Send me on my way (on my way) Send me on my way (on my way) Send me on my way (on my way) Send me on my way (on my way) Send me on my way (on my way) Send me on my way (on my way) Mm hmm (on my way) Well, I would like to hold my little hand, and we will run, we will, we will crawl, we will I would like to hold my little hand, and we will run, we will, we will crawl, send me on my way, send me on my way, send me on my way, on my way, send me on my way, send me on my way Oh oh oh (way) Send me on my way Oh oh oh (way) Send me on my way. I would like to reach out my hand, I may see you, I may tell you to run (on my way, on my way) You know what they say about the young`,
 	`(Tweedle-lee-deedle-lee-dee) (Tweedle-lee-deedle-lee-dee) (Tweedle-lee-deedle-lee-dee) (Tweedle-lee-deedle-lee-dee) (Tweedle-lee-deedle-lee-dee) (Tweedle-lee-deedle-lee-dee) (Tweet tweet tweet tweet) He rocks in the treetop all the day long, Hoppin' and a-boppin' and a-singin' his song. All the little birds on Jay Bird Street love to hear the robin go tweet tweet tweet. Rockin' robin (tweet tweet tweet) Rock, rock, rockin' robin (Tweet, tweedle-lee-dee) Blow, rockin' robin 'Cause we're really gonna rock tonight, yeah (Tweet, tweedle-lee-dee) Every little swallow, every chickadee, every little bird in the tall oak tree. The wise old owl, the big black crow, flap-a their wings singin' "go bird go" Rockin' robin (tweet tweet tweet) Rock, rock, rockin' robin (Tweet, tweedle-lee-dee) Blow, rockin' robin 'Cause we're really gonna rock tonight, blow! (Tweet, tweedle-lee-dee) A pretty little raven at the bird bandstand, taught him how to do the bop and it was grand, they started goin' steady and bless my soul, he out-bopped the buzzard and the oriole. He rocks in the treetop all the day long, Hoppin' and a-boppin' and a-singin' his song. All the little birds on Jay Bird Street love to hear the robin go tweet tweet tweet. Rockin' robin (tweet tweet tweet) Rock, rock, rockin' robin (Tweet, tweedle-lee-dee) Blow, rockin' robin 'Cause we're really gonna rock tonight (Tweet, tweedle-lee-dee) Well, the pretty little raven at the bird bandstand, taught him how to do the bop and it was grand, they started goin' steady and bless my soul, he out-bopped the buzzard and the oriole. He rocks in the treetop all the day long, Hoppin' and a-boppin' and a-singin' his song. All the little birds on Jay Bird Street love to hear the robin go tweet tweet tweet Rockin' robin (tweet tweet tweet) Rock, rock, rockin' robin (Tweet, tweedle-lee-dee) Blow, rockin' robin 'Cause we're really gonna rock tonight (Tweet, tweedle-lee-dee) (Tweedle-lee-deedle-lee-dee) (Tweedle-lee-deedle-lee-dee) (Tweedle-lee-deedle-lee-dee) (Tweedle-lee-deedle-lee-dee) (Tweedle-lee-deedle-lee-dee) (Tweedle-lee-deedle-lee-dee) (Tweet tweet) (wolf whistle)`, //not based off the Michael Jackson version, this is based on the Bobby Day one from 1958
+	`Pressure! Pushin' down on me, pressin' down on you, no man ask for. Under pressure, that brings a building down, splits a family in two, puts people on streets. That's okay. That's the terror of knowing what this world is about, watchin' some good friends screamin', "Let me out!" Pray tomorrow gets me higher, pressure on people, people on streets. Chippin' around, kick my brains 'round the floor, these are the days it never rains but it pours. People on streets. It's the terror of knowing what this world is about, watching some good friends screaming, "Let me out!" Pray tomorrow gets me higher, higher, high! Pressure on people, people on streets. Turned away from it all like a blind man, sat on the fence but it don't work, keep comin' up with love but it's so slashed and torn, why, why, whyyyyyyyyyyyyyyyyyyyyyyy? Love, love, love, love. Insanity laughs under pressure we're breaking, can't we give ourselves one more chance? Why can't we give love that one more chance? Why can't we give love, give love, give love, give love, give love, give love, give love, give love? 'Cause love's such an old-fashioned word, and love dares you to care for the people on the edge of the night, and love dares you to change our way of caring about ourselves, this is our last dance, this is our last dance, this is ourselves. Under pressure. Under pressure. Pressure.`,
 	//local news
 	`local teacher calls students her 'bane', gets schoolwide attention`,
 	`local Alec gets five adults soaking wet, sings 'Dancing Queen' afterwards`,
@@ -165,6 +168,7 @@ const buttons = [
 	autoclick10,
 	autoclick11,
 	autoclick12,
+	autoclick13,
 	skinbutton,
 	resetbutton,
 	upgradesbutton,
@@ -198,7 +202,7 @@ const news = () => {
 
 const newsichooseyou = () => {
 	const finalnews = news();
-	if (newslist.indexOf(finalnews) >= 0 && newslist.indexOf(finalnews) <= 3) {
+	if (newslist.indexOf(finalnews) >= 0 && newslist.indexOf(finalnews) <= 5) {
 		document.getElementById('news').innerText = 'Radio: ' + finalnews;
 	} else {
 		document.getElementById('news').innerText = 'News: ' + finalnews;
@@ -230,6 +234,7 @@ const loadProgress = () => {
 	if (localStorage.getItem('autoclick10cost')) autoclick10cost = parseInt(localStorage.getItem('autoclick10cost'));
 	if (localStorage.getItem('autoclick11cost')) autoclick11cost = parseInt(localStorage.getItem('autoclick11cost'));
 	if (localStorage.getItem('autoclick12cost')) autoclick12cost = parseInt(localStorage.getItem('autoclick12cost'));
+	if (localStorage.getItem('autoclick13cost')) autoclick13cost = parseInt(localStorage.getItem('autoclick13cost'));
 	if (localStorage.getItem('boughtwyattmode')) boughtwyattmode = parseInt(localStorage.getItem('boughtwyattmode'));
 }
 
@@ -253,6 +258,7 @@ const saveProgress = () => {
 	localStorage.setItem('autoclick10cost', autoclick10cost);
 	localStorage.setItem('autoclick11cost', autoclick11cost);
 	localStorage.setItem('autoclick12cost', autoclick12cost);
+	localStorage.setItem('autoclick13cost', autoclick13cost);
 	localStorage.setItem('boughtwyattmode', boughtwyattmode);
 };
 
@@ -275,25 +281,26 @@ const updateDisplay = () => {
 	document.getElementById('autoclick10cost').innerText = '$' + abbreviateNumber(autoclick10cost);
 	document.getElementById('autoclick11cost').innerText = '$' + abbreviateNumber(autoclick11cost);
 	document.getElementById('autoclick12cost').innerText = '$' + abbreviateNumber(autoclick12cost);
+	document.getElementById('autoclick13cost').innerText = '$' + abbreviateNumber(autoclick13cost);
 	if (wyattmode === 1) {
-		alec.src = 'images/why.jpeg';
+		alec.src = 'images/skins/why.jpeg';
 	} else {
 		if (skin === 1) {
-			alec.src = alectype === 0 ? 'images/abby.png' : (alectype === 1 ? 'images/abby2.png' : 'images/sadlycl.png');
+			alec.src = alectype === 0 ? 'images/skins/abby.png' : (alectype === 1 ? 'images/skins/abby2.png' : 'images/skins/sadlycl.png');
 		} else if (skin === 2) {
-			alec.src = alectype === 0 ? 'images/nate.png' : (alectype === 1 ? 'images/nate2.png' : 'images/nate3.png');
+			alec.src = alectype === 0 ? 'images/skins/nate.png' : (alectype === 1 ? 'images/skins/nate2.png' : 'images/skins/nate3.png');
 		} else if (skin === 3) {
-			alec.src = alectype === 0 ? 'images/dash.png' : (alectype === 1 ? 'images/dash2.png' : 'images/sadlycl.png');
+			alec.src = alectype === 0 ? 'images/skins/dash.png' : (alectype === 1 ? 'images/skins/dash2.png' : 'images/skins/sadlycl.png');
 		} else if (skin === 4) {
-			alec.src = alectype === 0 ? 'images/chris.png' : (alectype === 1 ? 'images/chris2.png' : 'images/chris3.png');
+			alec.src = alectype === 0 ? 'images/skins/chris.png' : (alectype === 1 ? 'images/skins/chris2.png' : 'images/skins/chris3.png');
 		} else if (skin === 5) {
-			alec.src = alectype === 0 ? 'images/ava.png' : (alectype === 1 ? 'images/ava2.png' : 'images/ava3.png');
+			alec.src = alectype === 0 ? 'images/skins/ava.png' : (alectype === 1 ? 'images/skins/ava2.png' : 'images/skins/ava3.png');
 		} else if (skin === 6) {
-			alec.src = alectype === 0 ? 'images/rence.png' : (alectype === 1 ? 'images/rence2.png' : 'images/rence3.png');
+			alec.src = alectype === 0 ? 'images/skins/rence.png' : (alectype === 1 ? 'images/skins/rence2.png' : 'images/skins/rence3.png');
 		} else if (skin === 7) {
-			alec.src = alectype === 0 ? 'images/riley.png' : (alectype === 1 ? 'images/riley2.png' : 'images/riley3.png');
+			alec.src = alectype === 0 ? 'images/skins/riley.png' : (alectype === 1 ? 'images/skins/riley2.png' : 'images/skins/riley3.png');
 		} else {
-			alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
+			alec.src = alectype === 0 ? 'images/skins/alec.png' : (alectype === 1 ? 'images/skins/alec2.png' : 'images/skins/alec3.png');
 		}
 	}
 };
@@ -316,7 +323,7 @@ skinbutton.addEventListener('click', () => {
 
 	if (skinImages.hasOwnProperty(skinchange)) {
 		skin = Object.keys(skinImages).indexOf(skinchange);
-		alec.src = `images/${skinImages[skinchange][alectype]}`;
+		alec.src = `images/skins/${skinImages[skinchange][alectype]}`;
 	}
 });
 
@@ -350,15 +357,16 @@ function addAutoclickListener(element, cost, cpsMultiplier, index) {
 				9: meowSFX,
 				10: chompSFX,
 				11: summonSFX,
+				12: birdSFX,
 			};
 
-			const excludedIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+			const excludedIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 			(index !== 0 && !excludedIndices.includes(index)) ? clickSFX.cloneNode().play(): (soundEffects[index] && soundEffects[index].cloneNode().play());
 
 			const container = document.querySelector(".container");
 			const newImage = document.createElement("img");
 			newImage.className = "shape";
-			newImage.src = index + 1 === 10 ? (Math.round(Math.random()) === 0 ? 'images/storm.png' : 'images/star.png') : `images/autoclick${index + 1}.png`;
+			newImage.src = index + 1 === 10 ? (Math.round(Math.random()) === 0 ? 'images/autoclickimgs/storm.png' : 'images/autoclickimgs/star.png') : `images/autoclickimgs/autoclick${index + 1}.png`;
 			container.appendChild(newImage);
 
 			newImage.addEventListener("animationend", () => {
@@ -396,8 +404,9 @@ function addAutoclickListener(element, cost, cpsMultiplier, index) {
 				autoclick11cost = cost;
 			} else if (element === autoclick12) {
 				autoclick12cost = cost;
+			} else if (element === autoclick13) {
+				autoclick13cost = cost;
 			}
-
 			saveProgress();
 		} else {
 			errorSFX.cloneNode().play();
@@ -476,6 +485,11 @@ const autoclickUpgrades = [
 		cost: autoclick12cost,
 		cpsMultiplier: 65000000
 	},
+	{
+		element: autoclick13,
+		cost: autoclick13cost,
+		cpsMultiplier: 430000000
+	},
 ];
 
 autoclickUpgrades.forEach((upgrade, index) => {
@@ -505,6 +519,7 @@ resetbutton.addEventListener('click', () => {
 		autoclick10cost = 75000000000;
 		autoclick11cost = 1000000000000;
 		autoclick12cost = 14000000000000;
+		autoclick13cost = 14000000000000;
 		saveProgress();
 		document.location.reload();
 	}
@@ -555,48 +570,48 @@ const bclick = () => {
 
 alec.addEventListener('mousedown', () => {
 	if (wyattmode === 1) {
-		alec.src = 'images/why.jpeg';
+		alec.src = 'images/skins/why.jpeg';
 	} else {
 		if (skin === 1) {
-			alec.src = alectype === 0 ? 'images/abbymush.png' : (alectype === 1 ? 'images/abby2mush.png' : 'images/sadlyclmush.png');
+			alec.src = alectype === 0 ? 'images/skins/abbymush.png' : (alectype === 1 ? 'images/skins/abby2mush.png' : 'images/skins/sadlyclmush.png');
 		} else if (skin === 2) {
-			alec.src = alectype === 0 ? 'images/natemush.png' : (alectype === 1 ? 'images/nate2mush.png' : 'images/nate3mush.png');
+			alec.src = alectype === 0 ? 'images/skins/natemush.png' : (alectype === 1 ? 'images/skins/nate2mush.png' : 'images/skins/nate3mush.png');
 		} else if (skin === 3) {
-			alec.src = alectype === 0 ? 'images/dashmush.png' : (alectype === 1 ? 'images/dash2mush.png' : 'images/sadlyclmush.png');
+			alec.src = alectype === 0 ? 'images/skins/dashmush.png' : (alectype === 1 ? 'images/skins/dash2mush.png' : 'images/skins/sadlyclmush.png');
 		} else if (skin === 4) {
-			alec.src = alectype === 0 ? 'images/chrismush.png' : (alectype === 1 ? 'images/chris2mush.png' : 'images/chris3mush.png');
+			alec.src = alectype === 0 ? 'images/skins/chrismush.png' : (alectype === 1 ? 'images/skins/chris2mush.png' : 'images/skins/chris3mush.png');
 		} else if (skin === 5) {
-			alec.src = alectype === 0 ? 'images/avamush.png' : (alectype === 1 ? 'images/ava2mush.png' : 'images/ava3mush.png');
+			alec.src = alectype === 0 ? 'images/skins/avamush.png' : (alectype === 1 ? 'images/skins/ava2mush.png' : 'images/skins/ava3mush.png');
 		} else if (skin === 6) {
-			alec.src = alectype === 0 ? 'images/rencemush.png' : (alectype === 1 ? 'images/rence2mush.png' : 'images/rence3mush.png');
+			alec.src = alectype === 0 ? 'images/skins/rencemush.png' : (alectype === 1 ? 'images/skins/rence2mush.png' : 'images/skins/rence3mush.png');
 		} else if (skin === 7) {
-			alec.src = alectype === 0 ? 'images/rileymush.png' : (alectype === 1 ? 'images/riley2mush.png' : 'images/riley3mush.png');
+			alec.src = alectype === 0 ? 'images/skins/rileymush.png' : (alectype === 1 ? 'images/skins/riley2mush.png' : 'images/skins/riley3mush.png');
 		} else {
-			alec.src = alectype === 0 ? 'images/alecmush.png' : (alectype === 1 ? 'images/alec2mush.png' : 'images/alec3mush.png');
+			alec.src = alectype === 0 ? 'images/skins/alecmush.png' : (alectype === 1 ? 'images/skins/alec2mush.png' : 'images/skins/alec3mush.png');
 		}
 	}
 });
 
 alec.addEventListener('mouseup', () => {
 	if (wyattmode === 1) {
-		alec.src = 'images/why.jpeg';
+		alec.src = 'images/skins/why.jpeg';
 	} else {
 		if (skin === 1) {
-			alec.src = alectype === 0 ? 'images/abby.png' : (alectype === 1 ? 'images/abby2.png' : 'images/sadlycl.png');
+			alec.src = alectype === 0 ? 'images/skins/abby.png' : (alectype === 1 ? 'images/skins/abby2.png' : 'images/skins/sadlycl.png');
 		} else if (skin === 2) {
-			alec.src = alectype === 0 ? 'images/nate.png' : (alectype === 1 ? 'images/nate2.png' : 'images/nate3.png');
+			alec.src = alectype === 0 ? 'images/skins/nate.png' : (alectype === 1 ? 'images/skins/nate2.png' : 'images/skins/nate3.png');
 		} else if (skin === 3) {
-			alec.src = alectype === 0 ? 'images/dash.png' : (alectype === 1 ? 'images/dash2.png' : 'images/sadlycl.png');
+			alec.src = alectype === 0 ? 'images/skins/dash.png' : (alectype === 1 ? 'images/skins/dash2.png' : 'images/skins/sadlycl.png');
 		} else if (skin === 4) {
-			alec.src = alectype === 0 ? 'images/chris.png' : (alectype === 1 ? 'images/chris2.png' : 'images/chris3.png');
+			alec.src = alectype === 0 ? 'images/skins/chris.png' : (alectype === 1 ? 'images/skins/chris2.png' : 'images/skins/chris3.png');
 		} else if (skin === 5) {
-			alec.src = alectype === 0 ? 'images/ava.png' : (alectype === 1 ? 'images/ava2.png' : 'images/ava3.png');
+			alec.src = alectype === 0 ? 'images/skins/ava.png' : (alectype === 1 ? 'images/skins/ava2.png' : 'images/skins/ava3.png');
 		} else if (skin === 6) {
-			alec.src = alectype === 0 ? 'images/rence.png' : (alectype === 1 ? 'images/rence2.png' : 'images/rence3.png');
+			alec.src = alectype === 0 ? 'images/skins/rence.png' : (alectype === 1 ? 'images/skins/rence2.png' : 'images/skins/rence3.png');
 		} else if (skin === 7) {
-			alec.src = alectype === 0 ? 'images/riley.png' : (alectype === 1 ? 'images/riley2.png' : 'images/riley3.png');
+			alec.src = alectype === 0 ? 'images/skins/riley.png' : (alectype === 1 ? 'images/skins/riley2.png' : 'images/skins/riley3.png');
 		} else {
-			alec.src = alectype === 0 ? 'images/alec.png' : (alectype === 1 ? 'images/alec2.png' : 'images/alec3.png');
+			alec.src = alectype === 0 ? 'images/skins/alec.png' : (alectype === 1 ? 'images/skins/alec2.png' : 'images/skins/alec3.png');
 		}
 	}
 });
@@ -658,6 +673,9 @@ buttons.forEach((button) => {
 			case autoclick12:
 				text = "Get the ultimate diety to summon Alecs for you";
 				break;
+			case autoclick13:
+				text = "Get some 2010's tunes or unknown smells to make the Alecs cry";
+				break;
 			case skinbutton:
 				text = "Make your Alecs look different!";
 				break;
@@ -697,7 +715,7 @@ wyattmodebutton.addEventListener('click', () => {
 		boughtwyattmode = 1;
 		wyattmodebutton.innerText = 'TOGGLE WYATT MODE';
 	} else if (wyattmode === 0 && boughtwyattmode === 1) {
-		document.body.style.backgroundImage = 'url("images/why.jpeg")';
+		document.body.style.backgroundImage = 'url("images/skins/why.jpeg")';
 		document.body.style.backgroundSize = 'cover';
 		document.getElementById('news').innerText = 'WYATT MODE ACTIVATED';
 		skinbutton.innerText = 'WYCHANGE WYSKIN';
@@ -734,7 +752,7 @@ function updateAlecAmount(currentTime) {
 			const newImage = document.createElement("img");
 			let b = 1 + Math.round(Math.random() * 11);
 			newImage.className = "slider";
-			newImage.src = b !== 10 ? `images/autoclick${b}.png` : (Math.round(Math.random()) === 0 ? `images/storm.png` : `images/star.png`);
+			newImage.src = b !== 10 ? `images/autoclickimgs/autoclick${b}.png` : (Math.round(Math.random()) === 0 ? `images/autoclickimgs/storm.png` : `images/autoclickimgs/star.png`);
 			//storm.png and star.png are my cats. their names are Stormcloud and Stardust :)
 			container.appendChild(newImage);
 			newImage.addEventListener("animationend", () => newImage.remove());
