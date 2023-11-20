@@ -1,65 +1,66 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: "Karla", sans-serif;
-}
+@media only screen and not (max-width: 768px){
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Karla", sans-serif;
+    }
 
-.container {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
+    .container {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 
-.column {
-    background-color: white;
-    padding: 24px;
-    display: flex;
-    border-radius: 15px;
-    margin: 0 200px 10px;
-    font-size: 25px;
-    text-align: center;
-}
+    .column {
+        background-color: white;
+        padding: 24px;
+        display: flex;
+        border-radius: 15px;
+        margin: 0 200px 10px;
+        font-size: 25px;
+        text-align: center;
+    }
 
-.buttons {
-    position: absolute;
-}
+    h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-h1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    html {
+        background-color: royalblue;
+    }
 
-html {
-    background-color: royalblue;
-}
+    a {
+        text-decoration: none;
+    }
 
-a {
-    text-decoration: none;
-}
+    a:hover {
+        color: darkslategray;
+    }
 
-a:hover {
-    color: darkslategray;
-}
+    img {
+        border-radius: 15px;
+        max-width: 100%;
+    }
 
-img {
-    border-radius: 15px;
-    max-width: 100%;
-}
+    .line {
+        margin-bottom: 10px;
+        border: none;
+        border-top: 1px solid grey;
+        width: 5%;
+    }
 
-.center-content {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-}
+    .cpage {
+        display: none;
+    }
 
-.line {
-    margin-bottom: 10px;
-    border: none;
-    border-top: 1px solid grey;
-    width: 5%;
+    .cpage.active {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
 }
 
 .cpage {
@@ -68,12 +69,14 @@ img {
 
 .cpage.active {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
 }
 
 .pagenumC {
     font-size: 20px;
+}
+
+.buttons {
+    position: absolute;
 }
 
 button {
@@ -85,4 +88,34 @@ button {
 
 ::-webkit-scrollbar {
     width: 0;
+}
+
+@media only screen and (max-width: 768px){
+    .container {
+        overflow-x: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 20px;
+        margin: 0 10% 0;
+        height: auto;
+        width: auto;
+        align-items: flex-start;
+    }
+
+    .buttons button, .pagenumC, #pagenumC {
+        font-size: 16px;
+    }
+
+    .column {
+        margin: 0 0 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .column img {
+        margin: 0;
+        border-radius: 15px;
+        height: auto;
+        width: 100%;
+    }
 }

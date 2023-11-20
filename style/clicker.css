@@ -39,7 +39,7 @@ button {
     width: 320px;
     display: flex;
     margin: 0 auto;
-    animation: m 5s infinite linear;
+    animation: rotate 5s infinite linear;
     z-index: 3;
 }
 
@@ -100,7 +100,6 @@ button {
 #autoclick10, #autoclick10cost,
 #autoclick11, #autoclick11cost,
 #autoclick12, #autoclick12cost,
-
 #soonupg {
     display: inline-block;
     padding: 5px;
@@ -209,15 +208,6 @@ button:hover {
     }
 }
 
-@keyframes fall {
-    0% {
-        bottom: var(--initial-bottom);
-    }
-    100% {
-        bottom: 0%;
-    }
-}
-
 @keyframes buttonSlideIn {
     from {
         bottom: -500px;
@@ -247,7 +237,7 @@ button:hover {
     }
 }
 
-@keyframes m {
+@keyframes rotate {
     from {
         transform: rotate(0deg);
     }
@@ -267,5 +257,25 @@ button:hover {
     }
     100% {
         opacity: 0;
+    }
+}
+
+/*mobile*/
+@media only screen and (max-width: 768px) {
+    #alec {
+        animation: none;
+    }
+
+    #descbox {
+        opacity: 0;
+    }
+
+    #upgradesdiv button {
+        font-size: 10px;
+    }
+
+    #upgradesdiv {
+        width: auto;
+        height: auto;
     }
 }

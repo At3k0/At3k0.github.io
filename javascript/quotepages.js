@@ -1,6 +1,6 @@
 let currentPageQ = 1;
 const pageTitlesQ = [
-    "HS Quotes",
+    "HS Quotes aka the Noah and Chris page",
     "HS Quotes",
     "HS Quotes",
     "HS Quotes",
