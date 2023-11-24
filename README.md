@@ -11,11 +11,12 @@ If you want to request a quote/candid to be removed, scroll down to the "Contact
 # Credits
 Rence Alder - Providing quotes (6) and pet names (a lot)<br>
 Myles O' Meara - Providing quotes (5 maybe 6)<br>
-Mealz Mokran - Providing quotes (3)<br>
+Mealz Mokran - Providing quotes (5)<br>
 Abby Mathess - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
 Christopher Laurence - Providing a quote<br>
 Gabby Frear - Providing a quote<br>
+Greyson Corday - Providing a quote<br>
 "gossip gurl" - Providing a quote<br>
 "some bozo" - Providing a quote<br>
 "John Cena" - Providing a quote<br>

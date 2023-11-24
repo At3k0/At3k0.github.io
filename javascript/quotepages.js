@@ -1,33 +1,34 @@
 let currentPageQ = 1;
 const pageTitlesQ = [
-    "HS Quotes aka the Noah and Chris page",
-    "HS Quotes",
-    "HS Quotes",
-    "HS Quotes",
-    "HS Quotes",
-    "HS Quotes",
-    "HS Quotes",
-    "MS Quotes",
-    "MS Quotes"
+	"HS Quotes aka the Noah and Chris page",
+	"HS Quotes",
+	"HS Quotes",
+	"HS Quotes",
+	"HS Quotes",
+	"HS Quotes",
+	"HS Quotes",
+	"MS Quotes",
+	"MS Quotes",
+	"MS Quotes"
 ];
 
 function showPageQ(pageNumberQ) {
-    for (let i = 1; i <= 9; i++) {
-        document.querySelector(`.qpage.qpage-${i}`).classList.remove("active");
-    }
+	for (let i = 1; i <= 10; i++) {
+		document.querySelector(`.qpage.qpage-${i}`).classList.remove("active");
+	}
 
-    document.querySelector(`.qpage.qpage-${pageNumberQ}`).classList.add("active");
-    currentPageQ = pageNumberQ;
-    document.getElementById("divisionQ").innerText = pageTitlesQ[currentPageQ - 1];
-    document.getElementById("pagenumQ").innerText = currentPageQ;
+	document.querySelector(`.qpage.qpage-${pageNumberQ}`).classList.add("active");
+	currentPageQ = pageNumberQ;
+	document.getElementById("divisionQ").innerText = pageTitlesQ[currentPageQ - 1];
+	document.getElementById("pagenumQ").innerText = currentPageQ;
 }
 
 function goForwardQ() {
-    showPageQ(currentPageQ < 9 ? currentPageQ + 1 : 1);
+	showPageQ(currentPageQ < 10 ? currentPageQ + 1 : 1);
 }
 
 function goBackQ() {
-    showPageQ(currentPageQ > 1 ? currentPageQ - 1 : 9);
+	showPageQ(currentPageQ > 1 ? currentPageQ - 1 : 10);
 }
 
 showPageQ(currentPageQ);

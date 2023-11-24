@@ -750,14 +750,13 @@ function updateAlecAmount(currentTime) {
 		if (Math.floor(Math.random() * 1000) === 1) {
 			const container = document.querySelector(".container");
 			const newImage = document.createElement("img");
-			let b = 1 + Math.round(Math.random() * 11);
+			let b = 1 + Math.round(Math.random() * 12);
 			newImage.className = "slider";
 			newImage.src = b !== 10 ? `images/autoclickimgs/autoclick${b}.png` : (Math.round(Math.random()) === 0 ? `images/autoclickimgs/storm.png` : `images/autoclickimgs/star.png`);
 			//storm.png and star.png are my cats. their names are Stormcloud and Stardust :)
 			container.appendChild(newImage);
 			newImage.addEventListener("animationend", () => newImage.remove());
 		}
-
 	}
 	slide(autoclickUpgrades.element, autoclickUpgrades.cost, autoclickUpgrades.cpsMultiplier, autoclickUpgrades.index);
 }
