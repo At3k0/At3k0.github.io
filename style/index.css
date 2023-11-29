@@ -131,14 +131,13 @@ button {
     font-weight: bold;
 }
 
-/*.ano {
+.ano {
     background-color: white;
     padding: 15px;
-    flex: 1;
+
     border-radius: 15px;
-    font-weight: bold;
-    font-size: 100px;
-}archived in case i need to make another*/
+    font-size: 50px;
+}
 
 .grid-item {
     display: flex;
