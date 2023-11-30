@@ -7,13 +7,14 @@ const pageTitlesQ = [
 	"HS Quotes",
 	"HS Quotes",
 	"HS Quotes",
+	"HS Quotes",
 	"MS Quotes",
 	"MS Quotes",
 	"MS Quotes"
 ];
 
 function showPageQ(pageNumberQ) {
-	for (let i = 1; i <= 10; i++) {
+	for (let i = 1; i <= 11; i++) {
 		document.querySelector(`.qpage.qpage-${i}`).classList.remove("active");
 	}
 
@@ -24,11 +25,11 @@ function showPageQ(pageNumberQ) {
 }
 
 function goForwardQ() {
-	showPageQ(currentPageQ < 10 ? currentPageQ + 1 : 1);
+	showPageQ(currentPageQ < 11 ? currentPageQ + 1 : 1);
 }
 
 function goBackQ() {
-	showPageQ(currentPageQ > 1 ? currentPageQ - 1 : 10);
+	showPageQ(currentPageQ > 1 ? currentPageQ - 1 : 11);
 }
 
 showPageQ(currentPageQ);

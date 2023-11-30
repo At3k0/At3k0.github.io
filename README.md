@@ -9,8 +9,8 @@ Quotes - The Bridges Academy Quotebook, in the form of a webpage
 [Want to request a Quote? Click here!]<br>
 If you want to request a quote/candid to be removed, scroll down to the "Contact" section<br>
 # Credits
+Myles O' Meara - Providing quotes (too many)<br>
 Rence Alder - Providing quotes (6) and pet names (a lot)<br>
-Myles O' Meara - Providing quotes (5 maybe 6)<br>
 Mealz Mokran - Providing quotes (5)<br>
 Abby Mathess - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
