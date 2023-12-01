@@ -10,11 +10,10 @@ Quotes - The Bridges Academy Quotebook, in the form of a webpage
 If you want to request a quote/candid to be removed, scroll down to the "Contact" section<br>
 # Credits
 Myles O' Meara - Providing quotes (too many)<br>
-Rence Alder - Providing quotes (6) and pet names (a lot)<br>
+Rence Alder - Providing quotes (7) and pet names (a lot)<br>
 Mealz Mokran - Providing quotes (5)<br>
 Abby Mathess - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
-Christopher Laurence - Providing a quote<br>
 Gabby Frear - Providing a quote<br>
 Greyson Corday - Providing a quote<br>
 "gossip gurl" - Providing a quote<br>
@@ -22,16 +21,15 @@ Greyson Corday - Providing a quote<br>
 "John Cena" - Providing a quote<br>
 Keiran George - Providing quotes (2) & a candid<br>
 Ava Federgreen - Providing a quote & a candid<br>
+Christopher Laurence - Providing a quote & a candid<br>
 Xiaoxia Fogg - Providing a candid<br>
 Gwen Karaba - Providing a candid<br>
 Lily Kyllo - Providing a candid<br>
 Sarah Quan - Providing a candid<br>
+Cole Walker - Providing a candid<br>
 
 Christian Solis - Allowing me to yoink quotes off his quote board<br>
 David Hekimian - Helping me set this up<br>
-
-(below are instagram handles)<br>
-@colejw2007 - Providing a candid<br>
 
 # Contact
 Email: alecdiramerian@gmail.com<br>
