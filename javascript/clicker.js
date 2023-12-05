@@ -10,6 +10,7 @@ let wyattmode = 0;
 let lastFrameTime = performance.now();
 let boughtwyattmode = 0;
 let upgradeonscreen = 0;
+let navbarornews = 0;
 let previousNewsIndex = -1;
 let autoclick1cost = 15;
 let autoclick2cost = 100;
@@ -732,7 +733,32 @@ wyattmodebutton.addEventListener('click', () => {
 		wyattmode = 0;
 		updateDisplay();
 	}
+});
 
+document.getElementById("change").addEventListener('click', () => {
+    clickSFX.cloneNode().play();
+    console.log(navbarornews);
+
+    const news = document.getElementById('news');
+    const header = document.getElementById('header');
+
+    if (navbarornews === 0) {
+        navbarornews = 1;
+        news.classList.remove("topslide");
+        header.classList.remove("bottomslide2");
+        news.classList.add("bottomslide");
+        header.classList.add("topslide2");
+        news.style.display = "block";
+        header.style.display = "block";
+    } else {
+        navbarornews = 0;
+        header.classList.remove("topslide2");
+        news.classList.remove("bottomslide");
+        header.classList.add("bottomslide2");
+        news.classList.add("topslide");
+        header.style.display = "block";
+        news.style.display = "block";
+    }
 });
 
 //(gasp) MATH?!?!?!??!? but the math is BAD, is very very BAD!
@@ -745,7 +771,6 @@ function updateAlecAmount(currentTime) {
 	document.getElementById('totalnum').innerText = 'Total Alecs: ' + abbreviateNumber(Math.floor(totalAlecAmount));
 	lastFrameTime = currentTime;
 	requestAnimationFrame(updateAlecAmount);
-
 	function slide(element, cost, cpsMultiplier, index) {
 		if (Math.floor(Math.random() * 1000) === 1) {
 			const container = document.querySelector(".container");

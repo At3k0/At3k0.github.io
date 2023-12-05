@@ -5,17 +5,54 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>snake</title>
 		<style>
-			body {
+			html, body {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
 				display: flex;
+				font-family: "Karla", sans-serif;
+				background-color: royalblue;
 				justify-content: center;
 				align-items: center;
-				height: 100vh;
-				margin: 0;
-				background-color: royalblue;
+				text-align: center;
+				z-index: 0;
+			}
+
+			header {
+				background-color: #333;
+				color: white;
+				padding: 5px 0px 10px;
+				border-radius: 0 0 15px 15px;
+				position: fixed;
+				top: 0;
+				display: initial;
+				width: 100%;
+				z-index: -2;
+			}
+
+			.notbg {
+				z-index: 100000;
+			}
+
+			header button:hover {
+				background-color: floralwhite;
+			}
+
+			.navbarlink {
+				border-radius: 15px;
+				border-color: dodgerblue;
 				font-family: "Karla", sans-serif;
+				font-size: 20px;
+				background-color: white;
+				padding: 5px;
+				border-radius: 15px;
+				font-weight: bold;
+				z-index: 100000;
 			}
 
 			canvas {
+				z-index: 100000000;
 				border: 1px solid #ccc;
 			}
 
@@ -27,24 +64,61 @@
 				color: white;
 			}
 
-			#stwin,
-			#score {
+			#stwin, #score {
 				position: fixed;
 				font-size: 50px;
 			}
 
 			#score {
-				top: 10px;
+				bottom: 10px;
 			}
 
 			.fixed {
 				position: fixed;
 				top: 0;
-				z-index: -1;
+				z-index: 0;
+			}
+
+			@media only screen and (max-width: 768px) {
+				#canvas {
+					width: 300px;
+				}
+
+				#stwin, #score {
+					font-size: 20px;
+				}
 			}
 		</style>
 	</head>
 	<body id="body">
+		<header id="header">
+			<div class="notbg" style="opacity: 0;">
+				<img src="images/smallogo.png" class="logo hover">
+				<nav class="notbg" style=>
+					<button class="navbarlink notbg"> Back to HOF </button>
+					<button class="navbarlink notbg"> Clicker </button>
+					<button class="navbarlink notbg"> Box HOF </button>
+					<button class="navbarlink notbg"> Scorecard </button>
+					<button class="navbarlink notbg"> Snake (?) </button>
+				</nav>
+			</div>
+		</header>
+		<div class="notbg" style="position: fixed; top: 0; margin: 0; padding: 5px 0px 10px;">
+			<a href="index.html">
+				<img src="images/smallogo.png" class="logo hover">
+			</a>
+			<nav class="notbg">
+				<a href="index.html">
+					<button class="navbarlink notbg"> Back to HOF </button>
+				</a>
+				<a href="clicker.html">
+					<button class="navbarlink notbg"> Clicker </button>
+				</a>
+				<button onclick="showBox()" class="navbarlink notbg"> Box HOF </button>
+				<button onclick="showRiddle()" class="navbarlink notbg"> Scorecard </button>
+				<button onclick="showSnake()" class="navbarlink notbg"> Snake (?) </button>
+			</nav>
+		</div>
 		<p id="stwin">Click anywhere to start</p>
 		<p id="score">Score: 0</p>
 		<canvas id="canvas" width="500" height="500"></canvas>
@@ -144,31 +218,31 @@
 							document.getElementById('body').classList.add('b');
 							document.getElementById('score').classList.add('w');
 						}
-						if (this.actives.includes(4)) {
-							if (ia === 0) {
-								setInterval(() => {
-									const player = document.createElement("iframe");
-									player.id = "pl"
-									if (t + player.offsetHeight > window.innerHeight) {
-										clearInterval();
-										document.getElementById("pl").remove();
-									} else {
-										player.id = "";
-										player.src = "gang.mp4";
-										player.classList.add('fixed');
-										player.style.left = m + "px";
-										if (m + player.offsetWidth > window.innerWidth) {
-											m = -300;
-											t += 150;
-										}
-										m += 300;
-										player.style.top = t + "px";
-										document.body.appendChild(player);
+						//if (this.actives.includes(4)) {
+						if (ia === 0) {
+							setInterval(() => {
+								const player = document.createElement("iframe");
+								player.id = "pl"
+								if (t + player.offsetHeight > window.innerHeight) {
+									clearInterval();
+									document.getElementById("pl").remove();
+								} else {
+									player.id = "";
+									player.src = "gang.mp4";
+									player.classList.add('fixed');
+									player.style.left = m + "px";
+									if (m + player.offsetWidth > window.innerWidth) {
+										m = -300;
+										t += 150;
 									}
-								}, 5000);
-								ia = 1;
-							}
+									m += 300;
+									player.style.top = t + "px";
+									document.body.appendChild(player);
+								}
+							}, 5000);
+							ia = 1;
 						}
+						//}
 					}
 					checkCollision(position) {
 						return (position.x < 0 || position.x >= this.canvas.width || position.y < 0 || position.y >= this.canvas.height || this.snake.some(segment => segment.x === position.x && segment.y === position.y));
@@ -234,5 +308,6 @@
 				new game('canvas', 20, 200).startGame();
 			});
 		</script>
+		<script src="javascript/pageswitch.js"></script>
 	</body>
 </html>
