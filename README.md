@@ -19,6 +19,7 @@ Greyson Corday - Providing a quote<br>
 "gossip gurl" - Providing a quote<br>
 "some bozo" - Providing a quote<br>
 "John Cena" - Providing a quote<br>
+EJ Pasinski - Providing a quote<br>
 Keiran George - Providing quotes (2) & a candid<br>
 Ava Federgreen - Providing a quote & a candid<br>
 Christopher Laurence - Providing a quote & a candid<br>
