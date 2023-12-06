@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .dpad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 10px;
+      width: 150px;
+      height: 150px;
+      background-color: #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      user-select: none;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="dpad">
+	<div></div>
+ 	<div class="button" id="up">↑</div>
+ 	<div></div>
+  	<div class="button" id="left">←</div>
+  	<div></div>
+  	<div class="button" id="right">→</div>
+  	<div></div>
+  	<div class="button" id="down">↓</div>
+  	<div></div>
+</div>
+
+</body>
+</html>

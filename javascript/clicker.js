@@ -736,29 +736,33 @@ wyattmodebutton.addEventListener('click', () => {
 });
 
 document.getElementById("change").addEventListener('click', () => {
-    clickSFX.cloneNode().play();
-    console.log(navbarornews);
+	clickSFX.cloneNode().play();
 
-    const news = document.getElementById('news');
-    const header = document.getElementById('header');
+	const news = document.getElementById('news');
+	const header = document.getElementById('header');
+	const petform = document.getElementById('pform');
 
-    if (navbarornews === 0) {
-        navbarornews = 1;
-        news.classList.remove("topslide");
-        header.classList.remove("bottomslide2");
-        news.classList.add("bottomslide");
-        header.classList.add("topslide2");
-        news.style.display = "block";
-        header.style.display = "block";
-    } else {
-        navbarornews = 0;
-        header.classList.remove("topslide2");
-        news.classList.remove("bottomslide");
-        header.classList.add("bottomslide2");
-        news.classList.add("topslide");
-        header.style.display = "block";
-        news.style.display = "block";
-    }
+	if (navbarornews === 0) {
+		navbarornews = 1;
+		news.classList.remove("topslide");
+		header.classList.remove("bottomslide2");
+		news.classList.add("bottomslide");
+		header.classList.add("topslide2");
+		news.style.display = "block";
+		header.style.display = "block";
+		petform.style.opacity = "0";
+	} else {
+		navbarornews = 0;
+		header.classList.remove("topslide2");
+		news.classList.remove("bottomslide");
+		header.classList.add("bottomslide2");
+		news.classList.add("topslide");
+		header.style.display = "block";
+		news.style.display = "block";
+		if (window.width < "768px") {
+			petform.style.opacity = "1";
+		}
+	}
 });
 
 //(gasp) MATH?!?!?!??!? but the math is BAD, is very very BAD!

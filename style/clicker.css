@@ -358,4 +358,9 @@ button:hover {
         width: auto;
         height: auto;
     }
+
+    #change {
+        bottom: 1%;
+        position: fixed;
+    }
 }
