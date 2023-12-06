@@ -40,7 +40,9 @@ const meowSFX = new Audio('audio/meow.mp3');
 const chompSFX = new Audio('audio/chomp.mp3');
 const summonSFX = new Audio('audio/summon.mp3');
 const birdSFX = new Audio('audio/bird.mp3');
+const news = document.getElementById('news');
 const alec = document.getElementById('alec');
+const change = document.getElementById('change');
 const descbox = document.getElementById('descbox');
 const skinbutton = document.getElementById('skin');
 const resetbutton = document.getElementById('reset');
@@ -191,7 +193,7 @@ function abbreviateNumber(number) {
 //news
 const startTimer = () => timer = setInterval(newsichooseyou, 7500);
 
-const news = () => {
+const newsSelect = () => {
 	let randomIndex;
 	do {
 		randomIndex = Math.floor(Math.random() * newslist.length);
@@ -202,15 +204,15 @@ const news = () => {
 };
 
 const newsichooseyou = () => {
-	const finalnews = news();
+	const finalnews = newsSelect();
 	if (newslist.indexOf(finalnews) >= 0 && newslist.indexOf(finalnews) <= 5) {
-		document.getElementById('news').innerText = 'Radio: ' + finalnews;
+		news.innerText = 'Radio: ' + finalnews;
 	} else {
-		document.getElementById('news').innerText = 'News: ' + finalnews;
+		news.innerText = 'News: ' + finalnews;
 	}
 };
 
-document.getElementById('news').addEventListener('click', () =>{
+news.addEventListener('click', () =>{
 	newsichooseyou();
 	clearInterval(timer);
 	startTimer();
@@ -333,7 +335,7 @@ upgradesbutton.addEventListener('click', () => {
 	clickSFX.cloneNode().play();
 	if (upgradeonscreen === 0) {
 		upgradeonscreen = 1;
-		document.getElementById("news").classList.toggle("active");
+		news.classList.toggle("active");
 		document.getElementById('upgradesdiv').style.right = "0%";
 	} else {
 		upgradeonscreen = 0;
@@ -520,7 +522,7 @@ resetbutton.addEventListener('click', () => {
 		autoclick10cost = 75000000000;
 		autoclick11cost = 1000000000000;
 		autoclick12cost = 14000000000000;
-		autoclick13cost = 14000000000000;
+		autoclick13cost = 170000000000000;
 		saveProgress();
 		document.location.reload();
 	}
@@ -718,7 +720,7 @@ wyattmodebutton.addEventListener('click', () => {
 	} else if (wyattmode === 0 && boughtwyattmode === 1) {
 		document.body.style.backgroundImage = 'url("images/skins/why.jpeg")';
 		document.body.style.backgroundSize = 'cover';
-		document.getElementById('news').innerText = 'WYATT MODE ACTIVATED';
+		news.innerText = 'WYATT MODE ACTIVATED';
 		skinbutton.innerText = 'WYCHANGE WYSKIN';
 		resetbutton.innerText = 'WYRESET';
 		upgradesbutton.innerText = 'WYUPGRADES';
@@ -726,7 +728,7 @@ wyattmodebutton.addEventListener('click', () => {
 		updateDisplay();
 	} else if (wyattmode === 1 && boughtwyattmode === 1) {
 		document.body.style.backgroundImage = 'none';
-		document.getElementById('news').innerText = 'WYATT MODE deactivated';
+		news.innerText = 'WYATT MODE deactivated';
 		skinbutton.innerText = 'Change Skin';
 		resetbutton.innerText = 'Reset';
 		upgradesbutton.innerText = 'Upgrades';
@@ -735,12 +737,11 @@ wyattmodebutton.addEventListener('click', () => {
 	}
 });
 
-document.getElementById("change").addEventListener('click', () => {
+change.addEventListener('click', () => {
 	clickSFX.cloneNode().play();
 
-	const news = document.getElementById('news');
+	
 	const header = document.getElementById('header');
-	const petform = document.getElementById('pform');
 
 	if (navbarornews === 0) {
 		navbarornews = 1;
@@ -750,7 +751,7 @@ document.getElementById("change").addEventListener('click', () => {
 		header.classList.add("topslide2");
 		news.style.display = "block";
 		header.style.display = "block";
-		petform.style.opacity = "0";
+		change.innerText = "Show news";
 	} else {
 		navbarornews = 0;
 		header.classList.remove("topslide2");
@@ -759,9 +760,7 @@ document.getElementById("change").addEventListener('click', () => {
 		news.classList.add("topslide");
 		header.style.display = "block";
 		news.style.display = "block";
-		if (window.width < "768px") {
-			petform.style.opacity = "1";
-		}
+		change.innerText = "Show navbar";
 	}
 });
 

@@ -190,8 +190,8 @@
 				x: 10 * gridSize,
 				y: 10 * gridSize
 			}];
-			snake.length = 3;
 			let food = getRandomPosition();
+			snake.length = 3;
 
 			function update() {
 				const head = {
@@ -226,28 +226,30 @@
 					document.getElementById('body').classList.add('b');
 					document.getElementById('score').classList.add('w');
 				}
-				if (ia === 0) {
-					setInterval(() => {
-						const player = document.createElement("iframe");
-						player.id = "pl";
-						if (t + player.offsetHeight > window.innerHeight) {
-							clearInterval();
-							document.getElementById("pl").remove();
-						} else {
-							player.id = "";
-							player.src = "gang.mp4";
-							player.classList.add('fixed');
-							player.style.left = m + "px";
-							if (m + player.offsetWidth > window.innerWidth) {
-								m = -300;
-								t += 150;
+				if (actives.includes(4)) {
+					if (ia === 0) {
+						setInterval(() => {
+							const player = document.createElement("iframe");
+							player.id = "pl";
+							if (t + player.offsetHeight > window.innerHeight) {
+								clearInterval();
+								document.getElementById("pl").remove();
+							} else {
+								player.id = "";
+								player.src = "gang.mp4";
+								player.classList.add('fixed');
+								player.style.left = m + "px";
+								if (m + player.offsetWidth > window.innerWidth) {
+									m = -300;
+									t += 150;
+								}
+								m += 300;
+								player.style.top = t + "px";
+								document.body.appendChild(player);
 							}
-							m += 300;
-							player.style.top = t + "px";
-							document.body.appendChild(player);
-						}
-					}, 5000);
-					ia = 1;
+						}, 5000);
+						ia = 1;
+					}
 				}
 			}
 

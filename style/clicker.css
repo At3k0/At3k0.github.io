@@ -11,6 +11,7 @@ html, body {
     align-items: center;
     text-align: center;
     z-index: 0;
+    overflow: hidden;
 }
 
 header {
@@ -362,5 +363,8 @@ button:hover {
     #change {
         bottom: 1%;
         position: fixed;
+    }
+    #pform {
+        display: none;
     }
 }
