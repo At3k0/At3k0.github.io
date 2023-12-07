@@ -702,10 +702,47 @@ buttons.forEach((button) => {
 	});
 	button.addEventListener('mouseout', handleMouseOut);
 });
-
+/*let autoclick1cost = 15;
+let autoclick2cost = 100;
+let autoclick3cost = 1100;
+let autoclick4cost = 12000;
+let autoclick5cost = 130000;
+let autoclick6cost = 1400000;
+let autoclick7cost = 20000000;
+let autoclick8cost = 330000000;
+let autoclick9cost = 5100000000;
+let autoclick10cost = 75000000000;
+let autoclick11cost = 1000000000000;
+let autoclick12cost = 14000000000000;
+let autoclick13cost = 170000000000000;*/
 window.addEventListener('load', function() {
 	document.getElementById('loading').style.display = 'none';
 	document.getElementById('content').style.display = 'block';
+	if (autoclick1cost < 15) {
+		autoclick1cost = 15;
+		document.getElementById(`autoclick1cost`).innerText = `$${abbreviateNumber(autoclick1cost)}`;
+	}
+	if (autoclick2cost < 100) {
+		autoclick2cost = 100;
+		document.getElementById(`autoclick2cost`).innerText = `$${abbreviateNumber(autoclick2cost)}`;
+	}
+	if (autoclick3cost < 1100) {
+		autoclick3cost = 1100;
+		document.getElementById(`autoclick3cost`).innerText = `$${abbreviateNumber(autoclick3cost)}`;
+	}
+	if (autoclick4cost < 12000) {
+		autoclick4cost = 12000;
+		document.getElementById(`autoclick4cost`).innerText = `$${abbreviateNumber(autoclick4cost)}`;
+	}
+	if (autoclick5cost < 130000) {
+		autoclick5cost = 130000;
+		document.getElementById(`autoclick5cost`).innerText = `$${abbreviateNumber(autoclick5cost)}`;
+	}
+	if (autoclick6cost < 1400000) {
+		autoclick6cost = 1400000;
+		document.getElementById(`autoclick6cost`).innerText = `$${abbreviateNumber(autoclick6cost)}`;
+	}
+	updateDisplay()
 });
 
 if (boughtwyattmode === 1) {
