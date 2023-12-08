@@ -1,5 +1,9 @@
 /*jshint esversion: 6 */
-Game()
+window.addEventListener('load', function() {
+	document.getElementById('loading').style.display = 'none';
+	document.getElementById('content').style.display = 'block';
+	Game();
+});
 function Game() {
 	//variables
 	let alecAmount = 0;
@@ -241,7 +245,7 @@ function Game() {
 		if (localStorage.getItem('autoclick12cost')) autoclick12cost = parseInt(localStorage.getItem('autoclick12cost'));
 		if (localStorage.getItem('autoclick13cost')) autoclick13cost = parseInt(localStorage.getItem('autoclick13cost'));
 		if (localStorage.getItem('boughtwyattmode')) boughtwyattmode = parseInt(localStorage.getItem('boughtwyattmode'));
-	}
+	};
 
 	loadProgress();
 
@@ -266,6 +270,59 @@ function Game() {
 		localStorage.setItem('autoclick13cost', autoclick13cost);
 		localStorage.setItem('boughtwyattmode', boughtwyattmode);
 	};
+
+	if (autoclick1cost < 15) {
+		autoclick1cost = 15;
+		document.getElementById(`autoclick1cost`).innerText = `$${abbreviateNumber(autoclick1cost)}`;
+	}
+	if (autoclick2cost < 100) {
+		autoclick2cost = 100;
+		document.getElementById(`autoclick2cost`).innerText = `$${abbreviateNumber(autoclick2cost)}`;
+	}
+	if (autoclick3cost < 1100) {
+		autoclick3cost = 1100;
+		document.getElementById(`autoclick3cost`).innerText = `$${abbreviateNumber(autoclick3cost)}`;
+	}
+	if (autoclick4cost < 12000) {
+		autoclick4cost = 12000;
+		document.getElementById(`autoclick4cost`).innerText = `$${abbreviateNumber(autoclick4cost)}`;
+	}
+	if (autoclick5cost < 130000) {
+		autoclick5cost = 130000;
+		document.getElementById(`autoclick5cost`).innerText = `$${abbreviateNumber(autoclick5cost)}`;
+	}
+	if (autoclick6cost < 1400000) {
+		autoclick6cost = 1400000;
+		document.getElementById(`autoclick6cost`).innerText = `$${abbreviateNumber(autoclick6cost)}`;
+	}
+	if (autoclick7cost < 20000000) {
+		autoclick7cost = 20000000;
+		document.getElementById(`autoclick7cost`).innerText = `$${abbreviateNumber(autoclick7cost)}`;
+	}
+	if (autoclick8cost < 300000000) {
+		autoclick8cost = 330000000;
+		document.getElementById(`autoclick8cost`).innerText = `$${abbreviateNumber(autoclick8cost)}`;
+	}
+	if (autoclick9cost < 5100000000) {
+		autoclick9cost = 5100000000;
+		document.getElementById(`autoclick9cost`).innerText = `$${abbreviateNumber(autoclick9cost)}`;
+	}
+	if (autoclick10cost < 75000000000) {
+		autoclick10cost = 75000000000;
+		document.getElementById(`autoclick10cost`).innerText = `$${abbreviateNumber(autoclick10cost)}`;
+	}
+	if (autoclick11cost < 1000000000000) {
+		autoclick11cost = 1000000000000;
+		document.getElementById(`autoclick11cost`).innerText = `$${abbreviateNumber(autoclick11cost)}`;
+	}
+	if (autoclick12cost < 14000000000000) {
+		autoclick12cost = 14000000000000;
+		document.getElementById(`autoclick12cost`).innerText = `$${abbreviateNumber(autoclick12cost)}`;
+	}
+	if (autoclick13cost < 170000000000000) {
+		autoclick13cost = 170000000000000;
+		document.getElementById(`autoclick13cost`).innerText = `$${abbreviateNumber(autoclick13cost)}`;
+	}
 
 	setInterval(saveProgress, 60000);
 
@@ -703,48 +760,6 @@ function Game() {
 			handleMouseOver(event, text);
 		});
 		button.addEventListener('mouseout', handleMouseOut);
-	});
-	/*let autoclick1cost = 15;
-	let autoclick2cost = 100;
-	let autoclick3cost = 1100;
-	let autoclick4cost = 12000;
-	let autoclick5cost = 130000;
-	let autoclick6cost = 1400000;
-	let autoclick7cost = 20000000;
-	let autoclick8cost = 330000000;
-	let autoclick9cost = 5100000000;
-	let autoclick10cost = 75000000000;
-	let autoclick11cost = 1000000000000;
-	let autoclick12cost = 14000000000000;
-	let autoclick13cost = 170000000000000;*/
-	window.addEventListener('load', function() {
-		document.getElementById('loading').style.display = 'none';
-		document.getElementById('content').style.display = 'block';
-		if (autoclick1cost < 15) {
-			autoclick1cost = 15;
-			document.getElementById(`autoclick1cost`).innerText = `$${abbreviateNumber(autoclick1cost)}`;
-		}
-		if (autoclick2cost < 100) {
-			autoclick2cost = 100;
-			document.getElementById(`autoclick2cost`).innerText = `$${abbreviateNumber(autoclick2cost)}`;
-		}
-		if (autoclick3cost < 1100) {
-			autoclick3cost = 1100;
-			document.getElementById(`autoclick3cost`).innerText = `$${abbreviateNumber(autoclick3cost)}`;
-		}
-		if (autoclick4cost < 12000) {
-			autoclick4cost = 12000;
-			document.getElementById(`autoclick4cost`).innerText = `$${abbreviateNumber(autoclick4cost)}`;
-		}
-		if (autoclick5cost < 130000) {
-			autoclick5cost = 130000;
-			document.getElementById(`autoclick5cost`).innerText = `$${abbreviateNumber(autoclick5cost)}`;
-		}
-		if (autoclick6cost < 1400000) {
-			autoclick6cost = 1400000;
-			document.getElementById(`autoclick6cost`).innerText = `$${abbreviateNumber(autoclick6cost)}`;
-		}
-		updateDisplay();
 	});
 
 	if (boughtwyattmode === 1) {
