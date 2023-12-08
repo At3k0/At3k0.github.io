@@ -10,6 +10,31 @@
 		<link rel="stylesheet" type="text/css" href="style/clicker.css">
 	</head>
 	<body id="bg">
+		<header id="header">
+			<a href="index.html">
+			<img src="images/smallogo.png" class="logo hover"></a>
+			<nav>
+				<a href="index.html">
+					<button href="index.html" class="navbarlink">
+						Back to HOF
+					</button>
+				</a>
+				<a href="clicker.html">
+					<button class="navbarlink">
+						Clicker
+					</button>
+				</a>
+				<button onclick="showBox()" class="navbarlink">
+					Box HOF
+				</button>
+				<button onclick="showRiddle()" class="navbarlink">
+					Scorecard
+				</button>
+				<button onclick="showSnake()" class="navbarlink">
+					Snake (?)
+				</button>
+			</nav>
+		</header>
 		<div id="loading">
 			<img src="images/loading.gif" alt="Loading..."/>
 			<br>
@@ -18,20 +43,23 @@
 		<div id="content">
 			<div id="maindiv">
 				<div>
-					<b id="news">
+					<button id="change">
+						Show navbar
+					</button>
+					<b id="news" class="topslide">
 						You feel like making Alecs. But nobody wants to eat your Alecs (thank god)
 					</b>
 					<br>
 					<br>
 					<br>
 					<span style="text-align: center;">
-						<button onclick="openPetsForm()" class="txt">
+						<button id="pform" class="txt bslide">
 							Want your pet to be featured? Click here!
 						</button>
 					</span>
 					<br>
 					<br>
-					<img src="images/skins/alec.png" id="alec" alt="alec" title="alec" onclick="bclick()">
+					<img src="images/skins/alec.png" id="alec" alt="alec" title="alec">
 					<br>
 					<b id="num">
 						Alecs: 0
@@ -44,23 +72,23 @@
 					</b>
 					<br>
 					<br>
-					<button id="changelogb">
+					<button id="changelogb" class="bslide">
 						Click me for changelog!
 					</button>
 					<br>
 					<br>
-					<button id="skin">
+					<button id="skin" class="bslide">
 						Change Skin
 					</button>
-					<button id="reset">
+					<button id="reset" class="bslide">
 						Reset
 					</button>
-					<button id="upgrades">
+					<button id="upgrades" class="bslide">
 						Upgrades
 					</button>
 					<br>
 					<br>
-					<button id="wyattmode">
+					<button id="wyattmode" class="bslide">
 						BUY WYATT MODE FOR 100M
 					</button>
 					<div id="descbox">
@@ -69,87 +97,87 @@
 				</div>
 			</div>
 			<div id="upgradesdiv">
-				<button id="autoclick1">
+				<button id="autoclick1" class="bslide">
 					Buy Autoclicker
 					<b id="autoclick1cost">$15</b>
 				</button>
 				<br>
-				<button id="autoclick2">
+				<button id="autoclick2" class="bslide">
 					Buy Alec Factory
 					<b id="autoclick2cost">$100</b>
 				</button>
 				<br>
-				<button id="autoclick3">
+				<button id="autoclick3" class="bslide">
 					Buy Scotland
 					<b id="autoclick3cost">$1100</b>
 				</button>
 				<br>
-				<button id="autoclick4">
+				<button id="autoclick4" class="bslide">
 					Buy Flannel
 					<b id="autoclick4cost">$12000</b>
 				</button>
 				<br>
-				<button id="autoclick5">
+				<button id="autoclick5" class="bslide">
 					Buy Orange Chair
 					<b id="autoclick5cost">$130000</b>
 				</button>
 				<br>
-				<button id="autoclick6">
+				<button id="autoclick6" class="bslide">
 					Buy Duo the Owl
 					<b id="autoclick6cost">$1400000</b>
 				</button>
 				<br>
-				<button id="autoclick7">
+				<button id="autoclick7" class="bslide">
 					Buy Train
 					<b id="autoclick7cost">$20000000</b>
 				</button>
 				<br>
-				<button id="autoclick8">
+				<button id="autoclick8" class="bslide">
 					Buy Milkshake
 					<b id="autoclick8cost">$330000000</b>
 				</button>
 				<br>
-				<button id="autoclick9">
+				<button id="autoclick9" class="bslide">
 					Buy Clone Machine
 					<b id="autoclick9cost">$5100000000</b>
 				</button>
 				<br>
-				<button id="autoclick10">
+				<button id="autoclick10" class="bslide">
 					Buy Cat
 					<b id="autoclick10cost">$75000000000</b>
 				</button>
 				<br>
-				<button id="autoclick11">
+				<button id="autoclick11" class="bslide">
 					Buy Filet
 					<b id="autoclick11cost">$1000000000000</b>
 				</button>
 				<br>
-				<button id="autoclick12">
+				<button id="autoclick12" class="bslide">
 					Buy Tape God
 					<b id="autoclick12cost">$14000000000000</b>
 				</button>
 				<br>
-				<button id="autoclick13">
+				<button id="autoclick13" class="bslide">
 					Buy Nostalgia
 					<b id="autoclick13cost">170000000000000</b>
 				</button>
 				<br>
-				<button id="soonupg">
+				<button id="soonupg" class="bslide">
 					Coming when pigs fly
 					<b id="soonupg">$?</b>
 				</button>
 				<br>
-				<button id="soonupg">
+				<button id="soonupg" class="bslide">
 					Not coming soon <!--haha funny hypixel skyblock reference-->
 					<b id="soonupg">$?</b>
 				</button>
 				<br>
-				<button id="soonupg">
+				<button id="soonupg" class="bslide">
 					Coming on 3/7/24
 					<b id="soonupg">$?</b>
 				</button>
 				<br>
-				<button id="soonupg">
+				<button id="soonupg" class="bslide">
 					Coming when I get a gf <!--this may take a while-->
 					<b id="soonupg">$?</b>
 				</button>
@@ -423,5 +451,6 @@
 			- More updates coming soon!
 		</b>
 		<script src="javascript/clicker.js"></script>
+		<script src="javascript/pageswitch.js"></script>
 	</body>
 </html>

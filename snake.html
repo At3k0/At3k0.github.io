@@ -5,18 +5,70 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>snake</title>
 		<style>
-			body {
+			html, body {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
 				display: flex;
+				font-family: "Karla", sans-serif;
+				background-color: royalblue;
 				justify-content: center;
 				align-items: center;
-				height: 100vh;
-				margin: 0;
-				background-color: royalblue;
-				font-family: "Karla", sans-serif;
+				text-align: center;
+				z-index: 0;
+			}
+
+			header {
+				background-color: #333;
+				color: white;
+				padding: 5px 0px 10px;
+				border-radius: 0 0 15px 15px;
+				position: fixed;
+				top: 0;
+				display: initial;
+				width: 100%;
+				z-index: -2;
 			}
 
 			canvas {
+				z-index: 2;
 				border: 1px solid #ccc;
+			}
+
+			header button:hover {
+				background-color: floralwhite;
+			}
+
+			.notbg {
+				z-index: 1;
+			}
+
+			.navbarlink {
+				border-radius: 15px;
+				border-color: dodgerblue;
+				font-family: "Karla", sans-serif;
+				font-size: 20px;
+				background-color: white;
+				padding: 5px;
+				border-radius: 15px;
+				font-weight: bold;
+				z-index: 1;
+			}
+
+			#stwin, #score {
+				position: fixed;
+				font-size: 50px;
+			}
+
+			#score {
+				bottom: 10px;
+			}
+
+			.fixed {
+				position: fixed;
+				top: 0;
+				z-index: 0;
 			}
 
 			.b {
@@ -27,27 +79,90 @@
 				color: white;
 			}
 
-			#stwin,
-			#score {
+			.dpad {
 				position: fixed;
-				font-size: 50px;
+				display: none;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(3, 1fr);
+				width: 150px;
+				height: 150px;
+				padding: 5px;
+				background-color: #ccc;
+				border-radius: 10px;
+				bottom: 10%;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+				user-select: none;
 			}
 
-			#score {
-				top: 10px;
+			.button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #fff;
+				border: 1px solid #aaa;
+				border-radius: 5px;
+				font-size: 18px;
+				cursor: pointer;
 			}
 
-			.fixed {
-				position: fixed;
-				top: 0;
-				z-index: -1;
+			@media only screen and (max-width: 768px) {
+				#canvas {
+					width: 300px;
+				}
+
+				#stwin,	#score {
+					font-size: 20px;
+				}
+
+				.dpad {
+					display: grid;
+				}
 			}
 		</style>
 	</head>
 	<body id="body">
+		<header id="header">
+			<div class="notbg" style="opacity: 0;">
+				<img src="images/smallogo.png" class="logo hover">
+				<nav class="notbg" style=>
+					<button class="navbarlink notbg"> Back to HOF </button>
+					<button class="navbarlink notbg"> Clicker </button>
+					<button class="navbarlink notbg"> Box HOF </button>
+					<button class="navbarlink notbg"> Scorecard </button>
+					<button class="navbarlink notbg"> Snake (?) </button>
+				</nav>
+			</div>
+		</header>
+		<div class="notbg" style="position: fixed; top: 0; margin: 0; padding: 5px 0px 10px;">
+			<a href="index.html">
+				<img src="images/smallogo.png" class="logo hover">
+			</a>
+			<nav class="notbg">
+				<a href="index.html">
+					<button class="navbarlink notbg"> Back to HOF </button>
+				</a>
+				<a href="clicker.html">
+					<button class="navbarlink notbg"> Clicker </button>
+				</a>
+				<button onclick="showBox()" class="navbarlink notbg"> Box HOF </button>
+				<button onclick="showRiddle()" class="navbarlink notbg"> Scorecard </button>
+				<button onclick="showSnake()" class="navbarlink notbg"> Snake (?) </button>
+			</nav>
+		</div>
 		<p id="stwin">Click anywhere to start</p>
 		<p id="score">Score: 0</p>
 		<canvas id="canvas" width="500" height="500"></canvas>
+		<div class="dpad">
+			<div></div>
+			<div class="button" id="up">↑</div>
+			<div></div>
+			<div class="button" id="left">←</div>
+			<div></div>
+			<div class="button" id="right">→</div>
+			<div></div>
+			<div class="button" id="down">↓</div>
+			<div></div>
+		</div>
 		<script>
 			let score = 0;
 			let interval = 200;
@@ -55,184 +170,199 @@
 			let ia = 0;
 			let m = 0;
 			let t = 0;
+			let activeClasses = [];
+			let specialEventFlag = false;
+			let direction = 'right';
+			const gridSize = 20;
+			const canvas = document.getElementById("canvas");
+			const ctx = canvas.getContext('2d');
+			const specialEventInterval = 5000;
+			const actives = activeClasses;
+			const music = new Audio('audio/drumty.mp3');
+			const music2 = new Audio('audio/orty.mp3');
 			const directions = {
 				up: 'y',
 				down: 'y',
 				left: 'x',
 				right: 'x'
 			};
-			const music = new Audio('audio/drumty.mp3');
-			const music2 = new Audio('audio/orty.mp3');
+			let snake = [{
+				x: 10 * gridSize,
+				y: 10 * gridSize
+			}];
+			let food = getRandomPosition();
+			snake.length = 3;
+
+			function update() {
+				const head = {
+					...snake[0]
+				};
+				head[directions[direction]] += (direction === 'up' || direction === 'left' ? -1 : 1) * gridSize;
+				if (checkCollision(head)) {
+					resetGame();
+					return;
+				}
+				if (head.x === food.x && head.y === food.y) {
+					snake.unshift({
+						...head
+					});
+					score++;
+					document.getElementById("score").innerText = "Score: " + score;
+					food = getRandomPosition();
+				} else {
+					snake.pop();
+					snake.unshift({
+						...head
+					});
+				}
+				draw();
+				if (actives.includes(2) && ip === 0) {
+					music.pause();
+					music2.loop = true;
+					music2.play();
+					ip = 1;
+				}
+				if (actives.includes(3)) {
+					document.getElementById('body').classList.add('b');
+					document.getElementById('score').classList.add('w');
+				}
+				if (actives.includes(4)) {
+					if (ia === 0) {
+						setInterval(() => {
+							const player = document.createElement("iframe");
+							player.id = "pl";
+							if (t + player.offsetHeight > window.innerHeight) {
+								clearInterval();
+								document.getElementById("pl").remove();
+							} else {
+								player.id = "";
+								player.src = "gang.mp4";
+								player.classList.add('fixed');
+								player.style.left = m + "px";
+								if (m + player.offsetWidth > window.innerWidth) {
+									m = -300;
+									t += 150;
+								}
+								m += 300;
+								player.style.top = t + "px";
+								document.body.appendChild(player);
+							}
+						}, 5000);
+						ia = 1;
+					}
+				}
+			}
+
+			function getRandomPosition() {
+				return {
+					x: Math.floor(Math.random() * (canvas.width / gridSize)) * gridSize,
+					y: Math.floor(Math.random() * (canvas.height / gridSize)) * gridSize
+				};
+			}
+
+			function startSpecialEventTimer() {
+				const mpv = 5;
+				const intervalId = setInterval(() => {
+					if (actives.length === mpv) {
+						clearInterval(intervalId);
+						return;
+					}
+					let randomValue = Math.floor(Math.random() * mpv);
+					while (actives.includes(randomValue)) {
+						randomValue = Math.floor(Math.random() * mpv);
+					}
+					actives.push(randomValue);
+					console.log(actives);
+				}, specialEventInterval);
+			}
+
+			function draw() {
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				const randomColor = () => '#' + Math.floor(Math.random() * 16777215).toString(16);
+				const drawSegment = (x, y, color) => {
+					ctx.fillStyle = color;
+					ctx.fillRect(x, y, gridSize, gridSize);
+				};
+				if (actives.includes(1)) {
+					snake.forEach(segment => drawSegment(segment.x, segment.y, randomColor()));
+					drawSegment(food.x, food.y, randomColor());
+				} else {
+					snake.forEach((segment, index) => {
+						const color = index === 0 ? 'lightgreen' : 'blue';
+						drawSegment(segment.x, segment.y, color);
+					});
+					drawSegment(food.x, food.y, 'red');
+				}
+			}
+
+			function resetGame() {
+				score = 0;
+				document.getElementById("score").innerText = "Score: " + score;
+				snake = [{
+					x: 10 * gridSize,
+					y: 10 * gridSize
+				}];
+				snake.length = 3;
+				direction = "right";
+				food = getRandomPosition();
+			}
+
+			function updateDirection(newDirection) {
+				if (actives.includes(0)) {
+					switch (newDirection) {
+						case 'up':
+							newDirection = 'down';
+							break;
+						case 'down':
+							newDirection = 'up';
+							break;
+						case 'left':
+							newDirection = 'right';
+							break;
+						case 'right':
+							newDirection = 'left';
+							break;
+					}
+				}
+				// Check if the new direction is valid
+				if (newDirection && direction !== newDirection && directionOpposite(direction) !== newDirection) {
+					direction = newDirection;
+				}
+			}
+			document.addEventListener('keydown', function(event) {
+				const directionMap = {
+					ArrowDown: 'down',
+					ArrowUp: 'up',
+					ArrowLeft: 'left',
+					ArrowRight: 'right',
+				};
+				const newDirection = directionMap[event.key];
+				updateDirection(newDirection);
+			});
+			['up', 'left', 'right', 'down'].forEach(function(direction) {
+				document.getElementById(direction).addEventListener('click', function() {
+					updateDirection(direction);
+				});
+			});
+			const directionOpposite = dir => ({
+				'up': 'down',
+				'down': 'up',
+				'left': 'right',
+				'right': 'left',
+			} [dir]);
+			const startGame = () => {
+				startSpecialEventTimer();
+				setInterval(() => update(), interval);
+			};
+			const checkCollision = position => (position.x < 0 || position.x >= canvas.width || position.y < 0 || position.y >= canvas.height || snake.some(segment => segment.x === position.x && segment.y === position.y));
 			document.addEventListener('click', function initialize() {
 				document.removeEventListener('click', initialize);
 				document.getElementById("stwin").remove();
 				music.loop = true;
-				music.play()
-				class game {
-					constructor(canvasId, gridSize) {
-						this.canvas = document.getElementById(canvasId);
-						this.ctx = this.canvas.getContext('2d');
-						this.gridSize = gridSize;
-						this.snake = [{
-							x: 10 * gridSize,
-							y: 10 * gridSize
-						}];
-						this.snake.length = 3;
-						this.direction = 'right';
-						this.food = this.getRandomPosition();
-						this.specialEventInterval = 5000;
-						this.specialEventFlag = false;
-						this.startSpecialEventTimer();
-						this.actives = [];
-					}
-					getRandomPosition() {
-						return {
-							x: Math.floor(Math.random() * (this.canvas.width / this.gridSize)) * this.gridSize,
-							y: Math.floor(Math.random() * (this.canvas.height / this.gridSize)) * this.gridSize
-						};
-					}
-					draw() {
-						this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-						const randomColor = () => '#' + Math.floor(Math.random() * 16777215).toString(16);
-						const drawSegment = (x, y, color) => {
-							this.ctx.fillStyle = color;
-							this.ctx.fillRect(x, y, this.gridSize, this.gridSize);
-						};
-						if (this.actives.includes(1)) {
-							this.snake.forEach(segment => drawSegment(segment.x, segment.y, randomColor()));
-							drawSegment(this.food.x, this.food.y, randomColor());
-						} else {
-							this.snake.forEach((segment, index) => {
-								const color = index === 0 ? 'lightgreen' : 'blue';
-								drawSegment(segment.x, segment.y, color);
-							});
-							drawSegment(this.food.x, this.food.y, 'red');
-						}
-					}
-					update() {
-						const head = {
-							...this.snake[0]
-						};
-						head[directions[this.direction]] += (this.direction === 'up' || this.direction === 'left' ? -1 : 1) * this.gridSize;
-						if (this.checkCollision(head)) {
-							this.resetGame();
-							return;
-						}
-						if (head.x === this.food.x && head.y === this.food.y) {
-							this.snake.unshift({
-								...head
-							});
-							score++;
-							document.getElementById("score").innerText = "Score: " + score;
-							this.food = this.getRandomPosition();
-						} else {
-							this.snake.pop();
-							this.snake.unshift({
-								...head
-							});
-						}
-						this.draw();
-						if (this.actives.includes(2)) {
-							if (ip === 0) {
-								music.pause();
-								music2.loop = true;
-								music2.play()
-								ip = 1;
-							}
-						}
-						if (this.actives.includes(3)) {
-							document.getElementById('body').classList.add('b');
-							document.getElementById('score').classList.add('w');
-						}
-						if (this.actives.includes(4)) {
-							if (ia === 0) {
-								setInterval(() => {
-									const player = document.createElement("iframe");
-									player.id = "pl"
-									if (t + player.offsetHeight > window.innerHeight) {
-										clearInterval();
-										document.getElementById("pl").remove();
-									} else {
-										player.id = "";
-										player.src = "gang.mp4";
-										player.classList.add('fixed');
-										player.style.left = m + "px";
-										if (m + player.offsetWidth > window.innerWidth) {
-											m = -300;
-											t += 150;
-										}
-										m += 300;
-										player.style.top = t + "px";
-										document.body.appendChild(player);
-									}
-								}, 5000);
-								ia = 1;
-							}
-						}
-					}
-					checkCollision(position) {
-						return (position.x < 0 || position.x >= this.canvas.width || position.y < 0 || position.y >= this.canvas.height || this.snake.some(segment => segment.x === position.x && segment.y === position.y));
-					}
-					resetGame() {
-						score = 0;
-						document.getElementById("score").innerText = "Score: " + score;
-						this.snake = [{
-							x: 10 * this.gridSize,
-							y: 10 * this.gridSize
-						}];
-						this.snake.length = 3;
-						this.direction = "right";
-						this.food = this.getRandomPosition();
-					}
-					handleKeyPress(event) {
-						const directionMap = {
-							ArrowUp: 'up',
-							ArrowDown: 'down',
-							ArrowLeft: 'left',
-							ArrowRight: 'right',
-						};
-						if (this.actives.includes(0)) {
-							directionMap.ArrowUp = 'down';
-							directionMap.ArrowDown = 'up';
-							directionMap.ArrowLeft = 'right';
-							directionMap.ArrowRight = 'left';
-						}
-						const newDirection = directionMap[event.key];
-						if (newDirection && this.direction !== newDirection && this.directionOpposite(this.direction) !== newDirection) {
-							this.direction = newDirection;
-						}
-					}
-					directionOpposite(dir) {
-						const oppositeMap = {
-							'up': 'down',
-							'down': 'up',
-							'left': 'right',
-							'right': 'left',
-						};
-						return oppositeMap[dir];
-					}
-					startGame() {
-						document.addEventListener('keydown', (event) => this.handleKeyPress(event));
-						setInterval(() => this.update(), interval);
-					}
-					startSpecialEventTimer() {
-						const mpv = 5;
-						const intervalId = setInterval(() => {
-							if (this.actives.length === mpv) {
-								clearInterval(intervalId);
-								return;
-							}
-							let randomValue = Math.floor(Math.random() * mpv);
-							while (this.actives.includes(randomValue)) {
-								randomValue = Math.floor(Math.random() * mpv);
-							}
-							this.actives.push(randomValue);
-							console.log(this.actives);
-						}, this.specialEventInterval);
-					}
-				}
-				new game('canvas', 20, 200).startGame();
+				music.play();
+				startGame();
 			});
 		</script>
+		<script src="javascript/pageswitch.js"></script>
 	</body>
 </html>

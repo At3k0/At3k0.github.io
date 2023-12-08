@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 0; 
+    padding: 0;
     display: flex;
     font-family: "Karla", sans-serif;
     background-color: royalblue;
@@ -11,6 +11,40 @@ html, body {
     align-items: center;
     text-align: center;
     z-index: 0;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 5px 0px 10px;
+    border-radius: 0 0 15px 15px;
+    position: fixed;
+    top: 0;
+    display: initial;
+    width: 100%;
+}
+
+#change {
+    position: fixed;
+    z-index: 10000;
+    left: 1%;
+    margin: auto;
+}
+
+header button:hover, #change:hover {
+    background-color: floralwhite;
+}
+
+.navbarlink, #change {
+    border-radius: 15px;
+    border-color: dodgerblue;
+    font-family: "Karla", sans-serif;
+    font-size: 20px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+    font-weight: bold;
 }
 
 b {
@@ -19,7 +53,7 @@ b {
     border-radius: 15px;
 }
 
-button {
+.bslide {
     background-color: dodgerblue;
     color: white;
     border: none;
@@ -71,8 +105,11 @@ button {
     transform: translateX(50%);
     margin: 0;
     width: 95%;
-    animation: newsSlideIn 1.2s forwards;
     user-select: none;
+}
+
+.news {
+    animation: topslide 1.2s forwards;
 }
 
 #upgradesdiv {
@@ -138,7 +175,7 @@ button {
     border-radius: 15px;
 }
 
-#content, #descbox {
+#content, #descbox, header {
     display: none;
 }
 
@@ -185,6 +222,22 @@ button {
     z-index: -1;
 }
 
+.topslide {
+    animation: topslide 1.2s forwards;
+}
+
+.topslide2 {
+    animation: topslide2 1.2s forwards;
+}
+
+.bottomslide {
+    animation: bottomslide 1.2s forwards;
+}
+
+.bottomslide2 {
+    animation: bottomslide2 1.2s forwards;
+}
+
 /*hover*/
 #newalecb:hover, #alec:hover, button:hover {
     cursor: pointer;
@@ -218,12 +271,39 @@ button:hover {
     }
 }
 
-@keyframes newsSlideIn {
+@keyframes topslide {
     from {
-        top: -30px;
+        top: -100%;
     }
     to {
         top: 1%;
+    }
+}
+
+@keyframes topslide2 {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes bottomslide {
+    from {
+        top: 1%;
+    }
+    to {
+        top: -100%;
+    }
+}
+
+@keyframes bottomslide2 {
+    from {
+        top: 0;
+    }
+    to {
+        top: -100%;
     }
 }
 
@@ -278,5 +358,13 @@ button:hover {
     #upgradesdiv {
         width: auto;
         height: auto;
+    }
+
+    #change {
+        bottom: 1%;
+        position: fixed;
+    }
+    #pform {
+        display: none;
     }
 }
