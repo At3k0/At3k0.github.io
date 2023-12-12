@@ -93,8 +93,6 @@ function Game() {
 		`local Adonis is a good dog`,
 		`local Remy is a good dog`,
 		`local Owen is a good dog`,
-		`local Torch is a good crested gecko`,
-		`local Gecky is a good crested gecko`,
 		`local Bean is a good cat`,
 		`local Key is a good cat`, //pet owned by Kirk S.
 		`local Baby Key is a good cat`, //pet owned by Kirk S.
@@ -102,7 +100,10 @@ function Game() {
 		`local Key is a good cat`, //pet owned by Kirk S.
 		`local Rex is a good cat`, //pet owned by Rence A.
 		`local Blu is a good cat`, //pet owned by Rence A.
-		`local Vacuum Cleaner is a good Black Ghost Knifefish`, //yes this is a real pet
+		`local Bonnie is a good horse`,
+		`local Torch is a good crested gecko`,
+		`local Gecky is a good crested gecko`, //pet owned by Ava F. 
+		`local Vacuum Cleaner is a good Black Ghost Knifefish`, //pet owned by Ava F.
 		`local bill is a good bill`, //pet owned by bill
 		`local Zoe will rest in peace`,
 		`local Archie will rest in peace`, //pet owned by Carmen S.
