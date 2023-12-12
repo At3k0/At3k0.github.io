@@ -486,7 +486,6 @@ function Game() {
 			}
 		});
 	}
-
 	const autoclickUpgrades = [
 		{
 			element: autoclick1,
