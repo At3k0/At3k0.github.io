@@ -50,6 +50,29 @@ button {
     font-weight: bold;
 }
 
+.g {
+    position: absolute;
+    width: 5vh;
+    right: 5px;
+    top: 5px;
+}
+
+.rtxt {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    font-size: 2vh;
+    color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.logo.g:hover + .rtxt {
+    opacity: 1;
+
+}
+
 .container {
     display: flex;
     grid-gap: 5%;

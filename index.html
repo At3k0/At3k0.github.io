@@ -14,6 +14,8 @@
 	<body style="text-align: center;">
 		<header>
 			<img onclick="showHome()" src="images/smallogo.png" class="logo hover">
+			<img onclick="openRepo()" src="images/ghlogowhite.png" class="logo g hover">
+			<div class="rtxt navbarlink">BHOF repository</div>
 			<nav>
 				<button onclick="showShortFilms()" class="navbarlink">
 					Short Films
@@ -27,14 +29,8 @@
 				<button onclick="showClicker()" class="navbarlink">
 					Clicker
 				</button>
-				<button onclick="showBox()" class="navbarlink">
-					Box HOF
-				</button>
-				<button onclick="showRiddle()" class="navbarlink">
-					Scorecard
-				</button>
 				<button onclick="showSnake()" class="navbarlink">
-					Snake (?)
+					Snake
 				</button>
 			</nav>
 		</header>
@@ -102,14 +98,6 @@
 						<div class="grid-item" onclick="showClicker()">
 							<img class="mimg" src="images/skins/alec.png">
 							<span class="indtxt mtxt">Alec Clicker</span>
-						</div>
-						<div class="grid-item" onclick="showBox()">
-							<img class="mimg" src="images/box.png">
-							<span class="indtxt mtxt">Box HOF</span>
-						</div>
-						<div class="grid-item" onclick="showRiddle()">
-							<img class="mimg" src="images/riddle.png">
-							<span class="indtxt mtxt">Riddle Scores</span>
 						</div>
 						<div class="grid-item" onclick="showSnake()">
 							<img class="mimg" src="images/snake.png">
@@ -535,14 +523,8 @@
 		</div>
 		<footer>
 			<div style="flex-grow: 1;">
-				copyright literally nobody 2023
-				<hr class="line">
 				Run by Alec Diramerian
 				<hr class="line">
-				<a href="https://github.com/AlecDiramerian/bhof.github.io" class="l">
-				GitHub
-				</a>
-				|| 
 				<a href="https://instagram.com/bridges_hof" class="l">
 				Instagram
 				</a>
@@ -551,11 +533,7 @@
 				YouTube
 				</a>
 				<hr class="line">
-				Contact info in
-				<a href="https://github.com/AlecDiramerian/bhof.github.io#readme" class="l">
-				README.md
-				</a>
-				on GitHub
+				copyright literally nobody 2023
 			</div>
 		</footer>
 		<script src="javascript/pageswitch.js"></script>

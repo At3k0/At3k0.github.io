@@ -26,14 +26,13 @@ const redirectToPage = page => {
 };
 
 const showClicker = () => redirectToPage("clicker");
-const showBox = () => redirectToPage("box");
-const showRiddle = () => redirectToPage("scorecard");
 const showSnake = () => redirectToPage("snake");
 
-const openForm = url => window.open(url);
+const openLink = url => window.open(url);
 
-const openQuotesForm = () => openForm("https://forms.gle/1rS7JwsfzxzZ4B2V7");
-const openCandidsForm = () => openForm("https://forms.gle/19PAqcWP1ZffHae8A");
+const openQuotesForm = () => openLink("https://forms.gle/1rS7JwsfzxzZ4B2V7");
+const openCandidsForm = () => openLink("https://forms.gle/19PAqcWP1ZffHae8A");
+const openRepo = () => openLink("https://github.com/AlecDiramerian/bhof.github.io");
 
 const updateCSSLink = href => {
 	const head = document.getElementsByTagName('head')[0];

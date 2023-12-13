@@ -9,28 +9,29 @@ Quotes - The Bridges Academy Quotebook, in the form of a webpage
 [Want to request a Quote? Click here!]<br>
 If you want to request a quote/candid to be removed, scroll down to the "Contact" section<br>
 # Credits
-Myles O' Meara - Providing quotes (too many)<br>
-Rence Alder - Providing quotes (7) and pet names (a lot)<br>
-Mealz Mokran - Providing quotes (5)<br>
-Abby Mathess - Providing a quote<br>
+Myles O'M. - Providing quotes (too many)<br>
+Rence A. - Providing quotes (7) and pet names (a lot)<br>
+Mealz M. - Providing quotes (5)<br>
+Abby M. - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
-Gabby Frear - Providing a quote<br>
-Greyson Corday - Providing a quote<br>
+Gabby F. - Providing a quote<br>
+Greyson C. - Providing a quote<br>
 "gossip gurl" - Providing a quote<br>
 "some bozo" - Providing a quote<br>
 "John Cena" - Providing a quote<br>
-EJ Pasinski - Providing a quote<br>
-Keiran George - Providing quotes (2) & a candid<br>
-Christopher Laurence - Providing quotes (2) & a candid<br>
-Ava Federgreen - Providing a quote & a candid<br>
-Xiaoxia Fogg - Providing a candid<br>
-Gwen Karaba - Providing a candid<br>
-Lily Kyllo - Providing a candid<br>
-Sarah Quan - Providing a candid<br>
-Cole Walker - Providing a candid<br>
+EJ P. - Providing a quote<br>
+Keiran G. - Providing quotes (2) & a candid<br>
+Christopher L. - Providing quotes (2) & a candid<br>
+Ava F. - Providing a quote & a candid<br>
+Xiaoxia F. - Providing a candid<br>
+Gwen K. - Providing a candid<br>
+Lily K. - Providing a candid<br>
+Sarah Q. - Providing a candid<br>
+Cole W. - Providing a candid<br>
 
-Christian Solis - Allowing me to yoink quotes off his quote board<br>
-David Hekimian - Helping me set this up<br>
+Christian S. - Allowing me to yoink quotes off his quote board<br>
+Noah N. - Helping me Chris-proof my clicker<br>
+David H. - Helping me set this up (you dont know him he goes to uhh another school)<br>
 
 # Contact
 Email: alecdiramerian@gmail.com<br>
