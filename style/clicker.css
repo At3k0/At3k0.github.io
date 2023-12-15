@@ -25,18 +25,25 @@ header {
     width: 100%;
 }
 
-#change {
+#change, #station {
     position: fixed;
     z-index: 10000;
-    left: 1%;
     margin: auto;
+}
+
+#station {
+    right: 1%;
+}
+
+#change {
+    left: 1%;
 }
 
 header button:hover, #change:hover {
     background-color: floralwhite;
 }
 
-.navbarlink, #change {
+.navbarlink, #change, #station {
     border-radius: 15px;
     border-color: dodgerblue;
     font-family: "Karla", sans-serif;
@@ -123,6 +130,7 @@ b {
     padding: 5px;
     transition: right 0.5s;
     border-radius: 15px;
+    z-index: 11010010101;
 }
 
 #autoclick1, #autoclick1cost,
@@ -274,36 +282,44 @@ button:hover {
 @keyframes topslide {
     from {
         top: -100%;
+        opacity: 0;
     }
     to {
         top: 1%;
+        opacity: 1;
     }
 }
 
 @keyframes topslide2 {
     from {
         top: -100%;
+        opacity: 0;
     }
     to {
         top: 0;
+        opacity: 1;
     }
 }
 
 @keyframes bottomslide {
     from {
         top: 1%;
+        opacity: 1;
     }
     to {
         top: -100%;
+        opacity: 0;
     }
 }
 
 @keyframes bottomslide2 {
     from {
         top: 0;
+        opacity: 1;
     }
     to {
         top: -100%;
+        opacity: 0;
     }
 }
 
@@ -360,7 +376,7 @@ button:hover {
         height: auto;
     }
 
-    #change {
+    #change, #station {
         bottom: 1%;
         position: fixed;
     }

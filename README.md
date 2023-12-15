@@ -20,8 +20,8 @@ Greyson C. - Providing a quote<br>
 "some bozo" - Providing a quote<br>
 "John Cena" - Providing a quote<br>
 EJ P. - Providing a quote<br>
+Christopher L. - Providing quotes (2) & a candid & pet names (3)<br>
 Keiran G. - Providing quotes (2) & a candid<br>
-Christopher L. - Providing quotes (2) & a candid<br>
 Ava F. - Providing a quote & a candid<br>
 Xiaoxia F. - Providing a candid<br>
 Gwen K. - Providing a candid<br>
