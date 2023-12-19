@@ -11,7 +11,7 @@ If you want to request a quote/candid to be removed, scroll down to the "Contact
 # Credits
 Myles O'M. - Providing quotes (too many)<br>
 Rence A. - Providing quotes (7) and pet names (a lot)<br>
-Mealz M. - Providing quotes (5)<br>
+Mealz M. - Providing quotes (6)<br>
 Abby M. - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
 Gabby F. - Providing a quote<br>
