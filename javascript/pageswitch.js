@@ -53,3 +53,4 @@ const updateCSSLink = href => {
 		head.appendChild(newLink);
 	}
 };
+showHome();

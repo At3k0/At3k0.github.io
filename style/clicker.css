@@ -130,7 +130,7 @@ b {
     padding: 5px;
     transition: right 0.5s;
     border-radius: 15px;
-    z-index: 11010010101;
+    z-index: 10001;
 }
 
 #autoclick1, #autoclick1cost,
@@ -146,6 +146,7 @@ b {
 #autoclick11, #autoclick11cost,
 #autoclick12, #autoclick12cost,
 #autoclick13, #autoclick13cost,
+#autoclick14, #autoclick14cost,
 #soonupg {
     display: inline-block;
     padding: 5px;
@@ -165,7 +166,7 @@ b {
     padding: 10px;
     border-radius: 15px;
     border: 1px outset dodgerblue;
-    z-index: 2;
+    z-index: 10002;
 }
 
 #changelog {
