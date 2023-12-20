@@ -16,10 +16,11 @@ Abby M. - Providing a quote<br>
 "annonymous student" - Providing a quote<br>
 Gabby F. - Providing a quote<br>
 Greyson C. - Providing a quote<br>
+EJ P. - Providing a quote<br>
 "gossip gurl" - Providing a quote<br>
 "some bozo" - Providing a quote<br>
 "John Cena" - Providing a quote<br>
-EJ P. - Providing a quote<br>
+"John Pork" - Providing a quote<br>
 Christopher L. - Providing quotes (2) & a candid & pet names (3)<br>
 Keiran G. - Providing quotes (2) & a candid<br>
 Ava F. - Providing a quote & a candid<br>
