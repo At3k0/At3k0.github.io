@@ -244,7 +244,7 @@ function Game() {
 			} else if (skin === 2) {
 				alec.src = alectype === 0 ? 'images/skins/nate.png' : (alectype === 1 ? 'images/skins/nate2.png' : 'images/skins/nate3.png');
 			} else if (skin === 3) {
-				alec.src = alectype === 0 ? 'images/skins/dash.png' : (alectype === 1 ? 'images/skins/dash2.png' : 'images/skins/sadlycl.png');
+				alec.src = alectype === 0 ? 'images/skins/dash.png' : (alectype === 1 ? 'images/skins/dash2.png' : 'images/skins/dash3.png');
 			} else if (skin === 4) {
 				alec.src = alectype === 0 ? 'images/skins/chris.png' : (alectype === 1 ? 'images/skins/chris2.png' : 'images/skins/chris3.png');
 			} else if (skin === 5) {
@@ -266,7 +266,7 @@ function Game() {
 			alec: ['alec.png', 'alec2.png', 'alec3.png'],
 			abby: ['abby.png', 'abby2.png', 'abby3.png'],
 			nate: ['nate.png', 'nate2.png', 'nate3.png'],
-			dash: ['dash.png', 'dash2.png', 'sadlycl.png'],
+			dash: ['dash.png', 'dash2.png', 'dash3.png'],
 			chris: ['chris.png', 'chris2.png', 'chris3.png'],
 			ava: ['ava.png', 'ava2.png', 'ava3.png'],
 			rence: ['rence.png', 'rence2.png', 'rence3.png'],
@@ -540,7 +540,7 @@ function Game() {
 			} else if (skin === 2) {
 				alec.src = alectype === 0 ? 'images/skins/natemush.png' : (alectype === 1 ? 'images/skins/nate2mush.png' : 'images/skins/nate3mush.png');
 			} else if (skin === 3) {
-				alec.src = alectype === 0 ? 'images/skins/dashmush.png' : (alectype === 1 ? 'images/skins/dash2mush.png' : 'images/skins/sadlyclmush.png');
+				alec.src = alectype === 0 ? 'images/skins/dashmush.png' : (alectype === 1 ? 'images/skins/dash2mush.png' : 'images/skins/dash3mush.png');
 			} else if (skin === 4) {
 				alec.src = alectype === 0 ? 'images/skins/chrismush.png' : (alectype === 1 ? 'images/skins/chris2mush.png' : 'images/skins/chris3mush.png');
 			} else if (skin === 5) {
@@ -564,7 +564,7 @@ function Game() {
 			} else if (skin === 2) {
 				alec.src = alectype === 0 ? 'images/skins/nate.png' : (alectype === 1 ? 'images/skins/nate2.png' : 'images/skins/nate3.png');
 			} else if (skin === 3) {
-				alec.src = alectype === 0 ? 'images/skins/dash.png' : (alectype === 1 ? 'images/skins/dash2.png' : 'images/skins/sadlycl.png');
+				alec.src = alectype === 0 ? 'images/skins/dash.png' : (alectype === 1 ? 'images/skins/dash2.png' : 'images/skins/dash3.png');
 			} else if (skin === 4) {
 				alec.src = alectype === 0 ? 'images/skins/chris.png' : (alectype === 1 ? 'images/skins/chris2.png' : 'images/skins/chris3.png');
 			} else if (skin === 5) {
