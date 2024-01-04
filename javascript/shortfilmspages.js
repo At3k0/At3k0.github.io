@@ -2,7 +2,7 @@ let currentPageSF = 1;
 const pageDataSF = [
 	{ title: "Teacher's Bane", url: "https://www.youtube-nocookie.com/embed/IaG5XPOW9cc", description: "The one and only"},
 	{ title: "Teacher's Bane, but everything goes wrong", url: "https://www.youtube-nocookie.com/embed/S_uhfeleOdc", description: "Teacher's Bane, but it's different!"},
-	{ title: "Teacher's Bane, but everything goes wrong 2", url: "images/when.png", description: "Coming in December 2023"},
+	{ title: "sorry, this has been canceled", url: "images/when.png", description: "due to consent and editing issues"},
 	{ title: "???", url: "images/when.png", description: "Coming with the 2024 HS film festival"},
 	{ title: "Shakespeare Shorts (no cap) - goofy edition", url: "https://www.youtube-nocookie.com/embed/6lm-AGp-szU", description: "''A certy-fied hood classic!''"},
 	{ title: "Flight AKD-69420", url: "https://www.youtube-nocookie.com/embed/ERArvgDBJZc", description: "My first (and worst) short film"},
