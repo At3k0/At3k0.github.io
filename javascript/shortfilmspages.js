@@ -1,6 +1,7 @@
 let currentPageSF = 1;
 const pageDataSF = [
-	{ title: "Teacher's Bane", url: "https://www.youtube-nocookie.com/embed/IaG5XPOW9cc", description: "The one and only"},
+	
+	{ title: "Teacher's Bane", url: "https://www.youtube-nocookie.com/embed/KvBMSc40ThM", description: "The one and only"},
 	{ title: "Teacher's Bane, but everything goes wrong", url: "https://www.youtube-nocookie.com/embed/S_uhfeleOdc", description: "Teacher's Bane, but it's different!"},
 	{ title: "sorry, this has been canceled", url: "images/when.png", description: "due to consent and editing issues"},
 	{ title: "???", url: "images/when.png", description: "Coming with the 2024 HS film festival"},
