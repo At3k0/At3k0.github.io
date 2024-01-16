@@ -99,14 +99,12 @@ export const newslist = [
 	`if I sold Bryce, would I recieve one pound sterling?`,
 	`What is the motto of Angel Motto?`,
 	` :ƨwɘИ`,
-	`pls join newspaper club its on Mondays at lunch in Jocelyn's room`,
 	`Little Bo Peep becomes a rapper, calls herself Lil' Beep and makes an album called 'I bleep the sheep'`,
 	`Little Red Riding Hood becomes a rapper, calls herself Lil' Red and makes an album called 'Riding in the Hood'`,
 	`GUYS IM FROM 2084! APPLE HAS RELEASED THEIR IPHONE 41 PLUS SUPER MAX SLIM TITANIUM MINI AND NINTENDO RELEASED SUPER MARIO 65, A GIANT EGG WILL CRUSH THE EARTH IN 2085, PLEASE BELEIVE ME IM NOT CRAZY!`,
 	`how much smith could a will smith smith if a will smith could smith wood?`,
 	`ooga booga your kneecaps are goonga`,
 	`Gru and Sokka have declared war on eachother, only one will get the moon.`,
-
 ];
 
 export const radiolist = [
