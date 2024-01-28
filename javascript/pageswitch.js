@@ -36,6 +36,7 @@ const showSnake = () => redirectToPage("snake");
 const showSimulator = () => openLink("https://www.roblox.com/games/15409499206/get-hit-by-a-train-simulator")
 const openQuotesForm = () => openLink("https://forms.gle/1rS7JwsfzxzZ4B2V7");
 const openCandidsForm = () => openLink("https://forms.gle/19PAqcWP1ZffHae8A");
+const openPetition = () => openLink("https://www.ipetitions.com/petition/concerns-at-bridgesacademy");
 const openRepo = () => openLink("https://github.com/AlecDiramerian/bhof.github.io");
 
 const updateCSSLink = href => {
