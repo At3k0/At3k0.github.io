@@ -14,7 +14,7 @@ const pageTitlesQ = [
 ];
 
 function showPageQ(pageNumberQ) {
-	for (let i = 1; i <= 11; i++) {
+	for (let i = 1; i <= 12; i++) {
 		document.querySelector(`.qpage.qpage-${i}`).classList.remove("active");
 	}
 
@@ -25,11 +25,11 @@ function showPageQ(pageNumberQ) {
 }
 
 function goForwardQ() {
-	showPageQ(currentPageQ < 11 ? currentPageQ + 1 : 1);
+	showPageQ(currentPageQ < 12 ? currentPageQ + 1 : 1);
 }
 
 function goBackQ() {
-	showPageQ(currentPageQ > 1 ? currentPageQ - 1 : 11);
+	showPageQ(currentPageQ > 1 ? currentPageQ - 1 : 12);
 }
 
 showPageQ(currentPageQ);
