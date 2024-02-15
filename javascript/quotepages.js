@@ -10,6 +10,7 @@ const pageTitlesQ = [
 	"HS Quotes",
 	"HS Quotes",
 	"MS Quotes",
+	"MS Quotes",
 	"MS Quotes"
 ];
 
