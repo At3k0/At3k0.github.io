@@ -3,12 +3,13 @@ Yup, I was serious about making this. The Bridges Vimeo didn't post the 2023 MS 
 There are three main pages on here:<br>
 Short Films - All my short films, other people's short films will be coming in 3-5 buisness days<br>
 Candids - Random images from Bridges that didn't make it into the yearbook<br>
-Quotes - The Bridges Academy Quotebook, in the form of a webpage
+Quotes - The Bridges Academy Quotebook, in the form of a webpage<br>
 
-There's also the dumb pages
-Alec Clicker - It's cookie clicker, but stupider!
-Snake - It's snake, but stupider!
-Get Hit By a Train Simulator - A Roblox game about getting hit by a train (very stupid)
+There's also the "dumb pages"<br>
+Alec Clicker - It's cookie clicker, but stupider!<br>
+Snake - It's snake, but stupider!<br>
+Get Hit By a Train Simulator - A Roblox game about getting hit by a train (very stupid)<br>
+
 # Requests
 [Want to request a Candid? Click here!]<br>
 [Want to request a Quote? Click here!]<br>
