@@ -1,7 +1,7 @@
 let currentPageC = 1;
 
 function showPageC(pageNumberC) {
-	for (let i = 1; i <= 10; i++) {
+	for (let i = 1; i <= 11; i++) {
 		document.querySelector(`.cpage.cpage-${i}`).classList.remove("active");
 	}
 
@@ -11,11 +11,11 @@ function showPageC(pageNumberC) {
 }
 
 function goForwardC() {
-	showPageC(currentPageC < 10 ? currentPageC + 1 : 1);
+	showPageC(currentPageC < 11 ? currentPageC + 1 : 1);
 }
 
 function goBackC() {
-	showPageC(currentPageC > 1 ? currentPageC - 1 : 10);
+	showPageC(currentPageC > 1 ? currentPageC - 1 : 11);
 }
 
 showPageC(currentPageC);
