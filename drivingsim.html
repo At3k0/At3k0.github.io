@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Driving Simulator</title>
+		<style>
+			#object {
+				width: 50px;
+				height: 50px;
+				background-color: blue;
+				position: absolute;
+				top: 0;
+				left: 0;
+				offset-anchor: 0;
+			}
+
+			body,
+			.container {
+				overflow: hidden;
+			}
+
+			#road {
+				transform: rotate(180deg);
+				background: url("images/dbg.png") repeat-y;
+				height: 7680px;
+				position: fixed;
+				bottom: 0%;
+				z-index: -1;
+				width: 840px;
+				
+			}
+			.roadanimation {
+				animation: slide 3s linear infinite;
+			}
+
+			.slider {
+				animation: hazardSlide 1s linear forwards;
+				top: 5%;
+			}
+
+			#car {
+				transform: scale(0.25);
+				position: fixed;
+				z-index: 10;
+			}
+
+			@keyframes slide {
+				0% {
+					transform: translateY(0);
+				}
+
+				100% {
+					transform: translateY(3840px);
+				}
+			}
+
+			@keyframes hazardSlide {
+				0% {
+					top: 0%;
+				}
+
+				100% {
+					top: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<img id="car" src="images/car.png">
+		<div class="container">
+			<div id="road" class="roadanimation"></div>
+		</div>
+		<script>
+			let car = document.getElementById('car');
+			let dead = 0
+			const hazardImages = [
+				{img: 'images/hazards/basicbee.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/ben.png', name: "basicbee", message: "You hit Talking Ben"},
+				{img: 'images/hazards/chris.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/cone.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/toadsworth.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/pumpkin.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/santa.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/cow.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/duck.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/fryingpan.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/weezer.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/quincy.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/superwhy.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/planter.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/sans.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/shakespeare.png', name: "basicbee", message: "You hit a Basic Bee"},
+				{img: 'images/hazards/train.png', name: "basicbee", message: "You got hit by a train"},
+				{img: 'images/hazards/leapfrog.png', name: "basicbee", message: "You hit a Basic Bee"},
+			];
+			document.addEventListener('mousemove', moveCar);
+
+			function moveCar(event) {
+				if (dead == 0) {
+					let mouseX = event.clientX;
+					let mouseY = event.clientY;
+					car.style.left = mouseX - (car.offsetWidth / 2) + 'px';
+					car.style.top = mouseY - (car.offsetHeight / 2) + 'px';
+				}
+			}
+
+			function getRandomHazard() {
+				const hazard = hazardImages[Math.floor(Math.random() * hazardImages.length)];
+				return hazard.img;
+			}
+
+			function createHazard() {
+				if (dead == 0) {
+					if (Math.floor(Math.random() * 75) === 1) {
+						const newImage = document.createElement("img");
+						let s = Math.round(Math.random() * (625 - 137) + 137) + "px";
+						newImage.style.left = s;
+						newImage.style.width = "100px";
+						newImage.style.height = "auto";
+						newImage.style.position = "fixed";
+						document.body.appendChild(newImage);
+						let hazardSrc = getRandomHazard();
+						newImage.className = "slider";
+						newImage.src = hazardSrc;
+						newImage.style.top += "1px";
+						setInterval(() => {
+							if (isColliding(car, newImage)) {
+								console.log(haza);
+								dead = 1
+								document.getElementById("road").classList.remove("roadanimation")
+								document.getElementById("road").style.transform = "initial"
+							}
+						}, 100);
+					}
+					requestAnimationFrame(createHazard);
+				}
+			}
+			requestAnimationFrame(createHazard);
+
+			function isColliding(element1, element2) {
+				const rect1 = element1.getBoundingClientRect();
+				const rect2 = element2.getBoundingClientRect();
+				return !(rect1.top > rect2.bottom || rect1.right < rect2.left || rect1.bottom < rect2.top || rect1.left > rect2.right);
+			}
+		</script>
+	</body>
+</html>
