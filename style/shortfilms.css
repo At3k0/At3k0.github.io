@@ -9,7 +9,6 @@ html, body {
     display: flex;
     height: 100%;
     justify-content: center;
-    align-items: center;
 }
 
 .column {
@@ -47,6 +46,7 @@ a:hover {
 iframe, .comingsoon {
     border-radius: 15px;
     max-width: 100%;
+    display: block;
 }
 
 .line {
@@ -73,6 +73,23 @@ button {
     border-color: dodgerblue;
     font-family: "Karla", sans-serif;
     background-color: white;
+}
+.column {
+    align-items: revert;
+}
+
+.sf1 {
+    margin-left: 0; 
+    margin-right: auto;
+    float: left;
+}
+
+#title {
+    font-size: 50px;
+}
+
+.desc, span {
+    text-align: left !important;
 }
 
 @media only screen and (max-width: 768px){
