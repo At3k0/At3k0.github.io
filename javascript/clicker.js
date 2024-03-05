@@ -698,7 +698,6 @@ function Game() {
 	change.addEventListener('click', () => {
 		clickSFX.cloneNode().play();
 
-		
 		const header = document.getElementById('header');
 
 		if (navbarornews === 0) {
