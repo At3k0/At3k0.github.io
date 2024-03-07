@@ -35,6 +35,7 @@ Gwen K. - Providing a candid<br>
 Lily K. - Providing a candid<br>
 Sarah Q. - Providing a candid<br>
 Cole W. - Providing a candid<br>
+Lucian B. - Providing a candid<br>
 
 Christian S. - Allowing me to yoink quotes off his quote board<br>
 Noah N. - Helping me Chris-proof my clicker<br>
