@@ -34,6 +34,7 @@ function Game() {
 	let autoclick12cost = 14000000000000;
 	let autoclick13cost = 170000000000000;
 	let autoclick14cost = 2100000000000000;
+	let autoclick15cost = 26000000000000000;
 	const clickSFX = new Audio('audio/mcclick.mp3');
 	const errorSFX = new Audio('audio/error.mp3');
 	const autoclickSFX = new Audio('audio/autoclick.mp3');
@@ -50,6 +51,7 @@ function Game() {
 	const summonSFX = new Audio('audio/summon.mp3');
 	const birdSFX = new Audio('audio/bird.mp3');
 	const whooshSFX = new Audio('audio/whoosh.mp3');
+	const buttonclickSFX = new Audio('audio/command.mp3');
 	const news = document.getElementById('news');
 	const alec = document.getElementById('alec');
 	const change = document.getElementById('change');
@@ -60,7 +62,7 @@ function Game() {
 	const upgradesbutton = document.getElementById('upgrades');
 	const wyattmodebutton = document.getElementById('wyattmode');
 	const changelogbutton = document.getElementById('changelogb');
-	const buttons = [autoclick1, autoclick2, autoclick3, autoclick4, autoclick5, autoclick6, autoclick7, autoclick8, autoclick9, autoclick10, autoclick11, autoclick12, autoclick13, autoclick14, skinbutton, resetbutton, upgradesbutton, changelogbutton, aps, totalnum];
+	const buttons = [autoclick1, autoclick2, autoclick3, autoclick4, autoclick5, autoclick6, autoclick7, autoclick8, autoclick9, autoclick10, autoclick11, autoclick12, autoclick13, autoclick14, autoclick15, skinbutton, resetbutton, upgradesbutton, changelogbutton, aps, totalnum];
 
 	function abbreviateNumber(number) {
 		const abbreviations = ["", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", "AA", "AB", "AC", "AD", "AE", "AF", "AG", "AH", "AI", "AJ", "AK", "AL", "AM", "AN", "AO", "AP", "AQ", "AR", "AS", "AT", "AU", "AV", "AW", "AX", "AY", "AZ"];
@@ -130,6 +132,7 @@ function Game() {
 		if (localStorage.getItem('autoclick12cost')) autoclick12cost = parseInt(localStorage.getItem('autoclick12cost'));
 		if (localStorage.getItem('autoclick13cost')) autoclick13cost = parseInt(localStorage.getItem('autoclick13cost'));
 		if (localStorage.getItem('autoclick14cost')) autoclick14cost = parseInt(localStorage.getItem('autoclick14cost'));
+		if (localStorage.getItem('autoclick15cost')) autoclick15cost = parseInt(localStorage.getItem('autoclick15cost'));
 		if (localStorage.getItem('boughtwyattmode')) boughtwyattmode = parseInt(localStorage.getItem('boughtwyattmode'));
 	};
 
@@ -155,6 +158,7 @@ function Game() {
 		localStorage.setItem('autoclick12cost', autoclick12cost);
 		localStorage.setItem('autoclick13cost', autoclick13cost);
 		localStorage.setItem('autoclick14cost', autoclick14cost);
+		localStorage.setItem('autoclick15cost', autoclick15cost);
 		localStorage.setItem('boughtwyattmode', boughtwyattmode);
 	};
 
@@ -214,6 +218,10 @@ function Game() {
 		autoclick14cost = 2100000000000000;
 		document.getElementById(`autoclick14cost`).innerText = `$${abbreviateNumber(autoclick14cost)}`;
 	}
+	if (autoclick15cost < 26000000000000000) {
+		autoclick15cost = 26000000000000000;
+		document.getElementById(`autoclick15cost`).innerText = `$${abbreviateNumber(autoclick15cost)}`;
+	}
 
 	setInterval(saveProgress, 60000);
 
@@ -236,6 +244,7 @@ function Game() {
 		document.getElementById('autoclick12cost').innerText = '$' + abbreviateNumber(autoclick12cost);
 		document.getElementById('autoclick13cost').innerText = '$' + abbreviateNumber(autoclick13cost);
 		document.getElementById('autoclick14cost').innerText = '$' + abbreviateNumber(autoclick14cost);
+		document.getElementById('autoclick15cost').innerText = '$' + abbreviateNumber(autoclick15cost);
 		if (wyattmode === 1) {
 			alec.src = 'images/skins/why.jpeg';
 		} else {
@@ -313,9 +322,10 @@ function Game() {
 					11: summonSFX,
 					12: birdSFX,
 					13: whooshSFX,
+					14: buttonclickSFX,
 				};
 
-				const excludedIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+				const excludedIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 				(index !== 0 && !excludedIndices.includes(index)) ? clickSFX.cloneNode().play(): (soundEffects[index] && soundEffects[index].cloneNode().play());
 
 				const container = document.querySelector(".container");
@@ -363,6 +373,8 @@ function Game() {
 					autoclick13cost = cost;
 				} else if (element === autoclick14) {
 					autoclick14cost = cost;
+				} else if (element === autoclick15) {
+					autoclick15cost = cost;
 				}
 				saveProgress();
 			} else {
@@ -452,6 +464,11 @@ function Game() {
 			cost: autoclick14cost,
 			cpsMultiplier: 2900000000
 		},
+		{
+			element: autoclick15,
+			cost: autoclick15cost,
+			cpsMultiplier: 21000000000
+		},
 	];
 
 	autoclickUpgrades.forEach((upgrade, index) => {
@@ -483,6 +500,7 @@ function Game() {
 			autoclick12cost = 14000000000000;
 			autoclick13cost = 170000000000000;
 			autoclick14cost = 2100000000000000;
+			autoclick15cost = 26000000000000000;
 			saveProgress();
 			document.location.reload();
 		}
@@ -641,6 +659,9 @@ function Game() {
 					break;
 				case autoclick14:
 					text = "Get Alecs to vibe to the same twenty songs for eternity!";
+					break;
+				case autoclick15:
+					text = "A repeating command block set to '/summon Alec'";
 					break;
 				case skinbutton:
 					text = "Make your Alecs look different!";

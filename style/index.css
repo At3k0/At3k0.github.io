@@ -79,7 +79,7 @@ button {
     padding: 0 20px;
 }
 
-.scontainer, .column {
+.scontainer {
     display: block;
     padding: 20px;
 }
@@ -207,10 +207,12 @@ button {
 
 img:hover, button:hover, .hover:hover, .navbarlink:hover, .indtxt:hover {
     cursor: pointer;
+
 }
 
 button:hover {
     background-color: floralwhite;
+    box-shadow: 0.5ex 0.5ex;
 }
 
 a:hover {
