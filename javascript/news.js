@@ -29,6 +29,7 @@ export const newslist = [
 	`local Cody is a good dog`, //pet owned by Chris L.
 	`local Mocha is a good dog`, //pet owned by Chris L.
 	`local Holly is a good dog`, //pet owned by Eric L.
+	`local Hilda is a good wiener dog`, //pet owned by Xiaoxia F.
 	`local Remy is a good dog`,
 	`local Owen is a good dog`,
 	`local Bean is a good cat`,
@@ -42,7 +43,7 @@ export const newslist = [
 	`local Bonnie is a good horse`,
 	`local Torch is a good crested gecko`,
 	`local Gecky is a good crested gecko`, //pet owned by Ava F. 
-	`local Vacuum Cleaner is a good Black Ghost Knifefish`, //pet owned by Ava F.
+	`local Vacuum Cleaner is a good Black Ghost Knifefish`, //pet owned by Ava F, yes this is a real pet
 	`local bill is a good bill`, //pet owned by bill
 	`local Zoe will rest in peace`,
 	`local Archie will rest in peace`, //pet owned by Carmen S.

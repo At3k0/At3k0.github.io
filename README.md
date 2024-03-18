@@ -30,7 +30,7 @@ EJ P. - Providing a quote<br>
 Christopher L. - Providing quotes (2) & a candid & pet names (3)<br>
 Keiran G. - Providing quotes (2) & a candid<br>
 Ava F. - Providing a quote & a candid<br>
-Xiaoxia F. - Providing a candid<br>
+Xiaoxia F. - Providing a candid & a pet name<br>
 Gwen K. - Providing a candid<br>
 Lily K. - Providing a candid<br>
 Sarah Q. - Providing a candid<br>
