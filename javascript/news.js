@@ -13,6 +13,7 @@ export const newslist = [
 	`local Middle School Bridges Confessions called a cyberbully by Kerinius Borzellius, but none of the "victims" agree`,
 	`local shoe gets thrown at fundraiser guy, all students agree it was justified`,
 	`local PSAT app turns man into a smurf`,
+	`local Something Rotten is a smashing success!`,
 	//local pets
 	`local Samson is a good dog`,
 	`local Bentley is a good dog`,
