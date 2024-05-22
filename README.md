@@ -42,7 +42,7 @@ Noah N. - Helping me Chris-proof my clicker<br>
 David H. - Helping me set this up (you dont know him he goes to uhh another school)<br>
 
 # Contact
-Email: alecdiramerian@gmail.com<br>
+Email: alec.diramerian@bridges.edu<br>
 
 [want to request a candid? click here!]: https://forms.gle/z2F7er1nemraYQyr6
 [want to request a quote? click here!]: https://forms.gle/FW84K2qrrsttKQ1A9
