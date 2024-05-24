@@ -1,22 +1,22 @@
 let currentPageQ = 1;
 const pageTitlesQ = [
-	"HS Quotes aka the Noah and Chris page",
-	"HS Quotes",
-	"HS Quotes",
-	"HS Quotes",
-	"HS Quotes",
-	"HS Quotes",
-	"HS Quotes",
-	"HS Quotes",
-	"HS Quotes",
-	"HS Quotes",
-	"MS Quotes",
-	"MS Quotes",
-	"MS Quotes"
+	"Quotes aka the Noah and Chris page",
+	"Quotes",
+	"Quotes",
+	"Quotes",
+	"Quotes",
+	"Quotes",
+	"Quotes",
+	"Quotes",
+	"Quotes",
+	"Quotes",
+	"Quotes",
+	"Quotes",
+	"Quotes"
 ];
 
 function showPageQ(pageNumberQ) {
-	for (let i = 1; i <= 13; i++) {
+	for (let i = 1; i <= 12; i++) {
 		document.querySelector(`.qpage.qpage-${i}`).classList.remove("active");
 	}
 
@@ -27,11 +27,11 @@ function showPageQ(pageNumberQ) {
 }
 
 function goForwardQ() {
-	showPageQ(currentPageQ < 13 ? currentPageQ + 1 : 1);
+	showPageQ(currentPageQ < 12 ? currentPageQ + 1 : 1);
 }
 
 function goBackQ() {
-	showPageQ(currentPageQ > 1 ? currentPageQ - 1 : 13);
+	showPageQ(currentPageQ > 1 ? currentPageQ - 1 : 12);
 }
 
 showPageQ(currentPageQ);
