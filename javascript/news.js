@@ -14,6 +14,8 @@ export const newslist = [
 	`local shoe gets thrown at fundraiser guy, all students agree it was justified`,
 	`local PSAT app turns man into a smurf`,
 	`local Something Rotten is a smashing success!`,
+	`local iceberg makes a school panic`,
+	`local student goes to Boulder, Colorado, meets Dr. Nefario`,
 	//local pets
 	`local Samson is a good dog`,
 	`local Bentley is a good dog`,
@@ -51,13 +53,13 @@ export const newslist = [
 	`local Frank is a good Californian Desert Tortoise`, //pet owned by D K.
 	`local Zoe will rest in peace`, 
 	`local Archie will rest in peace`, //pet owned by Carmen S.
-
 	//legal news
 	`Nintendo gets sued by R.J. Palacio claiming that their new game, "Super Mario Bros Wonder" infringes her book series, "Wonder"`,
 	`Kratt brothers sued by Chris Pratt, claims their names are too similar`,
 	`Myles O'M, Mealz M, Miles M, and Miles E. are in a legal battle because their names are too similar`,
 	`Minions sued by monkeys claiming they were addicted to bananas first, both end up going to rehab`,
 	`Tom Nook arrested after waking up resident at 2AM and forcing them to move`,
+	`I CALLED MARK LONG AT 3AM (GONE WRONG) (COPS CALLED) 😲😲😲`,
 	//inside jokes
 	`I AM AN OPTIMUS PRIME EARTHER. THE EARTH IS SHAPED LIKE OPTIMUS PRIME, AND IT IS TRUE. YOU CANNOT DENY IT.`,
 	`always dead`,

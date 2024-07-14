@@ -21,6 +21,24 @@
 		<script src="javascript/videodates.js"></script>
 	</head>
 	<body style="text-align: center;">
+		<div class="overlay" id="overlay">
+			<div>
+				<div class="terms-box" id="termsBox">
+					<h1>
+						READ ME!
+					</h1>
+					<p style="font-weight: revert !important;">
+						This is sort of a mini disclaimer.<br><b>We are not run or endorsed by the Bridges Education Group.</b> This is a <b>student-run</b> website. Do NOT contact Bridges Education Group for any issues you have here.<br>I'm here for fun. This website isn't to harm anyone. If you want a quote or candid removed, ask me about it. Everything added requires consent before being posted. If the consent was given virtually through a Google Form or iMessage or such, and that person did not actually consent, don't go after me, I'm always assuming that person gave the consent. Parents, teachers, and students, <b>I will never take down this website because it "harasses" or "bullies" others or anything like that.</b> In fact, the only way this website will ever be taken down is if I get bored or go broke or forget. I take money out of my own allowance to keep this up. You can rant about how I shouldn't have added something or consent or blah blah blah, whatever, but blame the person who sent it, okay? You may only request to take down a quote / picture of yourself. Parents, you may request to take down your children's quotes or pictures. However, I suggest just leaving the website if you are a parent, because this is not for you.<br>If you've just ignored all of that and want this website to be taken down, long story short, womp womp, cry about it.
+				</p>
+				</div>
+				<div class="button-container" id="proceedContainer">
+					<button id="proceedButton">Continue to bridgeshof.com</button>
+				</div>
+				<div style="text-align: center; margin-top: 10px;">
+					<button id="confirmButton" class="disabled" disabled>I understand</button>
+				</div>
+			</div>
+		</div>
 		<header>
 			<img onclick="showHome()" src="images/smallogo.png" class="logo hover">
 			<img onclick="openRepo()" src="images/ghlogowhite.png" class="logo g hover">
@@ -741,6 +759,38 @@
 		<script src="javascript/pageswitch.js"></script>
 		<script src="javascript/quotepages.js"></script>
 		<script src="javascript/candidpages.js"></script>
+		<script>
+			const termsBox = document.getElementById('termsBox');
+			const confirmButton = document.getElementById('confirmButton');
+			const proceedContainer = document.getElementById('proceedContainer');
+			const overlay = document.getElementById('overlay');
+
+			termsBox.addEventListener('scroll', () => {
+			if (termsBox.scrollTop + termsBox.clientHeight >= termsBox.scrollHeight) {
+				confirmButton.classList.remove('disabled');
+				confirmButton.disabled = false;
+			}
+			});
+
+			confirmButton.addEventListener('click', () => {
+				proceedContainer.style.display = 'block';
+				confirmButton.style.display = 'none';
+			});
+			document.addEventListener('DOMContentLoaded', () => {
+				const overlay = document.getElementById('overlay');
+				const proceedButton = document.getElementById('proceedButton');
+				const buttonClicked = localStorage.getItem('buttonClicked');
+				
+				if (!buttonClicked) {
+					overlay.style.display = 'flex';
+				}
+				
+				proceedButton.addEventListener('click', () => {
+					overlay.style.display = 'none';
+					localStorage.setItem('buttonClicked', true);
+				});
+			});
+		</script>
 		<!--<script src="javascript/shortfilmspages.js"></script>-->
 		<!--<script>
 			function shuffleArray(array) {
