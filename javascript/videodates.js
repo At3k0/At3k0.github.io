@@ -43,4 +43,4 @@ function toggleContent() {
 	}
 }
 
-window.onload = toggleContent;
+//window.onload = toggleContent;
