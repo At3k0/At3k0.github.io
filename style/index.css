@@ -50,6 +50,10 @@ button {
 	font-weight: bold;
 }
 
+.bhoflogo {
+	width: 100px;
+}
+
 .g {
 	position: absolute;
 	width: 5vh;

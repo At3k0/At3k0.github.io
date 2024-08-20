@@ -262,6 +262,10 @@ button:hover {
 
 }
 
+.bhoflogo {
+    width: 100px;
+}
+
 /*animation*/
 @keyframes slideUpgrades {
     0% {
