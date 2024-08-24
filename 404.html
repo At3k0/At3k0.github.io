@@ -5,15 +5,18 @@
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRY21G04WJ"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
 			gtag('js', new Date());
-			
 			gtag('config', 'G-BRY21G04WJ');
 		</script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Page Not Found</title>
 		<link rel="icon" type="image/x-icon" href="images/smallogo.png">
+		<script src="javascript/pageswitch.js"></script>
 		<style>
 			html, body {
 				height: 100%;
@@ -21,26 +24,102 @@
 				padding: 0;
 				font-family: "Karla", sans-serif;
 				background-color: royalblue;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				align-content: center;
 				text-align: center;
 			}
-			
+
+			header {
+				background-color: #333;
+				color: white;
+				padding: 5px 0 10px;
+				border-radius: 0 0 15px 15px;
+				position: relative;
+			}
+
+			button {
+				border-radius: 15px;
+				border-color: dodgerblue;
+				font-family: "Karla", sans-serif;
+				font-size: 20px;
+				cursor: pointer;
+				transition: background-color 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			button:hover {
+				background-color: floralwhite;
+				box-shadow: 0.5ex 0.5ex;
+			}
+
+			.navbarlink {
+				background-color: white;
+				padding: 5px;
+				border-radius: 15px;
+				font-weight: bold;
+				cursor: pointer;
+			}
+
+			.logo, p, span {
+				font-size: 20px;
+				font-weight: bold;
+			}
+
+			.bhoflogo {
+				width: 100px;
+			}
+
+			.g {
+				position: absolute;
+				width: 5vh;
+				right: 5px;
+				top: 5px;
+			}
+
+			.rtxt {
+				position: absolute;
+				top: 50px;
+				right: 0;
+				font-size: 2vh;
+				color: black;
+				opacity: 0;
+				pointer-events: none;
+				transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+			}
+
+			.logo.g:hover+.rtxt {
+				opacity: 1;
+			}
+
 			.error {
+				height: 50%;
+				width: 50%;
+				margin: auto;
+				align-content: center;
 				background-color: #f2f2f2;
 				padding: 20px;
 				border-radius: 15px;
-				width: 750px;
-				margin: 0;
-				font-size: 50px;
+				font-family: "Karla", sans-serif;
+			}
+
+			img, button, .hover {
+				cursor: pointer;
 			}
 		</style>
 	</head>
 	<body>
+		<header>
+			<img onclick="showHome()" src="images/smallogo.png" class="logo hover bhoflogo">
+			<img onclick="openRepo()" src="images/ghlogowhite.png" class="logo g hover">
+			<div class="rtxt navbarlink">BHOF repository</div>
+			<nav>
+				<a href="index.html">
+					<button class="navbarlink">Back to HOF</button>
+				</a>
+				<button onclick="showClicker()" class="navbarlink">Clicker</button>
+				<button onclick="showSnake()" class="navbarlink">Snake</button>
+				<button onclick="showSimulator()" class="navbarlink">GHBAT Simulator</button>
+			</nav>
+		</header>
 		<div class="error">
-			<img src="images/alecsleep.png" style="margin-left: auto; margin-right: auto; width: 500px;">
+			<img src="images/alecsleep.png" style="width: 25vw;">
 			<br>
 			Looks like something went wrong. Try going to a different page, checking your spelling, refreshing the page, clearing your cookies, or checking your internet.
 		</div>
