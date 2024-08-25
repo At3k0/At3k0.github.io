@@ -35,7 +35,7 @@
 					<button id="proceedButton">Continue to bridgeshof.com</button>
 				</div>
 				<div style="text-align: center; margin-top: 10px;">
-					<button id="confirmButton" class="disabled" disabled>I understand</button>
+					<button id="confirmButton">I understand</button>
 				</div>
 			</div>
 		</div>
@@ -751,11 +751,11 @@
 				For questions and inquiries, email alec.diramerian@bridges.edu
 				<hr class="line">
 				<a href="https://instagram.com/bridges_hof" class="l">
-				Instagram
+					Instagram
 				</a>
-				|| 
+				||
 				<a href="https://youtube.com/channel/UCejJ30l_YptNpTt_Kd_-SRA" class="l">
-				YouTube
+					YouTube
 				</a>
 				<hr class="line">
 				No copyright, but I don't care. Legal issues and shutdown requests will be ignored.
@@ -770,12 +770,12 @@
 			const proceedContainer = document.getElementById('proceedContainer');
 			const overlay = document.getElementById('overlay');
 
-			termsBox.addEventListener('scroll', () => {
+			/*termsBox.addEventListener('scroll', () => {
 			if (termsBox.scrollTop + termsBox.clientHeight >= termsBox.scrollHeight) {
 				confirmButton.classList.remove('disabled');
 				confirmButton.disabled = false;
 			}
-			});
+			});*/
 
 			confirmButton.addEventListener('click', () => {
 				proceedContainer.style.display = 'block';
