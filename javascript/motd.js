@@ -37,6 +37,20 @@ if (month === 8 && day === 27) {
 	message = `im not gonna get cancelled so no motd today`;
 } else if (month === 9 && day === 12) {
 	message = `today is a good day`;
+} else if (month === 9 && day === 13) {
+	message = `this bridges hof is enhanced with bridges' fastplay`;
+} else if (month === 9 && day === 14) {
+	message = `ok but im still wondering why was thor crying`;
+} else if (month === 9 && day === 15) {
+	message = `do NOT tell bubble enthusiasts about pop culture`;
+} else if (month === 9 && day === 16) {
+	message = `GUYS I THINK I MIGHT BE AUTISTIC`;
+} else if (month === 9 && day === 17) {
+	message = `Hey, Vsauce, Michael here. Your school is safe. Or is it?`;
+} else if (month === 9 && day === 18) {
+	message = `bridgeshof.com - hall of faming since 2023`;
+} else if (month === 9 && day === 19) {
+	message = `nah`;
 } else {
 	getElementById("motd").remove()
 }
