@@ -46,7 +46,7 @@ if (month === 8 && day === 27) {
 } else if (month === 9 && day === 16) {
 	message = `GUYS I THINK I MIGHT BE AUTISTIC`;
 } else if (month === 9 && day === 17) {
-	message = `Hey, Vsauce, Michael here. Your school is safe. Or is it?`;
+	message = `Blue, blue, blue... 🔵 U+1F535 b̷̢͙̼̙̥̗̜̼͍̞̃l̷̛̖̟̦̪͖̤͋͌̈́̒̔͂͝u̶͇̞̩͒͆͝͠e̴͍̫͇̖͚̓̀̈̔̈b̷̢͙̼̙̥̗̜̼͍̞̃l̷̛̖̟̦̪͖̤͋͌̈́̒̔͂͝u̶͇̞̩͒͆͝͠e̴͍̫͇̖͚̓̀̈̔̈b̷̢͙̼̙̥̗̜̼͍̞̃l̷̛̖̟̦̪͖̤͋͌̈́̒̔͂͝u̶͇̞̩͒͆͝͠e̴͍̫͇̖͚̓̀̈̔̈b̷̢͙̼̙̥̗̜̼͍̞̃l̷̛̖̟̦̪͖̤͋͌̈́̒̔͂͝u̶͇̞̩͒͆͝͠e̴͍̫͇̖͚̓̀̈̔̈b̷̢͙̼̙̥̗̜̼͍̞̃l̷̛̖̟̦̪͖̤͋͌̈́̒̔͂͝u̶͇̞̩͒͆͝͠e̴͍̫͇̖͚̓̀̈̔̈b̷̢͙̼̙̥̗̜̼͍̞̃l̷̛̖̟̦̪͖̤͋͌̈́̒̔͂͝u̶͇̞̩͒͆͝͠e̴͍̫͇̖͚̓̀̈̔̈`;
 } else if (month === 9 && day === 18) {
 	message = `bridgeshof.com - hall of faming since 2023`;
 } else if (month === 9 && day === 19) {
@@ -85,6 +85,8 @@ if (month === 8 && day === 27) {
 	message = `"Walk for me, flannel, I'll be Diddy, you'll be Naomi, woah-oh, le-" OH RIGHT... yeah i'll stop now`;
 } else if (month === 10 && day === 6) {
 	message = `for my birthday i want a flannel cake`;
+} else if (month === 10 && day === 7) {
+	message = `"Hey, Vsauce, Michael here. Your school is safe. Or is it?`;
 } else {
 	getElementById("motd").remove()
 }
