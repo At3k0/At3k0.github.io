@@ -96,6 +96,14 @@ button {
 	width: auto;
 	align-items: flex-start;
 }
+.sfcontainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+	grid-gap: 20px;
+	height: auto;
+	width: auto;
+	align-items: flex-start;
+}
 
 .hofcontainer {
 	margin: 0;
