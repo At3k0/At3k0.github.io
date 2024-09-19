@@ -28,6 +28,7 @@ html, body {
 
 .grid-item {
     justify-content: revert;
+    cursor: revert;
 }
 
 .columnsf {
@@ -51,6 +52,9 @@ a {
 
 a:hover {
     color: darkslategray;
+}
+.indtxt:hover {
+    cursor: default;
 }
 
 iframe, .comingsoon {
