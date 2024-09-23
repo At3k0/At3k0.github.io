@@ -70,6 +70,9 @@ b {
     font-size: 20px;
     position: relative;
     bottom: -500px;
+}
+
+.bslidea {
     animation: buttonSlideIn 1s forwards;
 }
 
@@ -148,7 +151,7 @@ b {
 #autoclick13, #autoclick13cost,
 #autoclick14, #autoclick14cost,
 #autoclick15, #autoclick15cost,
-#soonupg {
+#soonupg, #soonupg2 {
     display: inline-block;
     padding: 5px;
     background-color: white;
@@ -156,7 +159,7 @@ b {
     margin: 1px;
 }
 
-#soonupg {
+#soonupg, #soonupg2 {
     background-color: slategray;
 }
 
@@ -253,7 +256,7 @@ b {
     cursor: pointer;
 }
 
-#soonupg:hover {
+#soonupg:hover, #soonupg2:hover {
     cursor: not-allowed;
 }
 
@@ -266,6 +269,11 @@ button:hover {
     width: 100px;
 }
 
+.cc {
+    bottom: 0 !important;
+    animation: colorChange 5s infinite;
+}
+
 /*animation*/
 @keyframes slideUpgrades {
     0% {
@@ -273,6 +281,19 @@ button:hover {
     }
     100% {
         left: 100%;
+    }
+}
+@keyframes colorChange {
+    0% {
+        background-color: slategray;
+    }
+
+    98% {
+        background-color: mediumpurple;
+    }
+
+    100% {
+        background-color: slategray;
     }
 }
 
