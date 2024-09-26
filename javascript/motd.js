@@ -74,7 +74,7 @@ if (month === 8 && day === 27) {
 } else if (month === 9 && day === 30) {
 	message = `also taylor swift is just young gwyneth paltrow`;
 } else if (month === 10 && day === 1) {
-	message = `BOO! ...i didnt get you, did i?`;
+	message = `octobner`;
 } else if (month === 10 && day === 2) {
 	message = `"'Cause this is flannel, flannel night, and no one's gonna save you from the hall about to fame, you know it's flannel, flannel night, you're fighting for your life inside a channel, flannel tonight" -Michael Jackson in another universe, probably`;
 } else if (month === 10 && day === 3) {
@@ -86,7 +86,11 @@ if (month === 8 && day === 27) {
 } else if (month === 10 && day === 6) {
 	message = `for my birthday i want a flannel cake`;
 } else if (month === 10 && day === 7) {
-	message = `"Hey, Vsauce, Michael here. Your school is safe. Or is it?`;
+	message = `"Hey, Vsauce, Michael here. Your school is safe. Or is it?"`;
+} else if (month === 10 && day === 8) {
+	message = `chicken 💥💥`;
+} else if (month === 10 && day === 9) {
+	message = `who would win in a fight, Kendrick Lamar or Anna Kendrick?`;
 } else {
 	getElementById("motd").remove()
 }
