@@ -66,7 +66,7 @@ if (month === 8 && day === 27) {
 } else if (month === 9 && day === 26) {
 	message = `"You're red then you're black, you're hall then you're fame, you're black then you're red, you're fame then you're hall. You're Wong when it's WAHHH, it's black and it's red, we fight we break up, we diss we make up." -Katy Perry in another universe, probably`;
 } else if (month === 9 && day === 27) {
-	message = `okay, hear me out... https://i.pinimg.com/474x/fe/93/44/fe93448ecdcb26f9e4dfecb8c0df3b23.jpg`;
+	message = `this one had to be removed sorry`;
 } else if (month === 9 && day === 28) {
 	message = `does alicia keys have keys? if so, is lady gaga a baby? is eminem a candy? is p!nk pink? how green is green day? did the killers kill anyone? did one direction only tour north? how fast is taylor swift? why doesnt twenty one pilots have twenty one band members? we may never know`;
 } else if (month === 9 && day === 29) {
