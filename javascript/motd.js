@@ -80,16 +80,12 @@ if (month === 8 && day === 27) {
 } else if (month === 10 && day === 3) {
 	message = `imagine if neil diamond sung a spookier version of Sweet Caroline called Sweet Coraline for the critically acclaimed movie Coraline`;
 } else if (month === 10 && day === 4) {
-	message = `"Wake up in the mornin' feelin' like P. Diddy, grab my flan-" oh wait... i'll try again tomorrow`;
-} else if (month === 10 && day === 5) {
-	message = `"Walk for me, flannel, I'll be Diddy, you'll be Naomi, woah-oh, le-" OH RIGHT... yeah i'll stop now`;
-} else if (month === 10 && day === 6) {
 	message = `for my birthday i want a flannel cake`;
-} else if (month === 10 && day === 7) {
+} else if (month === 10 && day === 5) {
 	message = `"Hey, Vsauce, Michael here. Your school is safe. Or is it?"`;
-} else if (month === 10 && day === 8) {
+} else if (month === 10 && day === 6) {
 	message = `chicken 💥💥`;
-} else if (month === 10 && day === 9) {
+} else if (month === 10 && day === 7) {
 	message = `who would win in a fight, Kendrick Lamar or Anna Kendrick?`;
 } else {
 	getElementById("motd").remove()
