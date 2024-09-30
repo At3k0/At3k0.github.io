@@ -76,7 +76,7 @@ if (month === 8 && day === 27) {
 } else if (month === 10 && day === 1) {
 	message = `octobner`;
 } else if (month === 10 && day === 2) {
-	message = `"'Cause this is flannel, flannel night, and no one's gonna save you from the hall about to fame, you know it's flannel, flannel night, you're fighting for your life inside a channel, flannel tonight" -Michael Jackson in another universe, probably`;
+	message = `le flannel`;
 } else if (month === 10 && day === 3) {
 	message = `imagine if neil diamond sung a spookier version of Sweet Caroline called Sweet Coraline for the critically acclaimed movie Coraline`;
 } else if (month === 10 && day === 4) {
