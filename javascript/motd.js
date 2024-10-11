@@ -88,7 +88,17 @@ if (month === 8 && day === 27) {
 } else if (month === 10 && day === 7) {
 	message = `who would win in a fight, Kendrick Lamar or Anna Kendrick?`;
 } else if (month === 10 && day === 11) {
-	message = `SORRY I THOUGHT I UPLOADEDN THE MOTDS ILL ADD THEM BACK RN`;
+	message = `wild robot is fire`;
+} else if (month === 10 && day === 12) {
+	message = `they dont call me uncle fister for no reason...`;
+} else if (month === 10 && day === 13) {
+	message = `have you noticed the moon is... how do i put this... a little brighter recently?`;
+} else if (month === 10 && day === 14) {
+	message = `!!! <<THIS MESSAGE HAS DIED>> !!!`;
+} else if (month === 10 && day === 15) {
+	message = `Yes! Dance my brother Fister! *oppa gagnam stlyte*`;
+} else if (month === 10 && day === 16) {
+	message = `BREAKING NEWS!! GONZOLEZ IS ACTUALLY GOMEZ?!?!?!? WHAAAAAAAT???`;
 } else {
 	getElementById("motd").remove()
 }
