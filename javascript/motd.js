@@ -87,6 +87,8 @@ if (month === 8 && day === 27) {
 	message = `chicken 💥💥`;
 } else if (month === 10 && day === 7) {
 	message = `who would win in a fight, Kendrick Lamar or Anna Kendrick?`;
+} else if (month === 10 && day === 11) {
+	message = `SORRY I THOUGHT I UPLOADEDN THE MOTDS ILL ADD THEM BACK RN`;
 } else {
 	getElementById("motd").remove()
 }
