@@ -99,6 +99,20 @@ if (month === 8 && day === 27) {
 	message = `Yes! Dance my brother Fister! *oppa gagnam stlyte*`;
 } else if (month === 10 && day === 16) {
 	message = `BREAKING NEWS!! GONZOLEZ IS ACTUALLY GOMEZ?!?!?!? WHAAAAAAAT???`;
+} else if (month === 10 && day === 17) {
+	message = `oops i forgot today`;
+} else if (month === 10 && day === 18) {
+	message = `they also call me uncle freakster`;
+} else if (month === 10 && day === 19) {
+	message = `do NOT say "boot" without the "t". scariest crap ever`;
+} else if (month === 10 && day === 20) {
+	message = `what is a lauriss?`;
+} else if (month === 10 && day === 21) {
+	message = `snap snap`;
+} else if (month === 10 && day === 22) {
+	message = `what if thanos were an addams and he had to do the snap so he did it twice and 75% of all life was wiped out`;
+} else if (month === 10 && day === 23) {
+	message = `if we get snow i will give away a flannel`;
 } else {
 	getElementById("motd").remove()
 }
