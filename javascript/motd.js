@@ -113,6 +113,14 @@ if (month === 8 && day === 27) {
 	message = `what if thanos were an addams and he had to do the snap so he did it twice and 75% of all life was wiped out`;
 } else if (month === 10 && day === 23) {
 	message = `if we get snow i will give away a flannel`;
+} else if (month === 10 && day === 24) {
+	message = `there aint no party like a party`;
+} else if (month === 10 && day === 25) {
+	message = `if lady gaga came out as trans would she be gentleman googoo?`;
+} else if (month === 10 && day === 26) {
+	message = `you may be a pink pony girl dancing at the Pink Pony Club, but i am a red and black boy dancing at the Red and Black Club`;
+} else if (month === 10 && day === 27) {
+	message = `notify WILL be scotted`;
 } else {
 	getElementById("motd").remove()
 }
