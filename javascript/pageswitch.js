@@ -33,6 +33,7 @@ const showCandids = () => showElement(candids, 'style/candids.css');
 const showQuotes = () => showElement(quotes, 'style/quotes.css');
 const showClicker = () => redirectToPage("clicker");
 const showSnake = () => redirectToPage("snake");
+const showNote = () => redirectToPage("note");
 const showSimulator = () => openLink("https://www.roblox.com/games/15409499206/get-hit-by-a-train-simulator")
 const openQuotesForm = () => openLink("https://forms.gle/1rS7JwsfzxzZ4B2V7");
 const openCandidsForm = () => openLink("https://forms.gle/19PAqcWP1ZffHae8A");
