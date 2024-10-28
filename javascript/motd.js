@@ -122,6 +122,6 @@ if (month === 8 && day === 27) {
 } else if (month === 10 && day === 27) {
 	message = `notify WILL be scotted`;
 } else {
-	getElementById("motd").remove()
+	//getElementById("motd").remove()
 }
-document.getElementById(`motdmessage`).textContent = message;
+//document.getElementById(`motdmessage`).textContent = message;
